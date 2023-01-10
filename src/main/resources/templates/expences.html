@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>経費申請</title>
+<link rel="stylesheet" href="expences.css">
+</head>
+<body>
+	<h1 class="expences-application">経費申請</h1>
+	<form action="expences" method="post">
+	<div class="main1">
+		<div class="form-label-group1">
+				<label for="userId">ユーザーID</label><br>
+				<input type="text" id="userId" name="userId" class="form-control1">
+		</div>
+		<div class="form-label-group2">
+				<label for="applicationDate">申請日</label> <br>
+				<input type="date" id="applicationDate" name="applicationDate"
+				class="form-control2">
+		</div>
+	</div>
+	<div class="main2">
+		<div class="form-label-group3">
+			<div class="expences-item">経費項目</div>
+			<select name="pref">
+				<option value="Shomohin">消耗品</option>
+				<option value="Shuzenhi">修繕費</option>
+				<option value="Zappi">雑費</option>
+			</select>
+		</div>
+		<div class="form-label-group4">
+			<label for="amountMoney">金額</label> <br>
+			<input type="text" id="amountMoney" name="amountMoney"
+				class="form-control3">
+		</div>
+	</div>
+	<div class="main3">
+		<div class="form-label-group5">
+			<label for="remarks">備考</label><br><input type="text"
+				id="remarks" name="remarks" class="form-control4">
+		</div>
+		<div class="form-label-group6">
+			<button class="back" type="submit">戻る</button>
+		</div>
+		<div class="form-label-group7">
+			<button class="go" type="submit">申請</button>
+		</div>
+	</div>
+	</form>
+</body>
+</html>
