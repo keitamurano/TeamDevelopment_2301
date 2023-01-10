@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="expenceslist.css">
+<title>経費一覧</title>
+</head>
+<body>
+	<h1 class="form-label-group1">経費一覧</h1>
+	<table class="table">
+		<tr>
+			<th>ユーザーID</th>
+			<th>申請日</th>
+			<th>経費項目</th>
+			<th>金額</th>
+			<th>備考</th>
+		</tr>
+		<tr th:each="expences : ${expencesList}">
+			<td th:text="${expences.userId}"></td>
+			<td th:text="${expences.applicationDate}"></td>
+			<td th:text="${expences.expencesItem}"></td>
+			<td th:text="${expences.amountMoney}"></td>
+			<td th:text="${expences.remarks}"></td>
+		</tr>
+	</table>
+	<div class="form-label-group2">
+		<button class="back" type="submit">戻る</button>
+	</div>
+</body>
+</html>
