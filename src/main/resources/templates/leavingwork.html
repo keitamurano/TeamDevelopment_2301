@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<!--中身-->
+    <body>
+     <div id="wrapper"> 
+                <!--ヘッダー-->
+                <div class="header">
+                    <h1>退勤報告</h1>
+                </div>
+
+                <!--user_Idの処理（ラベル）-->
+                <div class="userID">
+                    <label>ユーザーID</label><br>
+                    <input id="myname" type="text" name="myname"
+                    placeholder="例）空条承太郎">
+                </div>
+
+                <!--ステータスの処理(プルダウン)-->
+                <div class="status">
+                    <label>ステータス</label><br>
+                        <!--★-->
+                        <select name="status">
+                            <option value="attendance" selected>退勤</option>
+                            <option value="Taurus">早退</option>
+                            <option value="Libra">その他</option>
+                        </select>
+                </div>
+
+                <!--退勤日(カレンダー)-->
+                <div class="ebd_date">
+                    <label>出勤日</label><br>
+                        <!--★-->
+                        <input type="date" id="出勤日">
+                </div>
+
+                <!--退勤時間(プルダウン？テキスト？)-->
+                <div class="end_time">
+                    <label>退勤時間</label><br>
+                    <!--★-->
+                    <input type="time" name="start_time" id="出勤時間">
+                </div>
+
+                <!--休憩時間(プルダウン？テキスト？)-->
+                <div class="break_time">
+                    <!--★-->
+                    <label>休憩時間（分）</label><br>
+                    <input id="break_time" type="text" name="break_time"
+                    placeholder="例）60">
+                </div>
+
+                <!--戻る(ボタン)--><!--登録(ボタン)-->
+                <div>
+                    <button>戻る</button>
+                    <button>登録</button>
+                </div>
+
+
+        </div>
+    </body>
+</html>
