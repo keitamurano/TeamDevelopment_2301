@@ -1,0 +1,110 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%
+}
+
+body {
+	background-image: url("white0023.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+h1 {
+	text-align: center;
+}
+
+.main1 {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.main2 {
+	list-style-type: none;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.main3 {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	padding-left: 10px;
+}
+
+.form-label-group1 {
+	text-align: center;
+	margin: 30px;
+}
+
+.form-control1 {
+	height: 30px;
+}
+
+.form-label-group2 {
+	text-align: center;
+	margin: 30px;
+	height: 30px;
+}
+
+.form-control2 {
+	height: 30px;
+}
+
+.form-label-group3 {
+	text-align: center;
+	margin: 30px;
+}
+
+select {
+	width: 130px;
+	height: 30px;
+}
+
+.form-label-group4 {
+	text-align: center;
+	margin: 30px;
+}
+
+.form-control3 {
+	height: 30px;
+}
+
+.form-label-group5 {
+	text-align: center;
+	margin: 30px;
+}
+
+.form-control4 {
+	height: 30px;
+}
+
+.form-label-group6 {
+	text-align: center;
+	position: relative;
+	top: 45px;
+	left: 30px;
+}
+
+.back {
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+}
+
+.form-label-group7 {
+	text-align: center;
+	position: relative;
+	top: 45px;
+	left: 50px;
+}
+
+.go {
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+}
