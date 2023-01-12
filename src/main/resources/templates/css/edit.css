@@ -1,0 +1,48 @@
+.wapper {
+    width: 1000px;
+    height: 1000px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  header{
+      width: 20px;
+      height: 20px;
+      text-align: right;
+  }
+  
+  h1 {
+      height: 50px;
+      color: rgb(4, 4, 5);
+      background-color: rgb(182, 181, 181);
+  }
+  
+  .form-text {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;    
+  }
+  
+  table th{
+      padding : 20px 10px;
+      
+    }
+    
+    table td{
+      padding : 20px 10px;
+    }
+  
+    table {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  body {
+    background-image: url("2F5C84906EC4423B9B40D862EFFD42E268D47EE4.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
