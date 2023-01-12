@@ -2,9 +2,49 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<title>マイページ</title>
+<link rel="stylesheet" href="mypage.css"></head>
 
+<body>
+    <div class="wrapper">
+        <div class="a"></div>
+        <div class="header">
+
+            <p class="mypage-p">MY PAGE</p>
+
+
+            <div class="userdate">
+                <button class="userbutton userbutton-shadow userbutton-circle" type=“button” onclick="location.href=''">☺︎</button>
+               
+                    <p class="username" th:text="${user.username}">name</p>
+                    <p class="userid" th:text="${user.password}">id</p>
+                
+            </div>
+
+        </div>
+        
+        
+        <div class="contents clearfix">
+                <div class="left">
+
+                <button class="page-button" type=“button” onclick="location.href=''">出勤報告</button>
+                <button class="page-button" type=“button” onclick="location.href=''">退勤報告</button>
+                <button class="page-button" type=“button” onclick="location.href=''">勤怠修正</button>
+                <button class="page-button" type=“button” onclick="location.href=''">経費申請</button>
+
+                </div>
+
+                <div class="right">
+
+                <button class="page-button" type=“button” onclick="location.href=''">退勤一覧</button>
+                <button class="page-button" type=“button” onclick="location.href=''">経費一覧</button>
+                <button class="page-button" type=“button” onclick="location.href=''">有休一覧</button>
+
+                </div>
+                
+                
+
+
+         </div>
+    </div>
 </body>
-</html>
