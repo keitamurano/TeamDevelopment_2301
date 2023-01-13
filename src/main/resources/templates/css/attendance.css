@@ -3,14 +3,61 @@
     text-align:center;
 }
 
-body{
-    background-image:url(../image/backimage.png);
+.userID{
+    text-align: center;
+        display: block;
+        padding-top: 30px;   
+  }
 
+text{
+    width: 70px;
+    height: 30px;}
+
+
+.status{
+    padding-top: 30px;
+    
 }
 
+.start_date{
+    padding-top: 30px;
+}
 
+.start_time{
+    padding-top: 30px;
+}
 
-body {
+.message{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*ヘッダー*/
+h1{
+    text-align:center;
+    color: rgb(10, 10, 10);
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.return{
+    text-align: left;
+        margin: 100px
+}
+
+  input{
+    height: 30px;
+    width: 200px;
+  }
+
+  select{
+    height: 30px;
+    width: 200px;
+  }
+
+  body {
     /* 画像ファイルの指定 */
     background-image: url(../image/backimage.png); /*分からない*/
      
@@ -29,22 +76,3 @@ body {
     /* 背景画像が読み込まれる前に表示される背景のカラー */
     background-color: #464646;
   }
-
-
-/*ヘッダー*/
-h1{
-    text-align:center;
-    color: rgb(10, 10, 10);
-    background-color: yellow;
-    width: 200px;
-    height: 50px;
-    margin: 0 auto;
-}
-
-
-button{
-    display:inline-block;/*コレ*/
-    }
-    div{
-    text-align:center;
-    }

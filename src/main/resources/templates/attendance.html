@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<!--中身-->
+    <body>
+     <div id="wrapper"> 
+        
+                <!--ヘッダー-->
+                <div class="header">
+                    <h1>出勤報告</h1>
+                </div>
+
+                <!--user_Idの処理（ラベル）-->
+                <div class="userID">
+                    <text>ユーザーID</text><br>
+                    <input type="text" name="myname"
+                    placeholder="例）空条承太郎">
+                </div>
+
+                <!--ステータスの処理(プルダウン)-->
+                <div class="status">
+                    <label>ステータス</label><br>
+                        <!--★-->
+                        <select name="status">
+                            <option value="attendance" selected>出勤</option>
+                            <option value="behind">遅刻</option>
+                            <option value="holiday">休日</option>
+                            <option value="paid">有給</option>
+                            <option value="lieu">代休</option>
+                            <option value="othersholiday">休日（その他）</option>
+                            <option value="others">その他</option>
+                        </select>
+                </div>
+
+                <!--出勤日(カレンダー)-->
+                <div class="start_date">
+                    <label>出勤日</label><br>
+                        <!--★-->
+                        <input type="date" id="start_date">
+                </div>
+
+                <!--出勤時間(プルダウン？テキスト？)-->
+                <div class="start_time">
+                    <label>出勤時間</label><br>
+                    <!--★-->
+                    <input type="time" name="start_time" id="出勤時間">
+                </div>
+
+                <div class = "remarks">
+                    <!--<label for="message">お問い合わせ内容</label><br>-->
+                    <label>備考</label><br>
+                    <input type="text" id="text" >
+                    </div>
+
+                <!--登録-->
+                <div class = "register">
+                    <input type="button" value="登録"   onclick="location.href='URL'" /><br>
+                 </div>
+
+                <!--戻る-->
+                <div class ="return">
+                    <input type="button" value="戻る" onclick="location.href='URL'" />
+                </div>
+           </div>     
+     </body>
+</html>
