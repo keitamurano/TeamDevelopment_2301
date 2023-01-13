@@ -15,13 +15,6 @@
 			<th>金額</th>
 			<th>備考</th>
 		</tr>
-		<tr th:each="expences : ${expencesList}">
-			<td th:text="${expences.userId}"></td>
-			<td th:text="${expences.applicationDate}"></td>
-			<td th:text="${expences.expencesItem}"></td>
-			<td th:text="${expences.amountMoney}"></td>
-			<td th:text="${expences.remarks}"></td>
-		</tr>
 	</table>
 	<div class="form-label-group2">
 		<button class="back" type="submit">戻る</button>
