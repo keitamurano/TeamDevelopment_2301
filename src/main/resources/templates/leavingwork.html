@@ -17,7 +17,7 @@
                 </div>
 
                 <!--user_Idの処理（ラベル）-->
-                <div class="userID">
+                <div class="user_id">
                     <label>ユーザーID</label><br>
                     <input id="myname" type="text" name="myname"
                     placeholder="例）空条承太郎">
@@ -35,8 +35,8 @@
                 </div>
 
                 <!--退勤日(カレンダー)-->
-                <div class="ebd_date">
-                    <label>出勤日</label><br>
+                <div class="end_date">
+                    <label>退勤日</label><br>
                         <!--★-->
                         <input type="date" id="出勤日">
                 </div>
@@ -53,16 +53,24 @@
                     <!--★-->
                     <label>休憩時間（分）</label><br>
                     <input id="break_time" type="text" name="break_time"
-                    placeholder="例）60">
+                    placeholder="例60">
                 </div>
 
-                <!--戻る(ボタン)--><!--登録(ボタン)-->
-                <div>
-                    <button>戻る</button>
-                    <button>登録</button>
+                <div class = "remarks">
+                    <!--<label for="message">お問い合わせ内容</label><br>-->
+                    <label>備考</label><br>
+                    <input type="text" id="text" >
+                    </div>
+                
+                <!--登録(ボタン)-->
+                <div class = "register">
+                    <input type="button" value="登録"   onclick="location.href='URL'" /><br>
+                 </div>
+
+                <!--戻る(ボタン)-->
+                <div class ="return">
+                    <input type="button" value="戻る" onclick="location.href='URL'" />
                 </div>
-
-
         </div>
     </body>
 </html>
