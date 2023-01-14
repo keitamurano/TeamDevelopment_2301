@@ -2,9 +2,14 @@
 body{
     background-image: url("https://www.haikei-free.com/dataimg/white0023.png");
     background-size: cover;
+    text-align: center;
     
 }
 
+.wrapper{
+    float: center;
+    margin: auto;
+}
 .back-color{
     background-color:white;
 }
