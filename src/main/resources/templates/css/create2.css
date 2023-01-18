@@ -1,0 +1,72 @@
+@.wapper {
+    width: 1000px;
+    height: 1000px;
+     margin: 0 auto;
+    
+  }
+  body {
+    background-image: url("https://www.haikei-free.com/dataimg/white0023.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  h1 {
+      height: 50px;
+      background-color:white;
+      text-align: center;
+  }
+
+  .username{
+    text-align: center;
+        display: block;
+        height: auto;  
+  }
+.status{
+    text-align: center;
+        display: block;
+        height: auto; 
+}
+select{
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+.workday{
+    text-align: center;
+        display: block;
+        height: auto;
+}
+
+.work-time{
+    text-align: center;
+        display: block;
+        height: auto;
+}
+.Reason-for-revision{
+    text-align: center;
+        display: block;
+        height: auto;
+}
+.leaving-work{
+    text-align: center;
+        display: block;
+        height: auto;
+}
+.return{
+    text-align: left;
+        display: block;
+        height: auto;
+}
+.register{
+    text-align: right;
+        display: block;
+        height: auto;
+}
+  input{
+    height: 50px;
+    width: 400px;
+  }
+  label{
+    font-size: 30px;
+  }
