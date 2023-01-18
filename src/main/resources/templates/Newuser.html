@@ -10,25 +10,21 @@
 
 </head>
 
-<body>
-    <div class="wapper" >
-
+<body background="2F5C84906EC4423B9B40D862EFFD42E268D47EE4.png">
+    <div class="wapper" ></div>
     <div class="header"></div>
 
     <div align="right">
-    <a href="#">ページトップへ戻る</a>
+    <button type="button" onclick="history.back()">戻る</button>
     </div>
     
-    <body background="2F5C84906EC4423B9B40D862EFFD42E268D47EE4.png">
-    </body>
-
         <h1>ユーザー新規登録</h1>
 
         <form action="#" method="post">
             
             <table>
                 <tr>
-                    <th>名前</th>
+                    <th>Name</th>
                     <td><input name="name" type="text"></td>
                 </tr>
                 <tr>
@@ -36,7 +32,7 @@
                     <td><input name="name" type="text"></td>
                 </tr>
                 <tr>
-                    <th>メールアドレス</th>
+                    <th>E-mail</th>
                     <td><input name="mail" type="email"></td>
                 </tr>
                 <tr>
@@ -46,11 +42,12 @@
                 
                 <tr>
                     <td colspan="2">
-                        <input type="button" value="登録">
+                        <div align="right">
+                        <input type="button" value="登録します"></div>
                     </td>
                 </tr>
             </table>
         </form>
-</div>
+
 </body>
 </html>
