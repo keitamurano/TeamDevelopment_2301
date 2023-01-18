@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="create2.css">
+    </head>
+
+    <body >
+     <div > 
+      <div class="header">
+                    <h1>勤怠一覧</h1>
+                </div>
+                <div class="username" >
+                    <label >ユーザー名</label><br>
+                    <input id="myname" type="text" name="myname"
+                    placeholder="">
+                </div>
+                <div class="status">
+                    <label>稼働分類</label>
+                    <br>
+                        <select name="status">
+                            <option value="attendance" selected>出勤</option>
+                            <option value="leaving work">退勤</option>
+                        </select>
+                </div>
+                <div class="workday">
+                    <label>出勤日</label><br>
+                        <input type="date" id="出勤日" style="font-size:1.5em">
+                </div>
+
+                <div class="work-time">
+                    <label>出勤時間</label><br>
+                    <input type="time" name="start_time" id="出勤時間" style="font-size:1.5em">
+                </div>
+
+                <div class="Reason-for-revision">
+                    <p>修正理由</p>
+                    <input type="text" id="text" style="font-size:1.5em">
+                </div>
+
+                <div class="leaving-work">
+                    <label>退勤日</label><br>
+                        <input type="date" id="退勤日" style="font-size:1.5em">
+                </div>
+
+                <div class="leaving work-time">
+                    <label>退勤時間</label><br>
+                    <input type="time" name="start_time" id="退勤時間">
+                </div>
+                
+                <div class="return">
+                    <button>戻る</button>
+                </div>
+                <div class="register">
+                    <button>登録</button>
+                </div>
+ 
+        </div>
+    </body>
+</html>
