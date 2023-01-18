@@ -1,0 +1,21 @@
+@charset "UTF-8";
+body{
+    background-image: url("https://www.haikei-free.com/dataimg/white0023.png");
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.wrapper{
+    float: center;
+    margin: auto;
+}
+.back-color{
+    background-color:white;
+}
+
+td{
+    padding: 40px 40px 40px 40px;
+    text-align:center;
+   
+}
