@@ -1,51 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>経費申請</title>
 <link rel="stylesheet" href="css/expences.css">
 </head>
 <body>
-	<h1 class="expences-application">経費申請</h1>
-	<form action="expences" method="post">
-	<div class="main1">
-		<div class="form-label-group1">
-				<label for="userId">ユーザーID</label><br>
-				<input type="text" id="userId" name="userId" class="form-control1">
+	<h1>経費申請</h1>
+	<br />
+	<form method="post" th:action="@{/confirm}" th:object="${demoForm}">
+
+		<div class="main1">
+			<div class="userId">
+				ユーザID<br /><input type="text" th:value="*{name}" th:field="*{name}"  class="inputuserId">
+			</div>
+		<br />
+		<div class="applicationDate">
+				申請日<br /><input type="date" th:value="*{birthYear}"th:field="*{birthYear}" class="inputapplicationDate">
+			</div>
 		</div>
-		<div class="form-label-group2">
-				<label for="applicationDate">申請日</label> <br>
-				<input type="date" id="applicationDate" name="applicationDate"
-				class="form-control2">
+	    <br />
+	   <div class="main2">
+			<div class="expences-item-pulldown">
+				<div class="expences-item">経費項目</div>
+					<select name="pref">
+						<option value="Shomohin">消耗品</option>
+						<option value="Shuzenhi">修繕費</option>
+						<option value="Zappi">雑費</option>
+					</select>
+			</div>
+		<br />
+		 <div class="amountMoney">
+				金額<br /><input type="text" th:value="*{name}" th:field="*{name}" class="inputamountMoney">
 		</div>
-	</div>
-	<div class="main2">
-		<div class="form-label-group3">
-			<div class="expences-item">経費項目</div>
-			<select name="pref">
-				<option value="Shomohin">消耗品</option>
-				<option value="Shuzenhi">修繕費</option>
-				<option value="Zappi">雑費</option>
-			</select>
 		</div>
-		<div class="form-label-group4">
-			<label for="amountMoney">金額</label> <br>
-			<input type="text" id="amountMoney" name="amountMoney"
-				class="form-control3">
+	    <div class="main3">
+			 <div class="remarks">
+				備考<br /><input type="text" th:value="*{name}" th:field="*{name}" class="inputremarks">
+			</div>
+			 <div class="back">
+				<input type="submit" value="戻る" class="back">
+			</div>
+			 <div class="application">
+				<input type="submit" value="申請" class="application">
+			</div>
 		</div>
-	</div>
-	<div class="main3">
-		<div class="form-label-group5">
-			<label for="remarks">備考</label><br><input type="text"
-				id="remarks" name="remarks" class="form-control4">
-		</div>
-		<div class="form-label-group6">
-			<button class="back" type="submit">戻る</button>
-		</div>
-		<div class="form-label-group7">
-			<button class="go" type="submit">申請</button>
-		</div>
-	</div>
 	</form>
 </body>
 </html>
