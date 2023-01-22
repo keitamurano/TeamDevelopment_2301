@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: head_fragment(title = '経費一覧', scripts = ~{::script}, links = ~{::link})"></head>
+
+
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/expenceslist.css">
 <title>経費一覧</title>
-</head>
-<body>
-	<h1 class="form-label-group1">経費一覧</h1>
-	<table class="table">
-		<tr>
-			<th>ユーザーID</th>
-			<th>申請日</th>
-			<th>経費項目</th>
-			<th>金額</th>
-			<th>備考</th>
-		</tr>
-	</table>
-	<div class="form-label-group2">
-		<button class="back" type="submit">戻る</button>
-	</div>
+<link rel="stylesheet" href="css/expenceslist.css">
+  <div class="container">
+    <h1>経費一覧</h1>
+    <div class="float-end">
+
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ユーザーID</th>
+          <th>申請日</th>
+          <th>経費項目</th>
+          <th>金額</th>
+          <th>備考</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="expences : ${expenceslist}" th:object="${expences}" class="align-middle">
+          <td th:text="*{userId}"></td>
+          <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
+          <!-- プルダウンのタイムリーフ調査中 -->
+          <td th:text="*{amountMoney}"></td>
+          <td th:text="*{remarks}"></td>
+          <td><input type="submit" value="戻る" class="back"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

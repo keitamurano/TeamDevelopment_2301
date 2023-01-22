@@ -1,0 +1,114 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%
+}
+/* ok */
+body {
+	background-image: url("white0023.jpg");
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+/* ok */
+h1 {
+	text-align: center;
+}
+/* ok */
+.main1 {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+/* ok */
+.main2 {
+	list-style-type: none;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+}
+/* ok */
+.main3 {
+	list-style-type: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	padding-left: 10px;
+}
+/* ok */
+.userId {
+	text-align: center;
+	margin: 30px;
+ 	height: 30px;
+}
+
+ .inputuserId {
+	height: 30px;
+}
+/* ok */
+.applicationDate {
+	text-align: center;
+	margin: 30px;
+	height: 30px;
+}
+
+ .inputapplicationDate {
+	height: 30px;
+}
+/* ok */
+.expences-item-pulldown {
+	text-align: center;
+	margin: 30px;
+}
+/* ok */
+select {
+	width: 130px;
+	height: 30px;
+}
+/* ok */
+.amountMoney {
+	text-align: center;
+	margin: 30px;
+}
+
+ .inputamountMoney {
+	height: 30px;
+}
+/* ok */
+.remarks {
+	text-align: center;
+	margin: 30px;
+}
+
+ .inputremarks {
+	height: 30px;
+}
+/* ok */
+.back {
+	text-align: center;
+	position: relative;
+	top: 25px;
+	left: 10px;
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+/* 	border-style: solid; */
+}
+
+/*  .back {
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+} */
+
+.application {
+	text-align: center;
+	position: relative;
+	top: 25px;
+	left: 40px;
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+/* 	border-style: solid; */
+}
+
