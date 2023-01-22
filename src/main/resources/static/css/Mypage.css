@@ -9,7 +9,7 @@
     width: 1024px;
     height: 750px;
     margin: 0px auto;    
-	background-image: url(white0023.png);
+    background-image: url("white0023.jpg");
     background-color: cadetblue;
     background-size: cover;
 }
@@ -94,11 +94,11 @@
 
 
 .username {
-    font-size: 3px;
+    font-size: 10px;
 }
 
 .userid {
-    font-size: 3px;
+    font-size: 10px;
 }
 
 .contents {
