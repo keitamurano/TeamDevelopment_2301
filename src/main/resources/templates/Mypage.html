@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
-<link rel="stylesheet" href="/resources/static/css/Mypage.css"></head>
+<link rel="stylesheet" href="Mypage.css"></head>
 
 <body>
     <div class="wrapper">
@@ -14,12 +14,14 @@
 
 
             <div class="userdate">
+            
             <form th:action="@{/mypage}" method="post">
                 <button class="editbutton userbutton-shadow userbutton-circle" type="button">☺︎</button>
                
                     <p class="username">name</p>
                     <p class="userid">id</p>
                 </form>
+                
             </div>
 
         </div>
