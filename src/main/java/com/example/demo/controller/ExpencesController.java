@@ -20,13 +20,18 @@ public class ExpencesController {
 		return "/expences";
 	}
 
+
+
+	@GetMapping("/top2")
+	public String top2() {
+		return "/expenceslist";
+	}
 	//	経費申請画面で「戻る」ボタンを押すとマイページ画面に遷移
 	//	@GetMapping("/back")
 	//	public String back(Model model) {
 	//	public String back() {
 	//		return "Mypage";
 	//	}
-
 
 
 	//経費申請画面「戻る」ボタンを押すとマイページ画面に遷移
