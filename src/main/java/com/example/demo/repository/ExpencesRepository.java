@@ -1,12 +1,17 @@
 package com.example.demo.repository;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.PaidEntity;
+
+import schoo.entity.Event;
 /**
  * ユーザー情報 Repository
  */
 @Repository
-public interface ExpencesRepository extends JpaRepository<ExpencesForm, integer> {
-	public List<ExpencesForm> findAll()
+public interface ExpencesRepository extends JpaRepository<ExpencesEntity, integer> {
+
+	public List<ExpencesEntity> findAll();
 }
