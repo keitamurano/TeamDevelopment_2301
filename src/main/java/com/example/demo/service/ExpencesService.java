@@ -1,12 +1,14 @@
 package com.example.demo.service;
 
 
-import org.hibernate.mapping.List;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.PaidEntity;
-import com.example.demo.repository.PaidRepository;
+import com.example.demo.entity.ExpencesEntity;
+import com.example.demo.repository.ExpencesRepository;
 /**
  * ユーザー情報 Service
  */
