@@ -7,7 +7,7 @@ public class ExpencesForm {
 
 		private Integer userId;
 
-//		private Date applicationDate;
+		private Date applicationDate;
 
 		private String expencesItem;
 
