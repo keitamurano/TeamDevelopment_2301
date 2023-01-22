@@ -44,7 +44,7 @@ public class ExpencesController {
 
     //	経費申請画面で「申請」ボタンを押すと経費一覧画面に遷移
 	@GetMapping("/regist")
-	public String regist(Model model,ExpencesForm expencesForm) {
+	public String regist(Model model, ExpencesForm expencesForm) {
     //Modelへの追加
        model.addAttribute("expences",expencesForm);
 		   return "expenceslist";
