@@ -30,13 +30,13 @@ public class ExpencesController {
 
 
 	//経費申請画面「戻る」ボタンを押すとマイページ画面に遷移
-	@RequestMapping(value = "/confirm", params = "back", method = RequestMethod.POST)
+	@RequestMapping(value = "@{/confirm}", params = "back", method = RequestMethod.POST)
 	public String back() {
 		return "/Mypage";
 	}
 
 	//経費一覧画面「戻る」ボタンを押すとマイページ画面に遷移
-	@RequestMapping(value = "confirm2", params = "back", method = RequestMethod.POST)
+	@RequestMapping(value = "@{/confirm2}", params = "back", method = RequestMethod.POST)
 	public String back2() {
 		return "/Mypage";
 	}
