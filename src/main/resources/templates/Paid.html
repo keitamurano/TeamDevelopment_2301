@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>有休一覧</title>
-<link rel="stylesheet" href="paidlist.css"></head>
+<link rel="stylesheet" href="Paid.css"></head>
 
 <body>
 
@@ -42,9 +42,10 @@
              </table>
 
              <p class="remain">残 （日）</p>
-
-             <button class="return-button" type="button" onclick="location.href=''">戻る</button>
-	
+             
+  <form th:action="@{/paid/list}" method="post">
+             <button class="return-button" type="button">戻る</button>
+	</form>
         </div>
 
     </div>
