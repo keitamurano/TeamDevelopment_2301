@@ -18,7 +18,6 @@ public class ExpencesController {
 //	public String top(Model model) {
 	public String top() {
 			return "expences";
-
 		}
 
 
