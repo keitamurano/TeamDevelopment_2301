@@ -9,7 +9,7 @@ public class ExpencesForm {
 
        @NotNull
 		private Integer userId;
-
+       @NotNull
 //		private Date applicationDate;
        @NotNull
 		private String expencesItem;
