@@ -1,0 +1,479 @@
+@charset "UTF-8";
+.body {
+    min-height: 100%;
+    height: 100%;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1024px;
+    height: 750px;
+    margin: 0px auto;    
+	background-image: url("white0023.jpg");
+    background-color: cadetblue;
+    background-size: cover;
+}
+.a {
+    width: 100%;
+    height: 20px;
+}
+
+.header {
+
+    width: 100%;
+    height: 120px;
+    background-color: rgba(136, 136, 136, 0.5);
+   
+
+
+}
+
+.mypage-p {
+     height: 120px;
+     font-size: 80px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     margin-top: 60px;
+     position: absolute;
+     left: 50%;
+     margin-right: -50%;
+     transform: translate(-50%, -50%)
+    
+}
+.userdate{
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+
+}
+.editbutton {
+    color: #fff;
+    background-color: #c9c9c9;
+    font-size: 70px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: rgb(146, 146, 146);
+    border: 3px;
+  }
+  
+.editbutton:hover {
+    color: #fff;
+    background: #c9c9c9;
+  }
+  
+  .userbutton-shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.369);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.369);
+  }
+  
+  .userbutton-circle {
+    border-radius: 50%;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    -webkit-box-shadow: 0 5px 0 #a2a0a0;
+    box-shadow: 0 5px 0 #a2a0a0;
+  }
+  
+  .userbutton-circle:hover {
+    -webkit-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+    -webkit-box-shadow: 0 2px 0 #a2a0a0;
+    box-shadow: 0 2px 0 #a2a0a0;
+  }
+   
+
+
+.username {
+    font-size: 3px;
+}
+
+.userid {
+    font-size: 3px;
+}
+
+.contents {
+    width: 100%;
+    height: 600px;
+}
+
+.left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.attendance-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.attendance-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.attendance-button:hover:before {
+    left: 100%;
+}
+.attendance-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+
+
+/*2*/
+
+.leavingwork-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.leavingwork-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.leavingwork-button:hover:before {
+    left: 100%;
+}
+.leavingwork-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+
+/*3*/
+.create-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.create-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.create-button:hover:before {
+    left: 100%;
+}
+.create-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+/*4*/
+.expences-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.expences-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.expences-button:hover:before {
+    left: 100%;
+}
+.expences-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+
+/*5*/
+.create2-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.create2-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.create2-button:hover:before {
+    left: 100%;
+}
+.create2-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+
+/*6*/
+.expenceslist-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.expenceslist-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.expenceslist-button:hover:before {
+    left: 100%;
+}
+.expenceslist-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+
+/*7*/
+.paid-button {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #d7d7d7;
+    filter: drop-shadow(0px 2px 4px #ccc);
+    border-radius: 3px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    height: 80px;
+    width: 400px;
+    font-size: 30px;
+}
+.paid-button:before{
+content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient( 
+130deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 55%);
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.paid-button:hover:before {
+    left: 100%;
+}
+.paid-button:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transition: 0.2s ease-in-out;
+   
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+

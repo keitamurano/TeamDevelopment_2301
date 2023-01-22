@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
-<link rel="stylesheet" href="mypage.css"></head>
+<link rel="stylesheet" href="/resources/static/css/Mypage.css"></head>
 
 <body>
     <div class="wrapper">
@@ -14,11 +14,12 @@
 
 
             <div class="userdate">
-                <button class="userbutton userbutton-shadow userbutton-circle" type="button" onclick="location.href=''">☺︎</button>
+            <form th:action="@{/mypage}" method="post">
+                <button class="editbutton userbutton-shadow userbutton-circle" type="button">☺︎</button>
                
-                    <p class="username" th:text="${user.username}">name</p>
-                    <p class="userid" th:text="${user.password}">id</p>
-                
+                    <p class="username">name</p>
+                    <p class="userid">id</p>
+                </form>
             </div>
 
         </div>
@@ -27,19 +28,36 @@
         <div class="contents clearfix">
                 <div class="left">
 
-                <button class="page-button" type="button" onclick="location.href=''">出勤報告</button>
-                <button class="page-button" type="button" onclick="location.href=''">退勤報告</button>
-                <button class="page-button" type="button" onclick="location.href=''">勤怠修正</button>
-                <button class="page-button" type="button" onclick="location.href=''">経費申請</button>
-
+            <form th:action="@{/mypage}" method="post">
+                <button class="attendance-button" type="button" >出勤報告</button>
+                </form>
+                
+            <form th:action="@{/mypage}" method="post">
+                <button class="leavingwork-button" type="button">退勤報告</button>
+                </form>
+                
+            <form th:action="@{/mypage}" method="post">
+                <button class="create-button" type="button">勤怠修正</button>
+                </form>
+                
+            <form th:action="@{/mypage}" method="post">
+                <button class="expences-button" type="button">経費申請</button>
+			</form>
                 </div>
 
                 <div class="right">
-
-                <button class="page-button" type="button" onclick="location.href=''">退勤一覧</button>
-                <button class="page-button" type="button"  onclick="location.href=''">経費一覧</button>
-                <button class="page-button" type="button" onclick="location.href=''">有休一覧</button>
-
+			
+            <form th:action="@{/mypage}" method="post">
+                <button class="create2-button" type="button">勤怠一覧</button>
+                </form>
+                
+            <form th:action="@{/mypage}" method="post">
+                <button class="expenceslist-button" type="button">経費一覧</button>
+                </form>
+                
+            <form th:action="@{/mypage}" method="post">
+                <button class="paid-button" type="button">有休一覧</button>
+			</form>
                 </div>
                 
                 
