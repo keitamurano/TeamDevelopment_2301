@@ -21,21 +21,21 @@
 
             <table class="paid-table">
                 <tbody>
-                  <tr>
+                  <tr th:each="user : ${Paidlist}" th:object="${PaidEntity}" class="align-middle">
                     <th>有給休暇</th>
-                    <td></td>
+                    <td th:text="*{paidholidy}"></td>
                   </tr>
-                  <tr>
+                  <tr th:each="user : ${Paidlist}" th:object="${PaidEntity}" class="align-middle">
                     <th>誕生日休暇</th>
-                    <td></td>
+                    <td th:text="*{birthdayholidy}"></td>
                   </tr>
-                  <tr>
+                  <tr th:each="user : ${Paidlist}" th:object="${PaidEntity}" class="align-middle">
                     <th>記念日休暇</th>
-                    <td></td>
+                    <td th:text="*{annversaryholidy}"></td>
                   </tr>
-                  <tr>
+                  <tr th:each="user : ${Paidlist}" th:object="${PaidEntity}" class="align-middle">
                     <th>特別休暇</th>
-                    <td></td>
+                    <td th:text="*{specialholidy}"></td>
                   </tr>
               </tbody>
      
