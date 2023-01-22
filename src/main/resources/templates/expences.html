@@ -8,40 +8,55 @@
 <body>
 	<h1>経費申請</h1>
 	<br />
-	<form method="post" th:action="@{/confirm}" th:object="${demoForm}">
+	<form method="post" th:action="@{/confirm}" th:object="${expences}">
 		<div class="main1">
 			<div class="userId">
-				ユーザID<br /><input type="text" th:value="*{name}" th:field="*{name}"  class="inputuserId">
+				ユーザID<br />
+				<input type="text" th:value="*{userId}" th:field="*{userId}"
+					class="inputuserId">
 			</div>
-		<br />
-		<div class="applicationDate">
- 				申請日<br /><input type="date" th:value="*{birthYear}"th:field="*{birthYear}" class="inputapplicationDate">
+			<br />
+			<div class="applicationDate">
+				申請日<br />
+				<input type="date" th:value="*{applicationDate}"
+					th:field="*{applicationDate}" class="inputapplicationDate">
 			</div>
 		</div>
-	    <br />
-	   <div class="main2">
+		<br />
+		<div class="main2">
 			<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
-					<select name="pref">
+				<!-- 					<select name="pref">
 						<option value="Shomohin">消耗品</option>
 						<option value="Shuzenhi">修繕費</option>
 						<option value="Zappi">雑費</option>
-					</select>
+					</select> -->
+				<select>
+					<option value="00"></option>
+					<option th:each="prefectures : ${prefecturesList}"
+						th:value="${prefectures.code}" th:text="${prefectures.name}"
+						th:selected="${prefectures.code == selectedValue}"></option>
+				</select>
 			</div>
-		<br />
-		 <div class="amountMoney">
-				金額<br /><input type="text" th:value="*{name}" th:field="*{name}" class="inputamountMoney">
-		</div>
-		</div>
-	    <div class="main3">
-			 <div class="remarks">
-				備考<br /><input type="text" th:value="*{name}" th:field="*{name}" class="inputremarks">
+			<br />
+			<div class="amountMoney">
+				金額<br />
+				<input type="text" th:value="*{amountMoney}"
+					th:field="*{amountMoney}" class="inputamountMoney">
 			</div>
-			 <div class="back">
+		</div>
+		<div class="main3">
+			<div class="remarks">
+				備考<br />
+				<input type="text" th:value="*{remarks}" th:field="*{remarks}"
+					class="inputremarks">
+			</div>
+			<div class="back">
 				<input type="submit" name="back" value="戻る" class="back">
 			</div>
-			 <div class="application">
-				<input type="submit" name="application" value="申請" class="application">
+			<div class="application">
+				<input type="submit" name="application" value="申請"
+					class="application">
 			</div>
 		</div>
 	</form>
