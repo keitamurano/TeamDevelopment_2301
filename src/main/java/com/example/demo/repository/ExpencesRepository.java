@@ -12,6 +12,5 @@ import schoo.entity.Event;
  */
 @Repository
 public interface ExpencesRepository extends JpaRepository<ExpencesEntity, integer> {
-
 	public List<ExpencesEntity> findAll();
 }
