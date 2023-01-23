@@ -25,7 +25,7 @@
         <tr th:each="expences : ${expenceslist}" th:object="${expences}" class="align-middle">
         	  <td th:text="*{userId}"></td>
         	  <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
-<!--           プルダウンのタイムリーフ調査中 -->
+<!--          プルダウンのタイムリーフ調査中 -->
          	  <td th:text="*{amountMoney}"></td>
          	  <td th:text="*{remarks}"></td>
         	  <td><input type="submit" name="back" value="戻る" class="back"></td>
