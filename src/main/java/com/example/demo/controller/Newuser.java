@@ -10,8 +10,8 @@ public class Newuser {
     @RequestMapping("user")
     public String user(ModelMap modelMap, HttpServletRequest httpServletRequest) {
         String username = httpServletRequest.getRemoteUser();
-        User user = userRepository.getOne(username);
-        modelMap.addAttribute("user", user);
+//        User user = userRepository.getOne(username);
+//        modelMap.addAttribute("user", user);
         return "user";
     }
 
