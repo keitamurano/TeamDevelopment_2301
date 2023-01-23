@@ -20,42 +20,42 @@ public class MypageController {
 		 
 	  @PostMapping(path="/mypage", params = "editbutton")
 	  public String postEdit() {
-		  return "/edit";
+		  return "edit";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "attendance-button")
 	  public String postAttendance() {
-		  return "/attendance";
+		  return "attendance";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "leavingwork-button")
 	  public String postLeavingwork() {
-		  return "/leavingwork";
+		  return "leavingwork";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "create-button")
 	  public String postCreate() {
-		  return "/create";
+		  return "create";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "create2-button")
 	  public String postCreate2() {
-		  return "/create2";
+		  return "create2";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "expences-button")
 	  public String postExpences() {
-		  return "/expences";
+		  return "expences";
 	  }
 	  
 	  @PostMapping(path="/mypage", params = "expanceslist-button")
 	  public String postExpanceslist() {
-		  return "/expenceslist";
+		  return "expenceslist";
 	  }
 	  
 	  @GetMapping(path="/mypage", params = "paidlist-button")
 	  public String postPaidlist() {
-		  return "/paidlist";
+		  return "Paid";
 	  }
 	
 }
