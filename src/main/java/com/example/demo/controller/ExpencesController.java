@@ -20,6 +20,12 @@ public class ExpencesController {
 		return "/expences";
 	}
 
+//    @RequestMapping("/confirm2")
+//    public String output(@ModelAttribute ExpencesForm expencesForm, Model model) {
+//        model.addAttribute("demoForm", expencesForm);
+//        return "expenceslist";
+//    }
+
 
 
 	@GetMapping("/top2")
@@ -47,7 +53,7 @@ public class ExpencesController {
 	}
 
 	//	経費申請画面で「申請」ボタンを押すと経費一覧画面に遷移
-	@GetMapping("/regist")
+	@GetMapping("/confirm")
 	public String regist(@ModelAttribute ExpencesForm expencesForm, Model model) {
 		//Modelへの追加
 		model.addAttribute("expenceslist.", expencesForm);
