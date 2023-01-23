@@ -8,8 +8,7 @@
 <body>
 	<h1>経費申請</h1>
 	<br />
-<!-- 	<form method="post" th:action="@{/confirm}" th:object="${expences}"> -->
-<form method="post" action="@{/confirm}" th:object="${expences}">
+	<form method="post" th:action="@{/confirm}" th:object="${expences}">
 		<div class="main1">
 			<div class="userId">
 				ユーザID<br /> <input type="text" th:value="*{userId}"
@@ -43,17 +42,21 @@
 			</div>
 		</div>
 		<div class="main3">
-			<div class="remarks">
+				<div class="remarks">
 				備考<br /> <input type="text" th:value="*{remarks}"
 					th:field="*{remarks}" class="inputremarks">
-			</div>
-			<div class="back">
-				<input type="submit" name="back" value="戻る" class="back">
-			</div>
-			<div class="application">
-				<input type="submit" name="application" value="申請" class="application">
-			</div>
+				</div>
 		</div>
 	</form>
+			<div class="back">
+			    <a th:href="@{/Mypage}">
+<!-- 				<input type="submit" name="back" value="戻る" class="back"></a> -->
+				<input type="submit" value="戻る" class="back"></a>
+			</div>
+			<div class="application">
+			   <a th:href="@{/expenceslist}">
+<!-- 				<input type="submit" name="application" value="申請" class="application"> -->
+					<input type="submit"  value="申請" class="application"></a>
+			</div>
 </body>
 </html>
