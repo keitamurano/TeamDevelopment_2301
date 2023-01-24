@@ -28,12 +28,14 @@
 <!--          プルダウンのタイムリーフ調査中 -->
          	  <td th:text="*{amountMoney}"></td>
          	  <td th:text="*{remarks}"></td>
-        	  <td><input type="submit" name="back" value="戻る" class="back"></td>
+<!--         	  <td><input type="submit" name="back" value="戻る" class="back"></td> -->
         </tr>
       </tbody>
     </table>
   </div>
-  <input type="submit" name="back" value="戻る" class="back">
+<!--   <input type="submit" name="back" value="戻る" class="back"> -->
  </form>
+			    <a th:href="@{/Mypage}">
+   				 <input type="submit" value="戻る" class="back"></a>
 </body>
 </html>
