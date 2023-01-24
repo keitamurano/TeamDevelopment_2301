@@ -42,6 +42,7 @@ public class ExpencesService {
   	    // エンティティを画面データに詰め替える
   	    for(ExpencesEntity expences : expencesList) {
   	    	ExpencesForm data = new ExpencesForm();
+
   	      data.setUserId(expences.getUserId());
   	      data.setApplicationDate(expences.getApplicationDate());
   	      data.setExpencesItem(expences.getExpencesItem());
