@@ -21,7 +21,7 @@ public class PaidController {
 	    return "Paid";
 	  }
 	  
-	  @PostMapping("/back") 
+	  @PostMapping("/Mypage") 
 	  public String back() {
 		  return "Mypage";
 	  }
