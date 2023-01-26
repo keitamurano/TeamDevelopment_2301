@@ -26,12 +26,12 @@
         	  <td th:text="*{userId}"></td>
         	  <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
 <!--          プルダウンのタイムリーフ調査中 -->
-<!-- 			<select>
+			<select>
 					<option value="00"></option>
 					<option th:each="prefectures : ${prefecturesList}"
 						th:value="${prefectures.code}" th:text="${prefectures.name}"
 						th:selected="${prefectures.code == selectedValue}"></option>
-			</select> -->
+			</select>
          	  <td th:text="*{amountMoney}"></td>
          	  <td th:text="*{remarks}"></td>
       </tr>
