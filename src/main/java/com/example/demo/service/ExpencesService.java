@@ -21,12 +21,22 @@ public class ExpencesService {
   @Autowired
   private ExpencesRepository expencesRepository;
 
-//   * 経費一覧情報 全検索
-//   * @return 検索結果
 
-//  		public List<ExpencesEntity> findAll(){
-//  		    return expencesRepository.findAll();
-//  		}
+//  経費申請登録
+//@return 検索結果
+  public static ExpencesForm create() {
+
+  	  ExpencesForm expencesForm = new ExpencesForm();
+  	  expencesForm.getUserId();
+  	  expencesForm.getApplicationDate();
+  	  expencesForm.getExpencesItem();
+  	  expencesForm.getAmountMoney();
+  	  expencesForm.getRemarks();
+
+      return expencesForm;
+  }
+
+
 
   	  /**
   	   * 経費申請情報 全検索
