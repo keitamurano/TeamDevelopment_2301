@@ -14,27 +14,27 @@ h1 {
 	text-align: center;
 }
 
-.main1 {
+/* .main1 {
 	list-style-type: none;
 	padding: 0;
 	display: flex;
 	justify-content: center;
-}
+} */
 
-.main2 {
+/* .main2 {
 	list-style-type: none;
 	padding: 10px;
 	display: flex;
 	justify-content: center;
-}
+} */
 
-.main3 {
+/* .main3 {
 	list-style-type: none;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 	padding-left: 10px;
-}
+} */
 
 .userId {
 	text-align: center;
@@ -44,16 +44,19 @@ h1 {
 
  .inputuserId {
 	height: 30px;
+	width:200px;
 }
 
 .applicationDate {
 	text-align: center;
 	margin: 30px;
 	height: 30px;
+
 }
 
  .inputapplicationDate {
 	height: 30px;
+	width:200px;
 }
 
 .expences-item-pulldown {
@@ -73,6 +76,7 @@ select {
 
  .inputamountMoney {
 	height: 30px;
+	width:200px;
 }
 
 .remarks {
@@ -82,13 +86,14 @@ select {
 
  .inputremarks {
 	height: 30px;
+	width:200px;
 }
 
 .back {
 	text-align: center;
 	position: relative;
-	top: 25px;
-	left: 10px;
+/* 	top: 25px; */
+	left: 200px;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
@@ -98,13 +103,14 @@ select {
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
+	left: 420px;
 }
 
 .application {
 	text-align: center;
 	position: relative;
-	top: 25px;
-	left: 40px;
+ 	top: 25px;
+ 	left: 480px;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
