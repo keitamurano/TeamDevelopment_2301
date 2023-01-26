@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
-<head> <!-- th:replace="common/head :: head_fragment(title = '経費一覧', scripts = ~{::script}, links = ~{::link})" --> </head>
+<head th:replace="common/head :: head_fragment(title = '経費一覧', scripts = ~{::script}, links = ~{::link})"> </head>
 <title>経費一覧</title>
 <link rel="stylesheet" href="css/expenceslist.css">
 <body>
- <form method="post" th:action="@{/confirm2}" th:object="${expencesListParam}">
+<h1>経費一覧</h1>
+<!--  <form method="post" th:action="@{/confirm2}" th:object="${expencesListParam}"> -->
   <div class="container">
-    <h1>経費一覧</h1>
     <div class="float-end">
     </div>
     <table class="table table-striped">
@@ -22,30 +22,23 @@
         </tr>
       </thead>
      <tbody>
-       <tr th:each="expences, st : *{userDataList}" class="align-middle">
-<!--         <tr th:each="expences : ${expenceslist}" th:object="${expences}" class="align-middle"> -->
-<!--          <tr th:each="expences : ${expenceslist}"  class="align-middle"> -->
+       <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle">
         	  <td th:text="*{userId}"></td>
         	  <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
 <!--          プルダウンのタイムリーフ調査中 -->
-<!--      	   <select>
-           	 <option value="00"></option>
-           	 <option
-                th:each="prefectures : ${prefecturesList}"
-                th:value="${prefectures.code}"
-                th:text="${prefectures.name}"
-                th:selected="${prefectures.code == selectedValue}">
-          	  </option>
-       		</select> -->
+<!-- 			<select>
+					<option value="00"></option>
+					<option th:each="prefectures : ${prefecturesList}"
+						th:value="${prefectures.code}" th:text="${prefectures.name}"
+						th:selected="${prefectures.code == selectedValue}"></option>
+			</select> -->
          	  <td th:text="*{amountMoney}"></td>
          	  <td th:text="*{remarks}"></td>
-<!--         	  <td><input type="submit" name="back" value="戻る" class="back"></td> -->
       </tr>
       </tbody>
     </table>
   </div>
-<!--   <input type="submit" name="back" value="戻る" class="back"> -->
- </form>
+<!--  </form> -->
 			    <a th:href="@{/Mypage}">
    				 <input type="submit" value="戻る" class="back"></a>
 </body>
