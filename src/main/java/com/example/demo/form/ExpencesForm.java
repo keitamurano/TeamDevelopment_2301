@@ -18,6 +18,7 @@ public class ExpencesForm {
        @Max(20)
        private String expencesItem;
 
+
        @NotNull
        @Max(10)
 		private Integer amountMoney;

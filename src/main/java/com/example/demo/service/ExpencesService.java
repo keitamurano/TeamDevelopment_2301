@@ -10,8 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.ExpencesListParam;
 import com.example.demo.entity.ExpencesEntity;
+import com.example.demo.entity.Prefectures;
 import com.example.demo.form.ExpencesForm;
 import com.example.demo.repository.ExpencesRepository;
+import com.example.demo.repository.PrefecturesRepository;
 /**
  * ユーザー情報 Service
  */
@@ -20,6 +22,13 @@ public class ExpencesService {
 
   @Autowired
   private ExpencesRepository expencesRepository;
+
+  @Autowired
+  private PrefecturesRepository prefecturesRepository;
+
+  public List<Prefectures> getPrefecturesAll() {
+	  return prefecturesRepository.findAll();
+  }
 
 
 //  経費申請登録
@@ -35,6 +44,12 @@ public class ExpencesService {
 
       return expencesForm;
   }
+
+//  経費申請テーブルで値を保持する
+  public ExpencesEntity save(ExpencesEntity expencesEntity) {
+	  return expencesRepository.save(expencesEntity);
+  }
+
 
 
 
