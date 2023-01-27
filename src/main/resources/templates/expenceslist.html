@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
-<head th:replace="common/head :: head_fragment(title = '経費一覧', scripts = ~{::script}, links = ~{::link})"> </head>
+<head > </head>
 <title>経費一覧</title>
 <link rel="stylesheet" href="css/expenceslist.css">
 <body>
@@ -22,9 +22,10 @@
         </tr>
       </thead>
      <tbody>
-       <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle">
-        	  <td th:text="*{userId}"></td>
-        	  <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
+<!--        <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle"> -->
+             <tr th:each="expenceslist :${expences}" >
+        	  <td th:text=${expenceslist.userId}></td>
+        	  <td th:text="${#dates.format(expenceslist.applicationDate, 'yyyy/MM/dd')}"></td>
 <!--          プルダウンのタイムリーフ調査中 -->
 			<select>
 					<option value="00"></option>
@@ -32,8 +33,8 @@
 						th:value="${prefectures.code}" th:text="${prefectures.name}"
 						th:selected="${prefectures.code == selectedValue}"></option>
 			</select>
-         	  <td th:text="*{amountMoney}"></td>
-         	  <td th:text="*{remarks}"></td>
+         	  <td th:text=${expenceslist.amountMoney}></td>
+         	  <td th:text=${expenceslist.remarks}></td>
       </tr>
       </tbody>
     </table>
