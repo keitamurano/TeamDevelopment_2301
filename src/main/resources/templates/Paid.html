@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head>
+<html>
 <head>
 <meta charset="UTF-8">
 <title>有休一覧</title>
@@ -45,10 +43,9 @@
 
              <p class="remain">残 （日）</p>
              
-  <form> <a th:href="@{/Mypage}"><!-- method="post"> -->
-             <input class="return-button" name="return-button" value="戻る" type="button"></a>
+  <form th:action="@{/paid/list}" method="post">
+             <button class="return-button" type="button">戻る</button>
 	</form>
-	
         </div>
 
     </div>

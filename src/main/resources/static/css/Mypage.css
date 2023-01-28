@@ -1,22 +1,17 @@
 @charset "UTF-8";
-body {
-	
-	
+.body {
     min-height: 100%;
-    
-    background-image: url("white0023.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-    
+    height: 100%;
+    font-weight: 300;
 }
 
 .wrapper {
-	width:100%;
+    width: 1024px;
+    height: 750px;
     margin: 0px auto;    
-
+    background-image: url("white0023.png");
+    background-color: cadetblue;
+    background-size: cover;
 }
 .a {
     width: 100%;

@@ -13,57 +13,48 @@ public class MypageController {
 
 	
 	 @GetMapping(value ="/mypage")
-	  public String mypage(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  public String mypage(Model model) {
+
 	    return "Mypage";
-	  }
-	 
+	  } 
 		 
-	  @PostMapping("/edit")
-	  public String postEdit(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "editbutton")
+	  public String postEdit() {
 		  return "edit";
 	  }
 	  
-	  @PostMapping("/attendance"/**path="/mypage", params = "attendance-button"**/)
-	  public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "attendance-button")
+	  public String postAttendance() {
 		  return "attendance";
 	  }
 	  
-	  @PostMapping("/leavingwork"/**path="/mypage", params = "leavingwork-button"**/)
-	  public String postLeavingwork(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "leavingwork-button")
+	  public String postLeavingwork() {
 		  return "leavingwork";
 	  }
 	  
-	  @GetMapping("/create" /** path="/mypage", params = "create-button"**/)
-	  public String postCreate(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "create-button")
+	  public String postCreate() {
 		  return "create";
 	  }
 	  
-	  @GetMapping("/create2" /**path="/mypage", params = "create2-button"**/)
-	  public String postCreate2(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "create2-button")
+	  public String postCreate2() {
 		  return "create2";
 	  }
 	  
-	  @PostMapping("/top" /**path="/mypage", params = "expences-button"**/)
-	  public String postExpences(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "expences-button")
+	  public String postExpences() {
 		  return "expences";
 	  }
 	  
-	  @PostMapping("/top2" /**path="/mypage", params = "expanceslist-button"**/)
-	  public String postExpanceslist(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @PostMapping(path="/mypage", params = "expanceslist-button")
+	  public String postExpanceslist() {
 		  return "expenceslist";
 	  }
 	  
-	  @PostMapping("/paid/list" /**path="/mypage", params = "paidlist-button"**/)
-	  public String postPaidlist(/**@RequestParam String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
+	  @GetMapping(path="/mypage", params = "paidlist-button")
+	  public String postPaidlist() {
 		  return "Paid";
 	  }
 	

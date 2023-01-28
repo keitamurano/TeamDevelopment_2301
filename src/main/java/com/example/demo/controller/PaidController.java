@@ -32,7 +32,7 @@ public class PaidController {
 	    return "Paid";
 	  }
 	  
-	  @PostMapping("/Mypage") 
+	  @PostMapping("/back") 
 	  public String back() {
 		  return "Mypage";
 	  }
