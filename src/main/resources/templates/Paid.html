@@ -21,23 +21,23 @@
 
         <div class="main">
 
-            <table class="paid-table">
+            <table class="paid-table" th:each="paidEntity : ${paidList}" th:object="${paidForm}">
                 <tbody>
                   <tr>
                     <th>有給休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${paidholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>誕生日休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${birthdayholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>記念日休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${anniversarydayholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>特別休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${Specialholiday}">0</span></td>
                   </tr>
               </tbody>
      
