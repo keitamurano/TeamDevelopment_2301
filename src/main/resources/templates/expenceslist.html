@@ -11,7 +11,7 @@
     <div class="float-end">
     </div>
     <table class="table table-striped">
-      <thead>
+<!--       <thead> -->
         <tr>
          	 <th>ユーザーID</th>
         	  <th>申請日</th>
@@ -20,12 +20,12 @@
         	  <th>備考</th>
        	      <th></th>
         </tr>
-      </thead>
-     <tbody>
+<!--       </thead> -->
+ <!--     <tbody> -->
 <!--        <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle"> -->
-             <tr th:each="expenceslist :${expences}" >
-        	  <td th:text=${expenceslist.userId}></td>
-        	   <td th:text="${#dates.format(expenceslist.applicationDate, 'yyyy/MM/dd')}"></td>
+          <tr th:each="expences :${expences}" >
+        	  <td th:text=${expences.userId}></td>
+        	   <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
 <!--          プルダウンのタイムリーフ調査中 -->
 <!--   			<select>
 					<option value="00"></option>
@@ -39,10 +39,10 @@
 						th:value="${prefectures.code}" th:text="${prefectures.name}"
 						th:selected="${prefectures.code == selectedValue}"></option>
 			</select>
-        	  <td th:text=${expenceslist.amountMoney}></td>
-         	  <td th:text=${expenceslist.remarks}></td>
+        	  <td th:text=${expences.amountMoney}></td>
+         	  <td th:text=${expences.remarks}></td>
       </tr>
-      </tbody>
+    <!--   </tbody> -->
     </table>
   </div>
 <!--  </form> -->
