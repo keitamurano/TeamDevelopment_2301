@@ -53,6 +53,11 @@ public class ExpencesService {
 
 
 
+
+
+
+
+
   	  /**
   	   * 経費申請情報 全検索
   	   * @return 検索結果

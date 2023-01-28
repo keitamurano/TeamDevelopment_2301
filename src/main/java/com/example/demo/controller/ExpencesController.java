@@ -56,7 +56,7 @@ public class ExpencesController {
 //経費申請画面でのフォーム入力を経費一覧画面に送信する
 		  @PostMapping("/expences")
 		  public String Submit(@Validated  ExpencesForm expencesForm, BindingResult error,Model model) {
-			  model.addAttribute("expences", ExpencesService.create());
+		  	  model.addAttribute("expences", ExpencesService.create());
 		      return "expenceslist";
 		  }
 
