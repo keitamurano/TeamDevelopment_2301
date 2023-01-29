@@ -1,6 +1,5 @@
 package com.example.demo.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -15,8 +14,8 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="expences")
-//public class ExpencesEntity{
-public class ExpencesEntity implements Serializable {
+public class ExpencesEntity{
+//public class ExpencesEntity implements Serializable {
 
     // 予約データの主キーはユーザーID
     @Id
