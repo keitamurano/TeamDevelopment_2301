@@ -15,14 +15,18 @@
     <div class="header"></div>
 
     <div align="right">
-    <button type="button" onclick="history.back()">戻る</button>
+     <form><a th:href="@{/edit}"> <!-- method="post" -->
+              	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="戻る">
+               </a></form>
     </div>
     
+    
+    
         <h1>ユーザー新規登録</h1>
-
-        <form action="#" method="post">
+                
             
             <table>
+            
                 <tr>
                     <th>Name</th>
                     <td><input name="name" type="text"></td>
@@ -42,12 +46,15 @@
                 
                 <tr>
                     <td colspan="2">
-                        <div align="right">
-                        <input type="button" value="登録します"></div>
+                  <div align="right">
+                  <a th:href="@{/Mypage}">
+                  <input type="submit" name="back" value="登録します" class="back"></a>
+                  </div>
+       
                     </td>
                 </tr>
             </table>
-        </form>
+        
 
 </body>
 </html>

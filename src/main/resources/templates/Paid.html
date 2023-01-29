@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>有休一覧</title>
@@ -19,23 +20,23 @@
 
         <div class="main">
 
-            <table class="paid-table">
+            <table class="paid-table" th:each="paidEntity : ${paidList}" th:object="${paidForm}">
                 <tbody>
                   <tr>
                     <th>有給休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${paidholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>誕生日休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${birthdayholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>記念日休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${anniversarydayholiday}">0</span></td>
                   </tr>
                   <tr>
                     <th>特別休暇</th>
-                    <td></td>
+                    <td><span class="n" th:text="${Specialholiday}">0</span></td>
                   </tr>
               </tbody>
      
@@ -43,8 +44,8 @@
 
              <p class="remain">残 （日）</p>
              
-  <form th:action="@{/paid/list}" method="post">
-             <button class="return-button" type="button">戻る</button>
+  <form><a th:href="@{/Mypage}"><!-- method="post"> -->
+             <input class="return-button" name="return-button" value="戻る" type="button"></a>
 	</form>
         </div>
 

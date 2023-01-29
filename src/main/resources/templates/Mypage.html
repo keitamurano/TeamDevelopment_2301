@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -15,12 +16,12 @@
 
             <div class="userdate">
             
-            <form th:action="@{/edit}" method="post">
-                <button name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" >☺︎</button>
-               
+      		<form><a th:href="@{/edit}"> <!-- method="post" -->
+              	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺︎">
+               </a>
                     <p class="username">name<span class="n" th:text="${name}">name</span></p>
-                    <p class="userid">id<span class="id" th:text="${user_id}">id</span></p>
-                </form>
+                    <p class="userid">id<span class="id" th:text="${userID}">id</span></p>
+          </form>
                 
             </div>
 
@@ -30,42 +31,42 @@
         <div class="contents clearfix">
                 <div class="left">
 
-            <form th:action="@{/mypage}" method="post">
-                <button class="attendance-button" type="button" >出勤報告</button>
+            <form> <a th:href="@{/attendance}"><!--  method="post" -->
+                <input class="attendance-button" name="attendance-button" value="出勤報告" type="button"></a>
                 </form>
                 
-            <form th:action="@{/mypage}" method="post">
-                <button class="leavingwork-button" type="button">退勤報告</button>
+            <form> <a th:href="@{/leavingwork}" ><!-- method="post"> -->
+             	<input class="leavingwork-button" name="leavingwork-button" type="button" value="退勤報告"></a>
                 </form>
                 
-            <form th:action="@{/mypage}" method="post">
-                <button class="create-button" type="button">勤怠修正</button>
+            <form> <a th:href="@{/create}"> <!-- method="post"> -->
+                <input class="create-button" name="create-button" value="勤怠修正" type="button"></a>
                 </form>
                 
-            <form th:action="@{/mypage}" method="post">
-                <button class="expences-button" type="button">経費申請</button>
+            <form> <a th:href="@{/expences}"> <!-- method="post"> -->
+                <input class="expences-button" name="expences-button" value="経費申請" type="button" ></a>
 			</form>
                 </div>
 
                 <div class="right">
 			
-            <form th:action="@{/mypage}" method="post">
-                <button class="create2-button" type="button">勤怠一覧</button>
+            <form> <a th:href="@{/create2}"><!-- method="post"> -->
+                <input class="create2-button" name="create2-button" value="勤怠一覧" type="button"></a>
                 </form>
                 
-            <form th:action="@{/mypage}" method="post">
-                <button class="expenceslist-button" type="button">経費一覧</button>
+            <form> <a th:href="@{/expenceslist}"> <!-- method="post"> -->
+                <input class="expenceslist-button" name="expenceslist-button" value="経費一覧" type="button"></a>
                 </form>
                 
-            <form th:action="@{/mypage}" method="post">
-                <button class="paid-button" type="button">有休一覧</button>
+            <form> <a th:href="@{/paid/list}"> <!-- method="post"> -->
+                <input class="paid-button" name="paid-button" value="有給一覧" type="button"></a>
 			</form>
+			
                 </div>
-                
-                
-
 
          </div>
     </div>
     
 </body>
+
+
