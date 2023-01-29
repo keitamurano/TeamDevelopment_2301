@@ -14,7 +14,7 @@ public class ExpencesForm {
        @NotNull
 		private Date applicationDate;
 
-//       @NotNull
+       @NotNull
        @Max(20)
        private String expencesItem;
 
