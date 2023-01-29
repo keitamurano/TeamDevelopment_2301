@@ -19,7 +19,7 @@ import com.example.demo.repository.PrefecturesRepository;
  * ユーザー情報 Service
  */
 @Service
-@Transactional(rollbackFor = Exception.class)
+@Transactional
 public class ExpencesService {
 
   @Autowired
@@ -43,11 +43,11 @@ public class ExpencesService {
    * 経費申請新規登録
    * @param user ユーザー情報
    */
-  public void create(ExpencesListParam expencesListParam) {
-	  expencesRepository.save(CreateExpences(expencesListParam));
-  }
+  public void insert(ExpencesForm expencesForm) {
+//	  expencesRepository.save(CreateExpences(expencesListParam));
+//  }
 
-//  public void create(ExpencesForm expencesForm) {
+//  public void create(ExpencesListParam expencesListParam) {
 //	  expencesRepository.save(CreateExpences(expencesForm));
 //  }
   /**
@@ -55,28 +55,32 @@ public class ExpencesService {
    * @param userRequest ユーザー情報リクエストデータ
    * @return ユーザーTBLエンティティ
    */
-  private ExpencesEntity CreateExpences(ExpencesListParam expencesListParam) {
+//  private ExpencesEntity CreateExpences(ExpencesListParam expencesListParam) {
 
       ExpencesEntity expencesEntity = new ExpencesEntity();
 
-      expencesEntity.setUserId(expencesListParam.getUserId());
-      expencesEntity.setApplicationDate(expencesListParam.getApplicationDate());
-      expencesEntity.setExpencesItem(expencesListParam.getExpencesItem());
-      expencesEntity.setAmountMoney(expencesListParam.getAmountMoney());
-      expencesEntity.setRemarks(expencesListParam.getRemarks());
-      return expencesEntity;
+      expencesEntity.setUserId(expencesForm.getUserId());
+      expencesEntity.setApplicationDate(expencesForm.getApplicationDate());
+      expencesEntity.setExpencesItem(expencesForm.getExpencesItem());
+      expencesEntity.setAmountMoney(expencesForm.getAmountMoney());
+      expencesEntity.setRemarks(expencesForm.getRemarks());
+      // データベースに登録する
+      expencesRepository.save(expencesEntity);
+//      return expencesEntity;
   }
 
 //  private ExpencesEntity CreateExpences(ExpencesForm ExpencesForm) {
 //
 //      ExpencesEntity expencesEntity = new ExpencesEntity();
 //
-//      expencesEntity.setUserId(ExpencesForm.getUserId());
-//      expencesEntity.setApplicationDate(ExpencesForm.getApplicationDate());
-//      expencesEntity.setExpencesItem(ExpencesForm.getExpencesItem());
-//      expencesEntity.setAmountMoney(ExpencesForm.getAmountMoney());
-//      expencesEntity.setRemarks(ExpencesForm.getRemarks());
-//      return expencesEntity;
+//      expencesEntity.setUserId(expencesListParam.getUserId());
+//      expencesEntity.setApplicationDate(expencesListParam.getApplicationDate());
+//      expencesEntity.setExpencesItem(expencesListParam.getExpencesItem());
+//      expencesEntity.setAmountMoney(expencesListParam.getAmountMoney());
+//      expencesEntity.setRemarks(expencesListParam.getRemarks());
+////      return expencesEntity;
+//      // データベースに登録する
+//      expencesRepository.save(expencesEntity);
 //  }
 
 
@@ -141,25 +145,25 @@ public class ExpencesService {
 
 
 
-
-
-//  経費申請テーブルで値を保持する
-  public ExpencesEntity saveing(ExpencesEntity expencesEntity) {
-	  return expencesRepository.save(expencesEntity);
-  }
-
-  public List<ExpencesEntity> getExpencesEntity() {
-      return expencesRepository.findAll();
-  }
-
-
-  public Prefectures saveing2(Prefectures prefectures) {
-	  return prefecturesRepository.save(prefectures);
-  }
-
-  public List<Prefectures> getPrefectures() {
-      return prefecturesRepository.findAll();
-  }
+//
+//
+////  経費申請テーブルで値を保持する
+//  public ExpencesEntity saveing(ExpencesEntity expencesEntity) {
+//	  return expencesRepository.save(expencesEntity);
+//  }
+//
+//  public List<ExpencesEntity> getExpencesEntity() {
+//      return expencesRepository.findAll();
+//  }
+//
+//
+//  public Prefectures saveing2(Prefectures prefectures) {
+//	  return prefecturesRepository.save(prefectures);
+//  }
+//
+//  public List<Prefectures> getPrefectures() {
+//      return prefecturesRepository.findAll();
+//  }
 
 
 
