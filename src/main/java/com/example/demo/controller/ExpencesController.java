@@ -5,14 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.dto.ExpencesListParam;
-import com.example.demo.entity.Prefectures;
-import com.example.demo.form.ExpencesForm;
+import com.example.demo.entity.ExpencesEntity;
 import com.example.demo.service.ExpencesService;
 
 @Controller
@@ -26,50 +25,49 @@ public class ExpencesController {
 	  @Autowired
 	  private ExpencesService expencesService;
 
-//	    @GetMapping(value = "/test")
-//	    public String display(Model model) {
-//	    	List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
-//	        model.addAttribute("prefecturesList", prefecturesList);
-//	        // プルダウンの初期値を設定する場合は指定
-//	        //model.addAttribute("selectedValue", "01");
-//	        return "expences";
-//	    }
+//OK------------------------------------------------------------------------------------------------------------
+//経費申請画面で空のフォームを用意する(ここでプルダウンの値が渡されている)
+//	  経費申請画面を表示
+	  @RequestMapping(value = "/expences", method = RequestMethod.GET)
+	  public String top(Model model) {
+//			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
+//			List<ExpencesEntity> expencesEntity = expencesService.getExpencesAll();
+		  model.addAttribute("expencesListParam",new ExpencesListParam());
+//			model.addAttribute("expencesList", expencesEntity);
+//			model.addAttribute("prefecturesList", prefecturesList);
+		  return "/expences";
+	  }
 
 
 
-//	@GetMapping("/expences")
-//	public String top(Model model) {
-//		model.addAttribute("expences",new ExpencesForm());
-//		return "/expences";
-//	}
-
-//経費申請画面で空のフォームを用意する
-		@GetMapping("/expences")
-		public String top(Model model) {
-			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
-			model.addAttribute("expences",new ExpencesForm());
-			model.addAttribute("prefecturesList", prefecturesList);
-			return "/expences";
-		}
+//OK------------------------------------------------------------------------------------------------------------
+//		   * 経費一覧画面を表示
+//		   * @param model Model
+//		   * @return 経費一覧画面
+	    @RequestMapping(value = "/expenceslist", method = RequestMethod.POST)
+	  public String displayList(Model model) {
+		  List<ExpencesEntity> expenceslist = expencesService.getExpencesAll();
+//		    List<Prefectures> prefectures = expencesService.getPrefecturesAll();
+		  model.addAttribute("expenceslist", expenceslist);
+//		    model.addAttribute("prefecturesList", prefectures);
+		  return "/expenceslist";
+	  }
 
 
-//経費申請画面でのフォーム入力を経費一覧画面に送信する
-		  @PostMapping("/expences")
-		  public String Submit(@Validated  ExpencesForm expencesForm, BindingResult error,Model model) {
-		  	  model.addAttribute("expences", ExpencesService.create());
-		      return "expenceslist";
-		  }
-
-
-//	   ユーザー情報一覧画面を表示
-//	    @param model Model
-//	    @return ユーザー情報一覧画面
-		  @GetMapping("expenceslist")
-		  public String displayList(Model model) {
-			  ExpencesListParam expencesListParam = expencesService.searchAll();
-			  model.addAttribute("expences", expencesListParam);
-			  return "expenceslist";
-		  }
+		    /**
+		     * ユーザー新規登録
+		     * @param userRequest リクエストデータ
+		     * @param model Model
+		     * @return ユーザー情報一覧画面
+		     */
+		    @RequestMapping(value = "/create", method = RequestMethod.POST)
+		    public String create( @ModelAttribute ExpencesListParam expencesListParam, Model model) {
+//		    public String create(@ModelAttribute ExpencesForm expencesForm) {
+		        // ユーザー情報の登録
+		        expencesService.create(expencesListParam);
+//		        expencesService.create(expencesForm);
+		        return "redirect:/expenceslist";
+		    }
 
 
 
