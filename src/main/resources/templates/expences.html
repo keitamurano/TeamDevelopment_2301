@@ -8,7 +8,8 @@
 <body>
 	<h1>経費申請</h1>
 	<br />
-	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}">
+<!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
+	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST">
 <!-- 		<div class="main1"> -->
 			<div class="userId">
 				ユーザID<br /> <input type="text"
@@ -47,8 +48,8 @@
 			</div>
 	</form>
 <!-- 		</div> -->
-<!--  	<form th:action="@{/expenceslist}" method="post"> -->
-<!--      </form> -->
+<!--  	<form th:action="@{/create}" method="post"> -->
+  <!--    </form> -->
 			<div class="back">
 			    <a th:href="@{/Mypage}">
 			    <input type="submit" value="戻る" class="back"></a>
