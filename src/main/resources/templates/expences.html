@@ -8,7 +8,7 @@
 <body>
 	<h1>経費申請</h1>
 	<br />
-	<form method="post" th:action="@{/expences}" th:object="${expences}">
+	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}">
 <!-- 		<div class="main1"> -->
 			<div class="userId">
 				ユーザID<br /> <input type="text"
@@ -20,15 +20,9 @@
 					th:field="*{applicationDate}" class="inputapplicationDate">
 			</div>
 		<br />
-			<div class="expences-item-pulldown">
+	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
-<!-- 				  <select>
-					<option value="00"></option>
-					<option th:each="prefectures : ${prefecturesList}"
-						th:value="${prefectures.code}" th:text="${prefectures.name}"
-						th:selected="${prefectures.code == selectedValue}"></option>
-				</select> -->
-        <select>
+ <!-- 			<select>
             <option value="00"></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
@@ -36,8 +30,9 @@
                 th:text="${prefectures.name}"
                 th:selected="${prefectures.code == selectedValue}">
             </option>
-        </select>
-			</div>
+        </select> -->
+
+	</div>
 			<br />
 			<div class="amountMoney">
 				金額<br /> <input type="text"
@@ -47,14 +42,16 @@
 				備考<br /> <input type="text"
 					th:field="*{remarks}" class="inputremarks">
 				</div>
-<!-- 		</div> -->
 			<div class="application">
 				<input type="submit"  value="申請" class="application">
 			</div>
 	</form>
+<!-- 		</div> -->
+<!--  	<form th:action="@{/expenceslist}" method="post"> -->
+<!--      </form> -->
 			<div class="back">
 			    <a th:href="@{/Mypage}">
-				<input type="submit" value="戻る" class="back"></a>
+			    <input type="submit" value="戻る" class="back"></a>
 			</div>
 </body>
 </html>

@@ -72,23 +72,21 @@ select {
 	width:200px;
 }
 .back {
-	text-align: center;
+    text-align : center ;
 	position: relative;
-/* 	top: 25px; */
-	left: 300px;
+/*  	top: 25px; */
+ 	left: 420px;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
 }
 
 
-
-
 .application {
-	text-align: center;
+    text-align : center ;
 	position: relative;
- 	top: 25px;
- 	left: 370px;
+  	top: 25px;
+  	left: 480px;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
