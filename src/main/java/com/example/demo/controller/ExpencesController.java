@@ -31,7 +31,7 @@ public class ExpencesController {
 //	    @RequestMapping(value = "/expenceslist", method = RequestMethod.GET)
 	  @GetMapping("/expenceslist")
 //	  @PostMapping("/expenceslist")
-	  public String displayList(Model model) {
+	  public String displayList( Model model) {
 		// serviceを使って、申請の一覧をDBから取得する
 		  List<ExpencesEntity> expenceslist = expencesService.getExpencesAll();
 //		    List<Prefectures> prefectures = expencesService.getPrefecturesAll();
@@ -47,7 +47,7 @@ public class ExpencesController {
 //	  @RequestMapping(value = "/expences", method = RequestMethod.GET)
 	  @GetMapping("/expences")
 //	  @PostMapping("/expences")
-	  public String top(Model model) {
+	  public String top( Model model) {
 //			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
 //			List<ExpencesEntity> expencesEntity = expencesService.getExpencesAll();
 		  model.addAttribute("expencesForm",new ExpencesForm());
@@ -70,7 +70,7 @@ public class ExpencesController {
 //		    @RequestMapping(value = "/expenceslist", method = RequestMethod.POST)
 	        @PostMapping("/expences")
 //	        @GetMapping("/expences")
-		    public String create( @ModelAttribute ExpencesForm expencesForm, Model model) {
+		    public String expencesInsert( @ModelAttribute ExpencesForm expencesForm, Model model) {
 		        // 経費申請の登録
 		        expencesService.insert(expencesForm);
 //		        expencesService.create(expencesForm);
