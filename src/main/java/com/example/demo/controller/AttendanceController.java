@@ -4,14 +4,16 @@ package com.example.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.ui.Model;
 //import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.ModelAttribute;
 //import org.springframework.web.bind.annotation.PostMapping;
 
+
 /*出勤報告コントローラー*/
 @Controller
+
 public class AttendanceController{
  
  
@@ -29,7 +31,7 @@ public class AttendanceController{
      }
 
 //登録ボタンを押下→マイページ画面に遷移する ??
-  @PostMapping("registertoMypage")
+  @RequestMapping("registertoMypage")
     public String toMypage(Model model) {
          return "attendance"; //attendance.htmlに画面遷移
      }
