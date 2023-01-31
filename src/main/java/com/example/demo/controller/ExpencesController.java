@@ -22,18 +22,20 @@ public class ExpencesController {
 	   * ユーザー情報 Service
 	   */
 	  @Autowired
-	  private ExpencesService expencesService;
+	   ExpencesService expencesService;
 
 //OK------------------------------------------------------------------------------------------------------------
 //		   * 経費一覧画面を表示
 //		   * @param model Model
 //		   * @return 経費一覧画面
-//	    @RequestMapping(value = "/expenceslist", method = RequestMethod.GET)
+//	  「http://localhost:8080/expenceslist」にアクセスがあったときのメソッド。
+//		  経費情報をデータベースから取得して、画面に表示する。
 	  @GetMapping("/expenceslist")
 //	  @PostMapping("/expenceslist")
-	  public String displayList( Model model) {
+//	  @RequestMapping("/expenceslist")
+	  public String expencesList( Model model) {
 		// serviceを使って、申請の一覧をDBから取得する
-		  List<ExpencesEntity> expenceslist = expencesService.getExpencesAll();
+		  List<ExpencesEntity> expenceslist = expencesService.findAll();
 //		    List<Prefectures> prefectures = expencesService.getPrefecturesAll();
 		// modelに経費の一覧を設定して、画面に渡す
 		  model.addAttribute("expenceslist", expenceslist);
@@ -58,9 +60,6 @@ public class ExpencesController {
 
 
 
-
-
-
 		    /**
 		     * ユーザー新規登録
 		     * @param userRequest リクエストデータ
@@ -69,11 +68,9 @@ public class ExpencesController {
 		     */
 //		    @RequestMapping(value = "/expenceslist", method = RequestMethod.POST)
 	        @PostMapping("/expences")
-//	        @GetMapping("/expences")
-		    public String expencesInsert( @ModelAttribute ExpencesForm expencesForm, Model model) {
+		    public String expencesInsert(@ModelAttribute ExpencesForm expencesForm,Model model) {
 		        // 経費申請の登録
 		        expencesService.insert(expencesForm);
-//		        expencesService.create(expencesForm);
 		     // 経費一覧画面にリダイレクト
 		        return "redirect:/expenceslist";
 		    }
