@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
@@ -24,7 +24,7 @@ public class LeavingworkController{
 	     }
 
 	//登録ボタンを押下→マイページ画面に遷移する ??
-	  @PostMapping("lregistertoMypage")
+	  @RequestMapping("lregistertoMypage")
 	    public String toMypage(Model model) {
 	         return "leaving"; //attendance.htmlに画面遷移
 	     }
