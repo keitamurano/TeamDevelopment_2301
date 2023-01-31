@@ -10,6 +10,7 @@
 	<br />
 <!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
 <!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
+   <div th:if="${validationError}" th:each="error:${validationError}"></div>
 	<form  th:action="@{/expences}" th:object="${expencesForm}" method="POST">
 <!-- 	th:action="@{/expenceslist}"は経費申請ボタンを押したときに controllerのexpenceslist＠mappingが起動される -->
 <!-- th:object="${expencesForm}" はfoamが追加される -->
