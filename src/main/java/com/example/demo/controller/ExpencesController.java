@@ -68,10 +68,20 @@ public class ExpencesController {
 		     */
 //		    @RequestMapping(value = "/expenceslist", method = RequestMethod.POST)
 	        @PostMapping("/expences")
-		    public String expencesInsert(@ModelAttribute ExpencesForm expencesForm,Model model) {
-		        // 経費申請の登録
+//		    public String expencesInsert(@Validated @ModelAttribute ExpencesForm expencesForm,BindingResult bindingResult,Model model) {
+	        public String expencesInsert(@ModelAttribute ExpencesForm expencesForm,Model model) {
+//	        	if (bindingResult.hasErrors()) {
+//	    			List<String> errorList = new ArrayList<String>();
+//	    			for (ObjectError error : bindingResult.getAllErrors()) {
+//	    				errorList.add(error.getDefaultMessage());
+//	    			}
+//	    			model.addAttribute("expencesForm",expencesForm);
+//	    			model.addAttribute("validationError", errorList);
+//	    			return "/expences";
+//	    		}
+//		        // 経費申請の登録
 		        expencesService.insert(expencesForm);
-		     // 経費一覧画面にリダイレクト
+//		     // 経費一覧画面にリダイレクト
 		        return "redirect:/expenceslist";
 		    }
 
