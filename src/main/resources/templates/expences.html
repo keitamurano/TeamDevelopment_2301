@@ -26,7 +26,7 @@
 		<br />
 	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
- <!-- 			<select>
+  	<!-- 	<select>
             <option value="00"></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
@@ -35,7 +35,7 @@
                 th:selected="${prefectures.code == selectedValue}">
             </option>
         </select> -->
-
+					<input type="text" th:field="*{expencesItem}" >
 	</div>
 			<br />
 			<div class="amountMoney">
