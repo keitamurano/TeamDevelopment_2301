@@ -38,6 +38,15 @@ public class AttendanceEntity{
 	@Column(name = "start_time")
     private Time starttime;
 	
+	@Column(name = "end_date")
+    private Time enddate;
+	
+	@Column(name = "end_time")
+    private Time endtime;
+	
+	@Column(name = "break_time")
+    private Time breaktime;
+	
 	@Column(name = "remarks")
     private String remarks;
 	

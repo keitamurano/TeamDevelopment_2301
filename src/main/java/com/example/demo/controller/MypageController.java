@@ -36,16 +36,16 @@ public class MypageController {
 		  return "leavingwork";
 	  }
 	  
-	  @GetMapping("/create" /** path="/mypage", params = "create-button"**/)
+	  @GetMapping("/kintaiichiran" /** path="/mypage", params = "create-button"**/)
 	  public String postCreate(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);
-		  return "create";
+		  return "kintaiichiran";
 	  }
 	  
-	  @GetMapping("/create2" /**path="/mypage", params = "create2-button"**/)
+	  @GetMapping("/kintaied" /**path="/mypage", params = "create2-button"**/)
 	  public String postCreate2(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);
-		  return "create2";
+		  return "kintaiEdit";
 	  }
 	  
 	  @PostMapping("/top" /**path="/mypage", params = "expences-button"**/)
