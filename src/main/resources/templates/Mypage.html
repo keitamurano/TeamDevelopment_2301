@@ -18,9 +18,13 @@
             
       		<form><a th:href="@{/edit}"> <!-- method="post" -->
               	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺︎">
-               </a>
-                    <p class="username">name<span class="n" th:text="${name}">name</span></p>
-                    <p class="userid">id<span class="id" th:text="${userID}">id</span></p>
+               </a><!-- 
+               <div class="namebox"> -->
+                    <p class="username">name:<span class="username" th:text="${user.name}"></span></p>
+                   <!--  </div> -->
+           <!--     <div class="idbox"> -->
+                    <p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>
+				<!-- 	</div> -->
           </form>
                 
             </div>
