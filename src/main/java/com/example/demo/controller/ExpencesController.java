@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.ExpencesEntity;
+import com.example.demo.entity.Prefectures;
 import com.example.demo.form.ExpencesForm;
 import com.example.demo.service.ExpencesService;
 
@@ -35,11 +36,11 @@ public class ExpencesController {
 //	  @RequestMapping("/expenceslist")
 	  public String expencesList( Model model) {
 		// serviceを使って、申請の一覧をDBから取得する
-		  List<ExpencesEntity> expenceslist = expencesService.findAll();
-//		    List<Prefectures> prefectures = expencesService.getPrefecturesAll();
+		    List<ExpencesEntity> expenceslist = expencesService.findAll();
+		    List<Prefectures> prefectures = expencesService.findAll2();
 		// modelに経費の一覧を設定して、画面に渡す
-		  model.addAttribute("expenceslist", expenceslist);
-//		    model.addAttribute("prefecturesList", prefectures);
+		    model.addAttribute("expenceslist", expenceslist);
+		    model.addAttribute("prefecturesList", prefectures);
 		  return "/expenceslist";
 	  }
 
@@ -50,11 +51,11 @@ public class ExpencesController {
 	  @GetMapping("/expences")
 //	  @PostMapping("/expences")
 	  public String top( Model model) {
-//			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
+			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
 //			List<ExpencesEntity> expencesEntity = expencesService.getExpencesAll();
 		  model.addAttribute("expencesForm",new ExpencesForm());
 //			model.addAttribute("expencesList", expencesEntity);
-//			model.addAttribute("prefecturesList", prefecturesList);
+			model.addAttribute("prefecturesList", prefecturesList);
 		  return "/expences";
 	  }
 
@@ -80,6 +81,8 @@ public class ExpencesController {
 //	    			return "/expences";
 //	    		}
 //		        // 経費申請の登録
+//	        	ExpencesForm expencesForm1 = new ExpencesForm();
+//	        	expencesForm1.setUserId(1);
 		        expencesService.insert(expencesForm);
 //		     // 経費一覧画面にリダイレクト
 		        return "redirect:/expenceslist";
