@@ -20,14 +20,15 @@
 					th:field="*{userId}" class="inputuserId">
 			</div>
 			<br />
-			<div class="applicationDate">
+			 <div class="applicationDate">
 				申請日<br /> <input type="date"
 					th:field="*{applicationDate}" class="inputapplicationDate">
 			</div>
 		<br />
 	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
-  	<!-- 	<select>
+   	<select th:name="expencesItem">
+<!--             <option value="00"></option> -->
             <option value="00"></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
@@ -35,8 +36,8 @@
                 th:text="${prefectures.name}"
                 th:selected="${prefectures.code == selectedValue}">
             </option>
-        </select> -->
-					<input type="text" th:field="*{expencesItem}" >
+        </select>
+					<!-- <input type="text" th:field="*{expencesItem}" > -->
 	</div>
 			<br />
 			<div class="amountMoney">

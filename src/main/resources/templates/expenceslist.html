@@ -26,15 +26,13 @@
           <tr th:each="expences : ${expenceslist}" th:object="${expencesEntity}">
           <td th:text="${expences.userId}"></td>
           <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
-<!--   	  <select>
-					<option value="00"></option>
-					<option th:each="prefectures : ${prefecturesList}"
-						th:value="${prefectures.code}" th:text="${prefectures.name}"
-						th:selected="${prefectures.code == selectedValue}"></option>
-			</select> -->
-  			<!-- <td th:each="prefectures : ${prefecturesList}" th:value="${prefectures.code}" th:text="${prefectures.name}"
-		      th:selected="${prefectures.code == selectedValue}"> -->
- 			  <td th:text="${expences.expencesItem}"></td>
+
+  			   <td th:each="prefectures : ${prefecturesList}"
+  			  		 th:if="${prefectures.code ==  expences.expencesItem}"
+							 th:text="${prefectures.name}">
+
+  			  </td>
+ 			  <!-- <td th:text="${expences.expencesItem}"></td> -->
         	  <td th:text="${expences.amountMoney}"></td>
          	  <td th:text="${expences.remarks}"></td>
      </tr>
