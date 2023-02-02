@@ -2,14 +2,13 @@
 
 package com.example.demo.form;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import javax.validation.constraints.NotNull;
 
-import lombok.Data;
 
-
-@Data
-
-public class attendanceForm{
+public class AttendanceForm{
 	
 	@NotNull
 	private Integer userId;
@@ -19,11 +18,11 @@ public class attendanceForm{
 	private  String status;
 
 	@NotNull
-	private  Data startdate;
+	private  Date startdate;
 
 
 	@NotNull
-	private  Data starttime;
+	private  Time starttime;
 
 	@NotNull
 	private  String remarks;

@@ -23,7 +23,7 @@ import lombok.Data;
 public class AttendanceEntity{
 
   
-    @Id //primary key(attendance_id)
+    @Id //primary key(user_id)
     @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
 	@Column(name = "user_id")
