@@ -20,28 +20,30 @@
 
         <div class="main">
 
-            <table class="paid-table" th:each="paidEntity : ${paidList}" th:object="${paidForm}">
+            <table class="paid-table" >
                 <tbody>
+                
                   <tr>
                     <th>有給休暇</th>
-                    <td><span class="n" th:text="${paidholiday}">0</span></td>
+                    <td><p th:text="${paidlist.paidholiday}"></p></td>
+                    
                   </tr>
                   <tr>
                     <th>誕生日休暇</th>
-                    <td><span class="n" th:text="${birthdayholiday}">0</span></td>
+                	<td><p th:text="${paidlist.birthdayholiday}"></p></td>
+               	
                   </tr>
                   <tr>
                     <th>記念日休暇</th>
-                    <td><span class="n" th:text="${anniversarydayholiday}">0</span></td>
+                	<td><p th:text="${paidlist.anniversaryholiday}"></p></td>
                   </tr>
                   <tr>
                     <th>特別休暇</th>
-                    <td><span class="n" th:text="${Specialholiday}">0</span></td>
+                	<td><p th:text="${paidlist.specialholiday}"></p></td>
                   </tr>
               </tbody>
      
              </table>
-
              <p class="remain">残 （日）</p>
              
   <form><a th:href="@{/Mypage}"><!-- method="post"> -->
@@ -51,3 +53,4 @@
 
     </div>
 </body>
+</html>

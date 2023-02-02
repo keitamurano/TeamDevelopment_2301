@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="create.css">
+<title>'勤怠一覧'</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div align="center">
+			<h1>勤怠一覧</h1>
+			<table colspan="2" border="1">
+				<tr class="back-color">
+					<td nowrap>ステータス</td>
+					<td nowrap>出勤日</td>
+					<td nowrap>出勤時間</td>
+					<td nowrap>退勤日</td>
+					<td nowrap>退勤時間</td>
+					<td nowrap>稼働時間</td>
+					<td nowrap>休憩時間</td>
+					<td nowrap>備考</td>
+					<td></td>
+				</tr>
+				<tr	>
+					<td th:text="*{status}"></td>
+					<td th:text="*{start_date}"></td>
+					<td th:text="*{start_time}"></td>
+					<td th:text="*{end_date}"></td>
+					<td th:text="*{end_time}"></td>
+					<td th:text="*{break_time}"></td>
+					<td th:text="*{remarks}"></td>
+					<td><a th:href="@{/kintaiedit/{user_id}(user_id=*{user_id})}">編集</a></td>	
+
+			</table>
+		</div>
+	</div>
+</body>
+</html>

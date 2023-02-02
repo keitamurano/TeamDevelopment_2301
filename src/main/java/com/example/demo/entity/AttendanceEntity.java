@@ -23,7 +23,7 @@ import lombok.Data;
 public class AttendanceEntity{
 
   
-    @Id //primary key(attendance_id)
+    @Id //primary key(user_id)
     @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
 	@Column(name = "user_id")
@@ -37,6 +37,15 @@ public class AttendanceEntity{
 
 	@Column(name = "start_time")
     private Time starttime;
+	
+	@Column(name = "end_date")
+    private Time enddate;
+	
+	@Column(name = "end_time")
+    private Time endtime;
+	
+	@Column(name = "break_time")
+    private Time breaktime;
 	
 	@Column(name = "remarks")
     private String remarks;
