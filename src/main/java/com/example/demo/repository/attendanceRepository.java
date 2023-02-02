@@ -13,8 +13,8 @@ import com.example.demo.entity.AttendanceEntity;
 
 
 @Repository
-public interface AttendanceRepository 
- extends JpaRepository<AttendanceRepository, Integer>{
+public interface attendanceRepository 
+ extends JpaRepository<attendanceRepository, Integer>{
 
 	void save(AttendanceEntity attendanceEntity);
 	

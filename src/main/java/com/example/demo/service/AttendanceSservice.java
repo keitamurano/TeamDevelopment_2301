@@ -9,18 +9,18 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.AttendanceEntity;
 import com.example.demo.form.AttendanceForm;
-import com.example.demo.repository.AttendanceRepository;
+import com.example.demo.repository.attendanceRepository;
 
 @Service 
 public class AttendanceSservice {
 
 	//出勤報告のRepository
 @Autowired
-private AttendanceRepository AttendanceRepository;
+private attendanceRepository AttendanceRepository;
 
 
 //DBから全件取得
-public List<com.example.demo.repository.AttendanceRepository> getAttendancAll() {
+public List<attendanceRepository> getAttendancAll() {
 	  return AttendanceRepository.findAll();
 }
 

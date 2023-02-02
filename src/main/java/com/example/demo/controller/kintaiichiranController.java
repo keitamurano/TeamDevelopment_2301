@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.entity.AttendanceEntity;
+import com.example.demo.repository.attendanceRepository;
 import com.example.demo.service.kintaiService;
 
 
@@ -26,7 +26,7 @@ public class kintaiichiranController {
 	 */
 	@GetMapping("mypage/kintaiichiran")
 	public String kintaiList(Model model) {
-		List<AttendanceEntity> kintailist = kintaiservice.searchAll();
+		List<attendanceRepository> kintailist = kintaiservice.searchAll();
 		model.addAttribute("kintailist", kintailist);
 		return "user/list";
 	}
