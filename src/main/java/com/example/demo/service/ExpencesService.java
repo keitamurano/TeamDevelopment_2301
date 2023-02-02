@@ -23,18 +23,18 @@ import com.example.demo.repository.PrefecturesRepository;
 public class ExpencesService {
 
   @Autowired
-  private ExpencesRepository expencesRepository;
+   ExpencesRepository expencesRepository;
 
   @Autowired
-  private PrefecturesRepository prefecturesRepository;
+   PrefecturesRepository prefecturesRepository;
 
 
 //  DBから全件取得
-  public List<Prefectures> getPrefecturesAll() {
-	  return prefecturesRepository.findAll();
-  }
+//  public List<Prefectures> findAll2() {
+//	  return prefecturesRepository.findAll();
+//  }
 
-  public List<ExpencesEntity> getExpencesAll() {
+  public List<ExpencesEntity> findAll() {
 	  return expencesRepository.findAll();
   }
 
@@ -66,7 +66,6 @@ public class ExpencesService {
       expencesEntity.setRemarks(expencesForm.getRemarks());
       // データベースに登録する
       expencesRepository.save(expencesEntity);
-//      return expencesEntity;
   }
 
 //  private ExpencesEntity CreateExpences(ExpencesForm ExpencesForm) {

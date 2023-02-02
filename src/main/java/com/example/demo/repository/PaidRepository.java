@@ -20,4 +20,8 @@ public class PaidRepository {
 
 
 @Repository
-public interface PaidRepository extends JpaRepository<PaidEntity, Long> {}
+
+public interface PaidRepository extends JpaRepository<PaidEntity, Integer> {
+	
+	
+}

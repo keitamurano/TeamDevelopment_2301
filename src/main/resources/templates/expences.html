@@ -10,6 +10,7 @@
 	<br />
 <!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
 <!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
+   <!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
 	<form  th:action="@{/expences}" th:object="${expencesForm}" method="POST">
 <!-- 	th:action="@{/expenceslist}"は経費申請ボタンを押したときに controllerのexpenceslist＠mappingが起動される -->
 <!-- th:object="${expencesForm}" はfoamが追加される -->
@@ -26,7 +27,7 @@
 		<br />
 	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
- <!-- 			<select>
+  	<!-- 	<select>
             <option value="00"></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
@@ -35,7 +36,7 @@
                 th:selected="${prefectures.code == selectedValue}">
             </option>
         </select> -->
-
+					<input type="text" th:field="*{expencesItem}" >
 	</div>
 			<br />
 			<div class="amountMoney">

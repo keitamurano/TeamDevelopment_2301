@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -14,12 +15,16 @@ import lombok.Data;
 
 @Data
 @Entity
+
 @Table( name="paid" )
 public class PaidEntity implements Serializable {
 	
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Integer userid;
+    
     @Column(name = "paid_holiday")
     private Integer paidholiday;
     
@@ -31,5 +36,7 @@ public class PaidEntity implements Serializable {
     
     @Column(name = "special_holiday")
     private Integer specialholiday;
+    
+
 
 }
