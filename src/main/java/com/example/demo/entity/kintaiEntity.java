@@ -5,8 +5,6 @@ import java.sql.Time;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,36 +12,34 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "attendance") // table名の指定（クラス名＝テーブル名）
+@Table(name = "attendance")
 public class kintaiEntity {
 
-	@Id // primary key(user_id)
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // (AUTO指定にすると自動で値を割振る）
-
 	@Column(name = "user_id")
-	private Integer userid;
+	private Integer user_id;
 
 	@Column(name = "status")
 	private String status;
 
 	@Column(name = "start_date")
-	private Date startdate;
+	private Date start_date;
 
 	@Column(name = "start_time")
-	private Time starttime;
+	private Time start_time;
 
 	@Column(name = "end_date")
-	private Date enddate;
+	private Date end_date;
 
 	@Column(name = "end_time")
-	private Time endtime;
+	private Time end_time;
 
 	@Column(name = "break_time")
-	private Time breaktime;
+	private Time break_time;
 
 	@Column(name = "remarks")
 	private String remarks;
 
+	@Id
 	@Column(name = "attendance_id")
-	private Integer attendanceid;
+	private Integer attendance_id;
 }

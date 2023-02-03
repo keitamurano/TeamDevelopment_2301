@@ -26,9 +26,9 @@
 				</tr>
 				<tr	th:each="kintailist : ${kintailist}">
 					<td th:text="${kintailist.status}"></td>
-					<td th:text="${kintailist.start_date}"></td>
+					<td th:text="${#dates.format(kintailist.start_date,'yyyy/MM/dd')}"></td>
 					<td th:text="${kintailist.start_time}"></td>
-					<td th:text="${kintailist.end_date}"></td>
+					<td th:text="${#dates.format(kintailist.end_date,'yyyy/MM/dd')}"></td>
 					<td th:text="${kintailist.end_time}"></td>
 					<td th:text="${kintailist.break_time}"></td>
 					<td th:text="${kintailist.remarks}"></td>
