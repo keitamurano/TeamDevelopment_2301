@@ -20,7 +20,7 @@ private attendanceRepository AttendanceRepository;
 
 
 //DBから全件取得
-public List<attendanceRepository> getAttendancAll() {
+public List<AttendanceEntity> getAttendancAll() {
 	  return AttendanceRepository.findAll();
 }
 
