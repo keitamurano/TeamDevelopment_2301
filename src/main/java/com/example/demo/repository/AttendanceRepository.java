@@ -1,5 +1,5 @@
 
- //データベースにアクセスをする
+//データベースにアクセスをする
 
 //出勤報告のRepositoryクラス
 
@@ -10,16 +10,14 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.AttendanceEntity;
 
-
-
 @Repository
-public interface attendanceRepository 
- extends JpaRepository<attendanceRepository, Integer>{
+public interface attendanceRepository extends JpaRepository<AttendanceEntity, Integer> {
 
-	void save(AttendanceEntity attendanceEntity);
-	
+//	void save(AttendanceEntity attendanceEntity);
+
 }
 
-/* JpaRepositiry…インターフェイスのこと
-インターフェイスに検索メソッドを定義しておくことで
-メソッドを呼び出すだけでスマートにデータ検索ができる。*/
+/*
+ * JpaRepositiry…インターフェイスのこと インターフェイスに検索メソッドを定義しておくことで
+ * メソッドを呼び出すだけでスマートにデータ検索ができる。
+ */

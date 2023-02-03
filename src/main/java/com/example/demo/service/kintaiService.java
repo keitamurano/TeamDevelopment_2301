@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.repository.attendanceRepository;
+import com.example.demo.entity.kintaiEntity;
+import com.example.demo.repository.kintaiRepository;
 
 
 
@@ -13,10 +14,10 @@ import com.example.demo.repository.attendanceRepository;
 public class kintaiService {
 
 	  @Autowired
-	  private attendanceRepository userRepository;
+	  private kintaiRepository KintaiRepository;
 
-	  public List<attendanceRepository> searchAll() {
-	    return userRepository.findAll();
+	  public List<kintaiEntity> searchAll() {
+	    return KintaiRepository.findAll();
 	  }
 	
 }
