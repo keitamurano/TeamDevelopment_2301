@@ -7,6 +7,7 @@ package com.example.demo.entity;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -49,8 +50,22 @@ public class AttendanceEntity{
 	
 	@Column(name = "remarks")
     private String remarks;
+
+	public static List<AttendanceEntity> findAll() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+
+
+		
+	}
+
+	public void save(AttendanceEntity attendanceEntity) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+	
 	
 	//@Column(name = "attendance_id")
    // private Integer attendanceid;
+	}
 }
 

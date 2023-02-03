@@ -13,13 +13,13 @@ import com.example.demo.entity.AttendanceEntity;
 
 
 @Repository
-public interface attendanceRepository 
- extends JpaRepository<attendanceRepository, Integer>{
-
-	void save(AttendanceEntity attendanceEntity);
+public interface AttendanceRepository 
+extends JpaRepository<AttendanceEntity, Integer>{
 	
 }
 
 /* JpaRepositiry…インターフェイスのこと
 インターフェイスに検索メソッドを定義しておくことで
 メソッドを呼び出すだけでスマートにデータ検索ができる。*/
+
+//
