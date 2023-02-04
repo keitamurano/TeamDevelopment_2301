@@ -1,30 +1,30 @@
-package com.example.demo.controller;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-
-
-@Controller
-//@RequestMapping("login1")
-public class LoginController {
-	
-	/**ログイン画面を表示*/
-	@GetMapping("/login1")
-	public String Login() {
-		
-	    String password = "123456";
-	    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-	    String hashedPassword = passwordEncoder.encode(password);
-	    System.out.println("hasyyuka");
-	    System.out.println(hashedPassword);
-
-
-		return  "/login1";
-	}
-	
-//	@GetMapping("/Mypage1")
+//package com.example.demo.controller;
+//
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.GetMapping;
+//
+//
+//@Controller
+////@RequestMapping("login1")
+//public class LoginController {
+//	
+//	/**ログイン画面を表示*/
+//	@GetMapping("/login1")
+//	public String Login() {
+//		
+//	    String password = "123456";
+//	    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//	    String hashedPassword = passwordEncoder.encode(password);
+//	    System.out.println("hasyyuka");
+//	    System.out.println(hashedPassword);
+//
+//
+//		return  "/login1";
+//	}
+//	
+//@GetMapping("/Mypage1")
 //	public String Mypage1() {
 //		return "/Mypage1";
 //	}
@@ -64,6 +64,6 @@ public class LoginController {
 //
 //		return "/attendance/attendance_index";
 //	}
-	
-
-}
+//	
+//
+//}
