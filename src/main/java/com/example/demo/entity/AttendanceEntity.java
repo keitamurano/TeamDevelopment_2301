@@ -39,7 +39,7 @@ public class AttendanceEntity{
     private Time starttime;
 	
 	@Column(name = "end_date")
-    private Time enddate;
+    private Date enddate;
 	
 	@Column(name = "end_time")
     private Time endtime;
@@ -50,7 +50,7 @@ public class AttendanceEntity{
 	@Column(name = "remarks")
     private String remarks;
 	
-	//@Column(name = "attendance_id")
-   // private Integer attendanceid;
+	@Column(name = "attendance_id")
+    private Integer attendanceid;
 }
 

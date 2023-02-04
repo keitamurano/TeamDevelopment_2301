@@ -24,16 +24,15 @@
 					<td nowrap>備考</td>
 					<td></td>
 				</tr>
-				<tr	>
-					<td th:text="*{status}"></td>
-					<td th:text="*{start_date}"></td>
-					<td th:text="*{start_time}"></td>
-					<td th:text="*{end_date}"></td>
-					<td th:text="*{end_time}"></td>
-					<td th:text="*{break_time}"></td>
-					<td th:text="*{remarks}"></td>
-					<td><a th:href="@{/kintaiedit/{user_id}(user_id=*{user_id})}">編集</a></td>	
-
+				<tr	th:each="kintailist : ${kintailist}">
+					<td th:text="${kintailist.status}"></td>
+					<td th:text="${#dates.format(kintailist.start_date,'yyyy/MM/dd')}"></td>
+					<td th:text="${kintailist.start_time}"></td>
+					<td th:text="${#dates.format(kintailist.end_date,'yyyy/MM/dd')}"></td>
+					<td th:text="${kintailist.end_time}"></td>
+					<td th:text="${kintailist.break_time}"></td>
+					<td th:text="${kintailist.remarks}"></td>
+					<td><a th:href="@{/kintaiedit/{user_id}(user_id=${kintailist.user_id})}">編集</a></td>	
 			</table>
 		</div>
 	</div>
