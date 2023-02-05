@@ -21,9 +21,9 @@
                 <div class="userID">
                     <text>ユーザーID</text><br>
                     <input type="text" name="myname"
-                    placeholder="例）空条承太郎">
+                    placeholder="例）〇〇〇〇">
                 </div>
-
+<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post">
                 <!--ステータスの処理(プルダウン)-->
                 <div class="status">
                     <label>ステータス</label><br>
@@ -60,7 +60,6 @@
                     </div>
 
                 <!--登録-->
-       <form th:action="@{/user/create1}"th:object="＄{REquest}"th:method="post">
                 <div class = "register">
                     <input type="button" value="登録"   onclick="location.href='URL'" /><br>
                  </div>
