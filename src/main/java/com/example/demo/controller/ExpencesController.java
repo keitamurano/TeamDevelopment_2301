@@ -91,10 +91,10 @@ public class ExpencesController {
 
 
 //	経費申請、経費一覧ともに「戻る」ボタンでマイページ画面に遷移
-	@GetMapping("/Mypage")
-	public String back() {
-		return "/Mypage";
-	}
+//	@GetMapping("/Mypage")
+//	public String back() {
+//		return "Mypage";
+//	}
+
 }
 
-//xxx
