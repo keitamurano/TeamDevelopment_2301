@@ -10,7 +10,12 @@
 	<h1>経費申請</h1>
 <!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
 <!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
-   <div th:if="${validationError}" th:each="error:${validationError}"></div>
+   <!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
+       <table class="error">
+        <tr th:if="${validationError}" th:each="error : ${validationError}">
+            <td style="color: red;" th:text="${error}"></td>
+        </tr>
+       </table>
 	<form  th:action="@{/expences}" th:object="${expencesForm}" method="POST">
 			<div class="userId">
 				ユーザID<br /> <input type="text"
@@ -24,8 +29,9 @@
 		<br />
 	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
-   	<select th:name="expencesItem">
-            <option value="00"></option>
+    	<select th:name="expencesItem">
+           <!-- <option value="00"></option> -->
+            <option></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
                 th:value="${prefectures.code}"
@@ -33,6 +39,10 @@
                 th:selected="${prefectures.code == selectedValue}">
             </option>
         </select>
+        		       <!-- <select name="expencesItem">
+
+		          <option th:each="prefectures : ${prefecturesList}"th:value="${prefectures.code}"th:text="${prefectures.name}"></option>
+		       </select> -->
 	</div>
 			<br />
 			<div class="amountMoney">
