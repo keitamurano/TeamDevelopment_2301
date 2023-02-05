@@ -114,13 +114,13 @@ public class ExpencesService {
 	////	  prefecturesRepository.save(prefectures);
 	//  }
 
-	public static Prefectures create2() {
-
-		Prefectures prefectures = new Prefectures();
-		prefectures.getCode();
-		prefectures.getName();
-		return prefectures;
-	}
+//	public static Prefectures create2() {
+//
+//		Prefectures prefectures = new Prefectures();
+//		prefectures.getCode();
+//		prefectures.getName();
+//		return prefectures;
+//	}
 
 	/**
 	 * ユーザー情報 Repository

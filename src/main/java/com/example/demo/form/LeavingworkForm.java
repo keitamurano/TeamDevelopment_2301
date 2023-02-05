@@ -2,11 +2,39 @@
 
 package com.example.demo.form;
 
+import java.sql.Date;
+import java.sql.Time;
+
+import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
-
 @Data
-public class LeavingworkForm {
+public class LeavingworkForm{
+	
+	@NotNull
+	private Integer userId;
 
+	@NotNull
+	private  String status;
+
+	@NotNull
+	private  Date startdate;
+
+	@NotNull
+	private  Time starttime;
+	
+	@NotNull
+	private  Date enddate;
+
+	@NotNull
+	private  Date endtime;
+	
+	@NotNull
+	private  Date breaktime;
+
+	@NotNull
+	private  String remarks;
+	
+	//attendance_ID integer(20) NOTNULL,
 }

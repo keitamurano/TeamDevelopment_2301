@@ -13,14 +13,14 @@ import com.example.demo.form.AttendanceForm;
 @Service 
 public class AttendanceService {
 
-	//出勤報告のRepositoryS
+ //出勤報告のRepositoryS
 @Autowired
 private AttendanceEntity attendanceRepository;
 
 
 //DBから全件取得
 public List<AttendanceEntity> getAttendancAll() {
-	  return AttendanceEntity.findAll();
+   return AttendanceEntity.findAll();
 }
 
 //エンティティ（データを格納する箱）を画面データに詰め替える
@@ -36,5 +36,3 @@ attendanceEntity.setRemarks(attendanceForm.getRemarks());
 attendanceRepository.save(attendanceEntity);
 }
 }
-
-

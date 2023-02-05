@@ -30,8 +30,4 @@ public class AttendanceForm{
 	private  String remarks;
 	
 	//attendance_ID integer(20) NOTNULL,
-	
-
-	
-
 }

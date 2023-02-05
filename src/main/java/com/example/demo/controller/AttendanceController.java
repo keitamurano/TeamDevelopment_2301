@@ -35,3 +35,5 @@ public class AttendanceController{
 
 //＠GetMappinrg…登録されているデータを取得する
 //＠PostMapping…新しいデータを登録する
+
+//登録するif文が無いがな（String createで作る）

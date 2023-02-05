@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>login1</title>
+<link rel="stylesheet" th:href="@{/css/login1.css}"></link>
+</head>
+
+<body>
+	<div id="form">
+		<p class="form-title">ログイン</p>
+		<p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null"
+			th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}"
+			class="error" style="color: red;">ログインIDまたはパスワードが間違っています。</p>
+		<form th:action="@{/login1}" method="post">
+			<label>ユーザーID</label>
+			<p class="id">
+				<input type="id" name="id">
+			</p>
+			<label>パスワード</label>
+			<p class="pass">
+				<input type="password" name="pass">
+			</p>
+			<p class="submit">
+				<input type="submit" value="サインイン">
+			</p>
+		</form>
+	</div>
+	<div class="form-footer">
+		<a th:href="@{'/shinki'}" class=" text-decoration-none">新規登録はこちら</a>
+	</div>
+</body>
+</html>

@@ -60,6 +60,7 @@
                     </div>
 
                 <!--登録-->
+       <form th:action="@{/user/create1}"th:object="＄{REquest}"th:method="post">
                 <div class = "register">
                     <input type="button" value="登録"   onclick="location.href='URL'" /><br>
                  </div>
@@ -69,6 +70,7 @@
                 <a th:href="@{/Mypage}">
                     <input type="button" value="戻る" onclick="location.href='URL'" /></a>
                 </div>
+      </form>
            </div>     
      </body>
 </html>
