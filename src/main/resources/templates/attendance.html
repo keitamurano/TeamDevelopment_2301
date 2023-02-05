@@ -21,9 +21,9 @@
                 <div class="userID">
                     <text>ユーザーID</text><br>
                     <input type="text" name="myname"
-                    placeholder="例）空条承太郎">
+                    placeholder="例）〇〇〇〇">
                 </div>
-
+<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post">
                 <!--ステータスの処理(プルダウン)-->
                 <div class="status">
                     <label>ステータス</label><br>
@@ -69,6 +69,7 @@
                 <a th:href="@{/Mypage}">
                     <input type="button" value="戻る" onclick="location.href='URL'" /></a>
                 </div>
+      </form>
            </div>     
      </body>
 </html>

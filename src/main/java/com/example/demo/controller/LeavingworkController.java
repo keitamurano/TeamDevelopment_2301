@@ -11,23 +11,26 @@ public class LeavingworkController{
 
 	 
 	//(マイページから出勤報告画面を表示）
-	  @GetMapping("/leavingwork")//出勤報告画面を表示する
+	  @GetMapping("/leavingwork")//退勤報告画面を表示する
 	     public String leavingwork (Model model){
 	         return "leavingwork"; //leaving.htmlに画面遷移
 	     }
 	  
   
 	//戻るボタン押下→マイページ画面に遷移する
-	  @GetMapping("/lbacktoMypage")
+	  @GetMapping("/leavingbacktoMypage")
 	     public String back (Model model) {
 	         return "lMypage"; //Mypage.htmlに画面遷移
 	     }
 
 	//登録ボタンを押下→マイページ画面に遷移する ??
-	  @PostMapping("lregistertoMypage")
+	  @PostMapping("leavingregistertoMypage")
 	    public String toMypage(Model model) {
-	         return "leaving"; //attendance.htmlに画面遷移
+	         return "leavingwork"; //attendance.htmlに画面遷移
 	     }
 
 }
 
+
+//＠GetMappinrg…登録されているデータを取得する
+//＠PostMapping…新しいデータを登録する

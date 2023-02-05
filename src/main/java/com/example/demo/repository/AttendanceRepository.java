@@ -11,9 +11,9 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.entity.AttendanceEntity;
 
 @Repository
-public interface attendanceRepository extends JpaRepository<AttendanceEntity, Integer> {
+public interface AttendanceRepository extends JpaRepository<AttendanceEntity, Integer> {
 
-//	void save(AttendanceEntity attendanceEntity);
+//	void save(AttendanceEntity attendanceEntity);←不要
 
 }
 

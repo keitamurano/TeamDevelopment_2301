@@ -7,7 +7,9 @@ import java.sql.Time;
 
 import javax.validation.constraints.NotNull;
 
+import lombok.Data;
 
+@Data
 public class AttendanceForm{
 	
 	@NotNull
@@ -28,8 +30,4 @@ public class AttendanceForm{
 	private  String remarks;
 	
 	//attendance_ID integer(20) NOTNULL,
-	
-
-	
-
 }
