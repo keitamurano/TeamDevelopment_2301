@@ -6,15 +6,12 @@
 <link rel="stylesheet" href="css/expences.css">
 </head>
 <body>
+    <div class="header">
 	<h1>経費申請</h1>
-	<br />
 <!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
 <!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
-   <!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
+   <div th:if="${validationError}" th:each="error:${validationError}"></div>
 	<form  th:action="@{/expences}" th:object="${expencesForm}" method="POST">
-<!-- 	th:action="@{/expenceslist}"は経費申請ボタンを押したときに controllerのexpenceslist＠mappingが起動される -->
-<!-- th:object="${expencesForm}" はfoamが追加される -->
-<!-- 		<div class="main1"> -->
 			<div class="userId">
 				ユーザID<br /> <input type="text"
 					th:field="*{userId}" class="inputuserId">
@@ -28,7 +25,6 @@
 	<div class="expences-item-pulldown">
 				<div class="expences-item">経費項目</div>
    	<select th:name="expencesItem">
-<!--             <option value="00"></option> -->
             <option value="00"></option>
             <option
                 th:each="prefectures : ${prefecturesList}"
@@ -37,7 +33,6 @@
                 th:selected="${prefectures.code == selectedValue}">
             </option>
         </select>
-					<!-- <input type="text" th:field="*{expencesItem}" > -->
 	</div>
 			<br />
 			<div class="amountMoney">
@@ -52,12 +47,10 @@
 				<input type="submit"  value="申請" class="application">
 			</div>
 	</form>
-<!-- 		</div> -->
-<!--  	<form th:action="@{/create}" method="post"> -->
-  <!--    </form> -->
 			<div class="back">
-			    <a th:href="@{/Mypage}">
-			    <input type="submit" value="戻る" class="back"></a>
-			</div>
+ 			    <a th:href="@{/mypage}">
+			   <input type="submit" value="戻る" class="back"></a>
+			 </div>
+			 </div>
 </body>
 </html>
