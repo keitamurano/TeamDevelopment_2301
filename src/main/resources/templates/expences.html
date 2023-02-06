@@ -6,61 +6,66 @@
 <link rel="stylesheet" href="css/expences.css">
 </head>
 <body>
-    <div class="header">
-	<h1>経費申請</h1>
-<!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
-<!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
-   <!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
-       <table class="error">
+	<div class="header">
+		<h1>経費申請</h1>
+		<!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
+		<!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
+		<!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
+		<!-- <table class="error">
         <tr th:if="${validationError}" th:each="error : ${validationError}">
             <td style="color: red;" th:text="${error}"></td>
         </tr>
-       </table>
-	<form  th:action="@{/expences}" th:object="${expencesForm}" method="POST">
+       </table> -->
+
+		<form th:action="@{/expences}" th:object="${expencesForm}"
+			method="POST">
 			<div class="userId">
-				ユーザID<br /> <input type="text"
-					th:field="*{userId}" class="inputuserId">
+				<div class="error" th:errors="*{userId}"></div>
+				ユーザID<br /> <input type="text" th:field="*{userId}"
+					class="inputuserId">
 			</div>
 			<br />
-			 <div class="applicationDate">
-				申請日<br /> <input type="date"
-					th:field="*{applicationDate}" class="inputapplicationDate">
+			<div class="applicationDate">
+				<div class="error" th:errors="*{applicationDate}"></div>
+				申請日<br /> <input type="date" th:field="*{applicationDate}"
+					class="inputapplicationDate">
 			</div>
-		<br />
-	<div class="expences-item-pulldown">
+			<br />
+			<div class="expences-item-pulldown">
+			<div class="error" th:errors="*{expencesItem}"></div>
 				<div class="expences-item">経費項目</div>
-    	<select th:name="expencesItem">
-           <!-- <option value="00"></option> -->
-            <option></option>
-            <option
-                th:each="prefectures : ${prefecturesList}"
-                th:value="${prefectures.code}"
-                th:text="${prefectures.name}"
-                th:selected="${prefectures.code == selectedValue}">
-            </option>
-        </select>
-        		       <!-- <select name="expencesItem">
+				<select th:name="expencesItem" >
+					 <!-- <option value="">未選択</option> -->
+					 <option></option>
+					<option th:each="prefectures : ${prefecturesList}"
+						th:value="${prefectures.code}" th:text="${prefectures.name}"
+						th:selected="${prefectures.code == selectedValue}"></option>
+				</select>
+
+				<!-- <select name="expencesItem">
 
 		          <option th:each="prefectures : ${prefecturesList}"th:value="${prefectures.code}"th:text="${prefectures.name}"></option>
 		       </select> -->
-	</div>
-			<br />
+			</div>
+			<!-- <br /> -->
 			<div class="amountMoney">
-				金額<br /> <input type="text"
-					th:field="*{amountMoney}" class="inputamountMoney">
+				<div class="error" th:errors="*{amountMoney}"></div>
+				金額<br /> <input type="text" th:field="*{amountMoney}"
+					class="inputamountMoney">
 			</div>
-				<div class="remarks">
-				備考<br /> <input type="text"
-					th:field="*{remarks}" class="inputremarks">
-				</div>
+			<div class="remarks">
+				<div class="error" th:errors="*{remarks}"></div>
+				備考<br /> <input type="text" th:field="*{remarks}"
+					class="inputremarks">
+			</div>
 			<div class="application">
-				<input type="submit"  value="申請" class="application">
+				<input type="submit" value="申請" class="application">
 			</div>
-	</form>
-			<div class="back">
- 			    <a th:href="@{/mypage}">
-			   <input type="submit" value="戻る" class="back"></a>
-			 </div>
-			 </div>
+		</form>
+		<div class="back">
+			<a th:href="@{/mypage}"> <input type="submit" value="戻る"
+				class="back"></a>
+		</div>
+	</div>
 </body>
 </html>
