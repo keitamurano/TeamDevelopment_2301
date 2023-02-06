@@ -32,9 +32,13 @@ public class ExpencesService {
 		return prefecturesRepository.findAll();
 	}
 
-	public List<ExpencesEntity> findAll() {
-		return expencesRepository.findAll();
-	}
+//	public List<ExpencesEntity> findAll() {
+//		return expencesRepository.findAll();
+//	}
+
+	public List<ExpencesEntity> findAllByOrderByUserIdAsc() {
+	return expencesRepository.findAllByOrderByUserIdAsc();
+}
 
 
 	/**
