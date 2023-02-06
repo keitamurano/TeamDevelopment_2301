@@ -40,7 +40,8 @@ public class ExpencesController {
 //	  @RequestMapping("/expenceslist")
 	  public String expencesList( Model model) {
 		// serviceを使って、申請の一覧をDBから取得する
-		    List<ExpencesEntity> expenceslist = expencesService.findAll();
+//		    List<ExpencesEntity> expenceslist = expencesService.findAll();
+		  List<ExpencesEntity> expenceslist = expencesService.findAllByOrderByUserIdAsc();
 		    List<Prefectures> prefectures = expencesService.findAll2();
 		// modelに経費の一覧を設定して、画面に渡す
 		    model.addAttribute("expenceslist", expenceslist);
@@ -81,7 +82,10 @@ public class ExpencesController {
 	    				errorList.add(error.getDefaultMessage());
 	    			}
 	    			model.addAttribute("expencesForm",expencesForm);
+//	    			プルダウンの値を保持する
 	    			model.addAttribute("validationError", errorList);
+	    			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
+	    			model.addAttribute("prefecturesList", prefecturesList);
 	    			return "/expences";
 	    		}
 //		        // 経費申請の登録
