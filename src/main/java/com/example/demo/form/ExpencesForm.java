@@ -1,6 +1,7 @@
 package com.example.demo.form;
 import java.util.Date;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -18,7 +19,8 @@ public class ExpencesForm {
 		@DateTimeFormat(pattern="yyyy-MM-dd")
 		private Date applicationDate;
 
-       @NotNull(message = "経費項目を選択してください")
+//       @NotNull(message = "経費項目を選択してください")
+     @NotEmpty(message = "経費項目を入力してください")
        private String expencesItem;
 
 
