@@ -36,10 +36,11 @@
 				<div class="expences-item">経費項目</div>
 				<select th:name="expencesItem" >
 					 <!-- <option value="">未選択</option> -->
-					 <option></option>
+					<option></option>
+					 <!-- <option value="00"> </option> -->
 					<option th:each="prefectures : ${prefecturesList}"
 						th:value="${prefectures.code}" th:text="${prefectures.name}"
-						th:selected="${prefectures.code == selectedValue}"></option>
+						th:selected="${prefectures.code == selectedValue}" ></option>
 				</select>
 
 				<!-- <select name="expencesItem">
