@@ -82,8 +82,8 @@ public class ExpencesController {
 	    				errorList.add(error.getDefaultMessage());
 	    			}
 	    			model.addAttribute("expencesForm",expencesForm);
-//	    			プルダウンの値を保持する
 	    			model.addAttribute("validationError", errorList);
+//	    			プルダウンの値を保持する
 	    			List<Prefectures> prefecturesList = expencesService.getPrefecturesAll();
 	    			model.addAttribute("prefecturesList", prefecturesList);
 	    			return "/expences";
