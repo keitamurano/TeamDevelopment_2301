@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"> <!--Thymeleafを使用するために記述-->
+    
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,13 +18,13 @@
                     <h1>出勤報告</h1>
                 </div>
 
+<!--<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post"> --> 
                 <!--user_Idの処理（ラベル）-->
                 <div class="userID">
-                    <text>ユーザーID</text><br>
-                    <input type="text" name="myname"
-                    placeholder="例）〇〇〇〇">
+                    ユーザーID<br>
+                    <input type="text" 
+                    th:field="*{userId}" class="userID">
                 </div>
-<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post">
                 <!--ステータスの処理(プルダウン)-->
                 <div class="status">
                     <label>ステータス</label><br>
@@ -43,33 +44,34 @@
                 <div class="start_date">
                     <label>出勤日</label><br>
                         <!--★-->
-                        <input type="date" id="start_date">
+                        <input type="date" 
+                        	th:field="*{start_date}" class="start_date">
                 </div>
 
                 <!--出勤時間(プルダウン？テキスト？)-->
                 <div class="start_time">
                     <label>出勤時間</label><br>
                     <!--★-->
-                    <input type="time" name="start_time" id="出勤時間">
+                    <input type="time" th:field="*{start_time}" class="start_time">
                 </div>
 
                 <div class = "remarks">
                     <!--<label for="message">お問い合わせ内容</label><br>-->
                     <label>備考</label><br>
-                    <input type="text" id="text" >
+                    <input type="text"  th:field="*{remarks}" class="remarks">
                     </div>
 
                 <!--登録-->
                 <div class = "register">
-                    <input type="button" value="登録"   onclick="location.href='URL'" /><br>
+                    <input type="button" th:field="*{register}" class="register"><br>
                  </div>
-
+<!-- </form> -->
                 <!--戻る-->
                 <div class ="return">
                 <a th:href="@{/Mypage}">
-                    <input type="button" value="戻る" onclick="location.href='URL'" /></a>
+                    <input type="button" value="戻る" class="return"></a>
                 </div>
-      </form>
+
            </div>     
      </body>
 </html>
