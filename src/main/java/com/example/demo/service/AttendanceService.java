@@ -25,7 +25,7 @@ public List<AttendanceEntity> getAttendancAll() {
 
 //エンティティ（データを格納する箱）を画面データに詰め替える
 
-public void create(AttendanceForm attendanceForm) {
+public void insert(AttendanceForm attendanceForm) {
 AttendanceEntity attendanceEntity = new AttendanceEntity();
 attendanceEntity.setUserid(attendanceForm.getUserId());
 attendanceEntity.setStatus(attendanceForm.getStatus());
