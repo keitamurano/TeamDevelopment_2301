@@ -18,12 +18,10 @@
                     <h1>出勤報告</h1>
                 </div>
 
-<!--<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post"> --> 
-                <!--user_Idの処理（ラベル）-->
+<form th:action="@{/Attendance/create}"th:object="＄{AttendanceForm}"th:method="post"> 
                 <div class="userID">
                     ユーザーID<br>
-                    <input type="text" 
-                    th:field="*{userId}" class="userID">
+                    <input type="text" th:field="*{userId}" >
                     <!-- ↑表記の仕方が×、全部修正する必要あり
                     「タイムリーフ DB保持　画面遷移-->
                 </div>
@@ -65,9 +63,9 @@
 
                 <!--登録-->
                 <div class = "register">
-                    <input type="button" th:field="*{register}" class="register"><br>
+                    <input type="button" value="登録" th:field="*{register}" class="register"><br>
                  </div>
-<!-- </form> -->
+</form>
                 <!--戻る-->
                 <div class ="return">
                 <a th:href="@{/Mypage}">
