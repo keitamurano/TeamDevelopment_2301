@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<head > </head>
+<title>経費一覧</title>
+<link rel="stylesheet" href="css/leaveingwork .css">
+<body>
+<h1>退勤報告一覧</h1>
+  <div class="container">
+    <div class="float-end">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+         	 <th>ユーザーID</th>
+        	  <th>ステータス</th>
+           	 <th>退勤日</th>
+        	  <th>退勤時間</th>
+        	  <th>休憩時間</th>
+        	  <th>備考</th>
+       	      <th></th>
+        </tr>
+      </thead>
+    <tbody>
+<!--        <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle"> -->
+          <tr th:each="leaveingwork : ${leaveingworklist}" th:object="${LeavingworkEntity}">
+          <td th:text="${leaveingwork.userId}"></td>
+          <td th:text="${leaveingwork.status}"></td>
+          <td th:text="${#dates.format(leaveingwork.enddate, 'yyyy/MM/dd')}"></td>
+
+ 			  <!-- <td th:text="${expences.expencesItem}"></td> -->
+        	  <td th:text="${expences.amountMoney}"></td>
+         	  <td th:text="${expences.remarks}"></td>
+     </tr>
+      </tbody>
+    </table>
+  </div>
+<!--  </form> -->
+   			  <div class="back">
+			    <a th:href="@{/mypage}">
+   				 <input type="submit" value="マイページへ" class="back"></a>
+			  </div>
+			  <div class="backApplication">
+			     <a th:href="@{/expences}">
+			   <input type="submit" value="申請に戻る" class="backApplication"></a>
+			   </div>
+</body>
+</html>
