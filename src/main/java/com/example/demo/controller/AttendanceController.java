@@ -45,8 +45,8 @@ private AttendanceService  attendanceService = new AttendanceService();
 	    }*/
 	    // ユーザー情報の登録
 	  
+	  model.addAttribute("attendanceForm", attendanceForm);
 	    attendanceService.insert(attendanceForm);
-	    model.addAttribute("attendanceForm", attendanceForm);
 	    return "Mypage";
 	  }
  }
