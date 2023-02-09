@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
@@ -20,10 +21,10 @@
               	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺︎">
                </a><!-- 
                <div class="namebox"> -->
-                    <p class="username">name:<span class="username" th:text="${user.name}"></span></p>
+                    <p class="username">name:<span th:remove="tag" sec:authentication="name"></span></p>
                    <!--  </div> -->
            <!--     <div class="idbox"> -->
-                    <p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>
+                    <!--<p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>-->
 				<!-- 	</div> -->
           </form>
                 
