@@ -1,7 +1,7 @@
 /*DBのレコードを表現するJavaクラス
- * データの入れ物となるクラス（DBの行に対応するように作成する）*/
+ データの入れ物となるクラス（DBの行に対応するように作成する）*/
 //データベースから取得したデータを格納するクラス
-/*
+
 package com.example.demo.entity;
 
 import java.sql.Date;
@@ -67,4 +67,3 @@ public class LeavingworkEntity{
    // private Integer attendanceid;
  }
 }
-*/

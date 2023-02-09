@@ -1,4 +1,4 @@
-/*
+
 package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,5 +16,4 @@ public interface LeavingworkRepository  extends JpaRepository<LeavingworkEntity,
 
 /*
  * JpaRepositiry…インターフェイスのこと インターフェイスに検索メソッドを定義しておくことで
- * メソッドを呼び出すだけでスマートにデータ検索ができる。
- */
+ * メソッドを呼び出すだけでスマートにデータ検索ができる。*/
