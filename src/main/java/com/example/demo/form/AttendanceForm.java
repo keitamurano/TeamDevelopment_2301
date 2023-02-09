@@ -2,10 +2,13 @@
 
 package com.example.demo.form;
 
-import java.sql.Date;
-import java.sql.Time;
+
+
+import java.util.Date;
 
 import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
 
@@ -20,11 +23,13 @@ public class AttendanceForm{
 	private  String status;
 
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private  Date startdate;
 
 
-	@NotNull
-	private  Time starttime;
+	@DateTimeFormat(pattern="HH:mm:ss")
+	//@NotNull
+	private  String starttime;
 
 	@NotNull
 	private  String remarks;

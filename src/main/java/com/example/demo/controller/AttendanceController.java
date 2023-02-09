@@ -25,11 +25,11 @@ private AttendanceService  attendanceService = new AttendanceService();
      }
   //19-26行目　HTMLの表示
   
-//戻るボタン押下→マイページ画面に遷移する
-  @GetMapping("/backtoMypage")
-     public String back (Model model) {
-         return "Mypage"; //Mypage.htmlに画面遷移
-     }
+////戻るボタン押下→マイページ画面に遷移する
+// @GetMapping("/Mypage")
+//     public String back (Model model) {
+//         return "Mypage"; //Mypage.htmlに画面遷移
+ //    }
 
   //登録ボタンを押したときに登録をする
   @PostMapping(value = "/Attendance")
@@ -44,9 +44,10 @@ private AttendanceService  attendanceService = new AttendanceService();
 	      return "user/add";S
 	    }*/
 	    // ユーザー情報の登録
-	  model.addAttribute("attendanceForm", attendanceForm);
+	  
 	    attendanceService.insert(attendanceForm);
-	    return "redirect:/user/list";
+	    model.addAttribute("attendanceForm", attendanceForm);
+	    return "Mypage";
 	  }
  }
 

@@ -2,6 +2,7 @@
 
 package com.example.demo.service;
 
+import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -30,7 +31,7 @@ AttendanceEntity attendanceEntity = new AttendanceEntity();
 attendanceEntity.setUserid(attendanceForm.getUserId());
 attendanceEntity.setStatus(attendanceForm.getStatus());
 attendanceEntity.setStartdate(attendanceForm.getStartdate());
-attendanceEntity.setStarttime(attendanceForm.getStarttime());
+attendanceEntity.setStarttime(LocalTime.parse(attendanceForm.getStarttime().substring(0, 5) + ":00"));
 attendanceEntity.setRemarks(attendanceForm.getRemarks());
 
 attendanceRepository.save(attendanceEntity);
