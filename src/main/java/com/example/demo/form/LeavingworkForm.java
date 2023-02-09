@@ -1,3 +1,4 @@
+/*
 //フォームクラスは画面とコントローラークラスの間で値を渡す役割をする
 
 package com.example.demo.form;
@@ -28,13 +29,20 @@ public class LeavingworkForm{
 	private  Date enddate;
 
 	@NotNull
-	private  Date endtime;
+	private  Time endtime;
 	
 	@NotNull
-	private  Date breaktime;
+	private  Time breaktime;
 
 	@NotNull
 	private  String remarks;
+
+	public String getRemarks() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
+
+	}
 	
 	//attendance_ID integer(20) NOTNULL,
-}
+*/

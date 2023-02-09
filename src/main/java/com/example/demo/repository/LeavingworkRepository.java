@@ -1,13 +1,14 @@
+/*
 package com.example.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.entity.AttendanceEntity;
+import com.example.demo.entity.LeavingworkEntity;
 
 
 @Repository
-public interface LeavingworkRepository  extends JpaRepository<AttendanceEntity, Integer> {
+public interface LeavingworkRepository  extends JpaRepository<LeavingworkEntity, Integer> {
 
 //	void save(AttendanceEntity attendanceEntity);←不要
 

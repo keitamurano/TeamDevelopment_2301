@@ -1,9 +1,10 @@
 /*DBのレコードを表現するJavaクラス
  * データの入れ物となるクラス（DBの行に対応するように作成する）*/
 //データベースから取得したデータを格納するクラス
-
+/*
 package com.example.demo.entity;
 
+import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
 
@@ -18,7 +19,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="attendance")//table名の指定（クラス名＝テーブル名）
+@Table(name="leavingwork")//table名の指定（クラス名＝テーブル名）
 public class LeavingworkEntity{
 
   
@@ -31,14 +32,14 @@ public class LeavingworkEntity{
  @Column(name = "status")
     private String status;
 
- //@Column(name = "start_date")
-   // private Date startdate;
+ @Column(name = "start_date")
+   private Date startdate;
 
- //@Column(name = "start_time")
- // private Time starttime; ←いる？
+ @Column(name = "start_time")
+ private Time starttime;
  
  @Column(name = "end_date")
-    private Time enddate;
+    private Date enddate;
  
  @Column(name = "end_time")
     private Time endtime;
@@ -66,3 +67,4 @@ public class LeavingworkEntity{
    // private Integer attendanceid;
  }
 }
+*/

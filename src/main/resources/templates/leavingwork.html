@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/leavingwork.css">
+    <link rel="stylesheet" th:href="@{/css/leavingwork.css}">
     </head>
 
 <!--中身-->
@@ -16,12 +16,11 @@
                 <div class="header">
                     <h1>退勤報告</h1>
                 </div>
-
+<form th:action="@{/leavingwork}"th:object="${LeavingworkForm}"method="post"> 
                 <!--user_Idの処理（ラベル）-->
-                <div class="user_id">
+                <div class="userID"  th:value="${userID}">
                     <label>ユーザーID</label><br>
-                    <input id="myname" type="text" name="myname"
-                    placeholder="例）空条承太郎">
+                    <input id="myname" type="text" name="myname">
                 </div>
 
                 <!--ステータスの処理(プルダウン)-->
@@ -38,40 +37,37 @@
                 <!--退勤日(カレンダー)-->
                 <div class="end_date">
                     <label>退勤日</label><br>
-                        <!--★-->
-                        <input type="date" id="出勤日">
+                   
+                        <input type="date" th:field="*{enddate}">
                 </div>
 
                 <!--退勤時間(プルダウン？テキスト？)-->
                 <div class="end_time">
                     <label>退勤時間</label><br>
-                    <!--★-->
-                    <input type="time" name="start_time" id="出勤時間">
+                    <input type="time" th:field="*{endttime}">
                 </div>
 
                 <!--休憩時間(プルダウン？テキスト？)-->
                 <div class="break_time">
-                    <!--★-->
                     <label>休憩時間（分）</label><br>
-                    <input id="break_time" type="time" name="break_time"
-                    placeholder="例60">
+                    <input type="time" th:field="*{breaktime}">
                 </div>
 
                 <div class = "remarks">
                     <!--<label for="message">お問い合わせ内容</label><br>-->
                     <label>備考</label><br>
-                    <input type="text" id="text" >
+                    <input type="text" th:field="*{remarks}">
                     </div>
                 
                 <!--登録(ボタン)-->
                 <div class = "register">
-                    <input type="button" value="登録"   onclick="location.href='URL'" /><br>
+                    <input type="submit" value="登録"><br>
                  </div>
-
+</form>
                 <!--戻る(ボタン)-->
                 <div class ="return">
                  <a th:href="@{/Mypage}">
-                    <input type="button" value="戻る" onclick="location.href='URL'" />
+                    <input type="button" value="戻る">
                     </a>
                 </div>
         </div>
