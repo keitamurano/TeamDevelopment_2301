@@ -43,14 +43,13 @@
                 <!--出勤日(カレンダー)-->
                 <div class="start_date">
                     <label>出勤日</label><br>
-                        <!--★-->
+                      
                       <input type="date" th:field="*{startdate}" > 
                 </div>
 
                 <!--出勤時間(プルダウン？テキスト？)-->
                 <div class="start_time">
-                    <label>出勤時間</label><br>
-                  
+                    <label>出勤時間</label><br>      
                <input type="time" th:field="*{starttime}" > 
                 </div>
 
@@ -62,7 +61,9 @@
 
                 <!--登録-->
                 <div class = "register">
-                    <input type="button" value="登録"> <br>
+                    <input type="submit" value="登録"> <br>
+                    
+                    <!--分からない↑submit? button?たぶんsubmit-->
                  </div>
 </form>
                 <!--戻る-->

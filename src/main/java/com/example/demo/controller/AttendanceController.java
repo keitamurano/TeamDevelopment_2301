@@ -11,7 +11,7 @@ import com.example.demo.form.AttendanceForm;
 import com.example.demo.service.AttendanceService;
 
 
-/*出勤報告コントローラー*/
+//出勤報告コントローラー*
 @Controller
 public class AttendanceController{
  
@@ -44,7 +44,7 @@ private AttendanceService  attendanceService = new AttendanceService();
 	      return "user/add";S
 	    }*/
 	    // ユーザー情報の登録
-	  model.addAttribute("AttendanceForm", attendanceForm);
+	  model.addAttribute("attendanceForm", attendanceForm);
 	    attendanceService.insert(attendanceForm);
 	    return "redirect:/user/list";
 	  }
