@@ -32,7 +32,7 @@ private AttendanceService  attendanceService = new AttendanceService();
  //    }
 
   //登録ボタンを押したときに登録をする
-  @PostMapping(value = "/Attendance")
+  @PostMapping("/Attendance")
   public String create(@ModelAttribute AttendanceForm attendanceForm, Model model) {
 	    /*if (result.hasErrors()) {
 	      // 入力チェックエラーの場合
@@ -45,8 +45,9 @@ private AttendanceService  attendanceService = new AttendanceService();
 	    }*/
 	    // ユーザー情報の登録
 	  
-	  model.addAttribute("attendanceForm", attendanceForm);
+	  
 	    attendanceService.insert(attendanceForm);
+	    model.addAttribute("AttendanceForm", attendanceForm);
 	    return "Mypage";
 	  }
  }
