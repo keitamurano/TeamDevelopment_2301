@@ -3,10 +3,11 @@
 
 package com.example.demo.form;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 
 import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
 
@@ -20,19 +21,23 @@ public class LeavingworkForm{
 	private  String status;
 
 	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private  Date startdate;
 
-	@NotNull
-	private  Time starttime;
+	@DateTimeFormat(pattern="HH:mm:ss")
+	//@NotNull
+	private  String starttime;
 	
 	@NotNull
 	private  Date enddate;
 
-	@NotNull
-	private  Time endtime;
+	@DateTimeFormat(pattern="HH:mm:ss")
+	//@NotNull
+	private  String endtime;
 	
-	@NotNull
-	private  Time breaktime;
+	@DateTimeFormat(pattern="HH:mm:ss")
+	//@NotNull
+	private  String breaktime;
 
 	@NotNull
 	private  String remarks;

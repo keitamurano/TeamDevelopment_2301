@@ -1,18 +1,21 @@
 
+
 package com.example.demo.service;
 
+import java.time.LocalTime;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.LeavingworkEntity;
 import com.example.demo.form.LeavingworkForm;
 
+@Service
 public class LeavingworkService {
 	
-
-	//出勤報告のRepositoryS
-	@Autowired
+//出勤報告のRepositoryS
+	
+	
 	private LeavingworkEntity leavingworkRepository=new LeavingworkEntity();
 
 
@@ -28,8 +31,8 @@ public class LeavingworkService {
 	leavingworkEntity.setUserid(leavingworkForm.getUserId());
 	leavingworkEntity.setStatus(leavingworkForm.getStatus());
 	leavingworkEntity.setEnddate(leavingworkForm.getEnddate());
-	leavingworkEntity.setEndtime(leavingworkForm.getEndtime());
-	leavingworkEntity.setBreaktime(leavingworkForm.getBreaktime());
+	leavingworkEntity.setEndtime(LocalTime.parse(leavingworkForm.getEndtime().substring(0, 5) + ":00"));
+	leavingworkEntity.setBreaktime(LocalTime.parse(leavingworkForm.getBreaktime().substring(0, 5) + ":00"));
 	leavingworkEntity.setRemarks(leavingworkForm.getRemarks());
 
 	 leavingworkRepository.save(leavingworkEntity);
