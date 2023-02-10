@@ -29,7 +29,7 @@ public class AttendanceEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
  @Column(name = "user_id")
-    private Integer userid;
+    private Integer userId;
 
  @Column(name = "status")
     private String status;
