@@ -2,8 +2,6 @@
 
 package com.example.demo.form;
 
-
-
 import java.util.Date;
 
 import javax.validation.constraints.NotNull;
