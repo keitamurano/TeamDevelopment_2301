@@ -5,9 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.entity.MypageEntity;
 
-
 @Repository
-
 public interface MypageRepository extends JpaRepository<MypageEntity, Integer> {
-	
 }
