@@ -1,13 +1,36 @@
 package com.example.demo.service;
 
-import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.NewuserEntity;
+import com.example.demo.entity.UserEntity;
+import com.example.demo.form.UserRequest;
+import com.example.demo.repository.UserRepository;
 
-
-public interface NewuserService {
-String greet(int i); //挨拶を返す
+@Service
+public class NewuserService {
+	 /**
+     * ユーザー情報 Repository
+     */
+  @Autowired
+UserRepository userRepository;
 	
-	ArrayList<NewuserEntity> getAll(); //全てのNewuserEntityを返す
+	 /**
+	   * ユーザー情報 新規登録
+	   * @param user ユーザー情報
+	   */
+	  public void create(UserRequest userRequest) {
+	    UserEntity user = new UserEntity();
+	    
+	    user.setName(userRequest.getName());
+	    user.setName_kana(userRequest.getName_kana());
+	    user.setMail_address(userRequest.getMail_address());
+	    user.setPassword(userRequest.getPassword());
+
+	    userRepository.save(user);
+	  }
+
+
+  
 
 }

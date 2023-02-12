@@ -53,7 +53,7 @@ public class MypageController {
 		  return "kintaiichiran";
 	  }
 
-	  @GetMapping("/Newuser" /**path="/mypage", params = "create2-button"**/)
+	  @GetMapping("/newuser" /**path="/mypage", params = "create2-button"**/)
 	  public String postCreate2(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);
 		  return "Newuser";

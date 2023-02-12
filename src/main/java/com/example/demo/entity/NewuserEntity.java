@@ -1,67 +1,35 @@
 package com.example.demo.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name = "user_tb")
+
 public class NewuserEntity {
-	
-	private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long user_id;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "name_kana")
 	private String name_kana;
+
+	@Column(name = "mail_address")
 	private String mail_address;
+
+	@Column(name = "password")
 	private String password;
-	
-	public NewuserEntity() {}
-	
-	public NewuserEntity(int id,String name,String name_kana,String mail_address,String password) {
-		this.id = id;
-		this.name = name;
-		this.name_kana = name_kana;
-		this.mail_address = mail_address;
-		this.password = password;
-	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName_kana() {
-		return name_kana;
-	}
-
-	public void setName_kana(String name_kana) {
-		this.name_kana = name_kana;
-	}
-
-	public String getMail_address() {
-		return mail_address;
-	}
-
-	public void setMail_address(String mail_address) {
-		this.mail_address = mail_address;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	
-	
-		
-	
 
 }
 

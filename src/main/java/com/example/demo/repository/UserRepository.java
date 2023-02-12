@@ -7,4 +7,5 @@ import com.example.demo.entity.UserEntity;
 
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
+//	 List<UserEntity> findById(Long user_id);
 }

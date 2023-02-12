@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <div class="header"></div>
 
     <div align="right">
-     <form><a th:href="@{/edit}"> <!-- method="post" -->
+     <form><a th:href="@{/login}"> <!-- method="post" -->
               	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="戻る">
                </a></form>
     </div>
@@ -23,22 +23,47 @@
     
     
         <h1>ユーザー新規登録</h1>
+                <form th:action="@{/user/create}" th:object="${userRequest}" th:method="post">
                 
             
-            <table>
+      
             
-                <tr>
-                    <th>Name</th>
-                    <td><input name="name" type="text"></td>
-                </tr>
-                <tr>
+               <div class="form-group">
+        <label>Name：<span class="text-danger"></span></label>
+        <input type="text" th:field="*{name}" name="name">
+      </div></br>
+      
+            <div class="form-group">
+        <label>カナ：<span class="text-danger"></span></label>
+        <input type="text" th:field="*{name_kana}" name="name_kana">
+      </div></br>
+      
+            <div class="form-group">
+        <label>E-mail：<span class="text-danger"></span></label>
+        <input type="text" th:field="*{mail_address}" name="mail_address">
+      </div></br>
+      
+            <div class="form-group">
+        <label>Password：<span class="text-danger"></span></label>
+        <input type="text" th:field="*{password}"  name="password">
+      </div></br>
+      
+        <div class="text-center">
+     <!--  <a href="/user/login1" class="btn btn-secondary">戻る</a>  -->
+    
+        <input type="submit" value="　登録　" class="btn btn-primary">
+      </div></br>
+                    
+              <!--   <tr>
                     <th>カナ</th>
-                    <td><input name="name" type="text"></td>
+                   <td><input type="text" th:field="*{name_kana}" class="form-control"></td>
                 </tr>
+                
                 <tr>
                     <th>E-mail</th>
-                    <td><input name="mail" type="email"></td>
+                    <td><input type="text" th:field="*{e-mail}" class="form-control"></td>
                 </tr>
+                
                 <tr>
                     <th>PassWord</th>
                     <td><input name="password" type="password"></td>
@@ -53,7 +78,9 @@
        
                     </td>
                 </tr>
-            </table>
+             -->
+            
+            </form>
         
 
 </body>

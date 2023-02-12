@@ -24,18 +24,19 @@ h1 {
   margin-left: auto;  
 }
 
-table th{
-    padding : 20px 10px;
-    
-  }
-  
-  table td{
-    padding : 20px 10px;
-  }
+.form-group{
+	text-align: center;
+}
 
-  table {
-    margin-left: auto;
-    margin-right: auto;
+
+.form-control
+{
+	 width: 30%;
+    height: 20px;
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(4, 4, 5);
+    background-color: rgb(182, 181, 181);
 }
 
 li {
@@ -46,4 +47,9 @@ body {
   background-image: url("white0023.jpg");
   background-size: cover;
   background-attachment: fixed;
+}
+
+.text-center{
+	text-align: right;
+	
 }
