@@ -23,11 +23,11 @@ public class MypageController {
 		model.addAttribute("user", userName);
 		return "Mypage";
 	}
-	@PostMapping("/edit")
-	public String postEdit(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
-		return "edit";
-	}
+//	@PostMapping("/edit")
+//	public String postEdit(/**@RequestParam String name, String userID, **/Model model) {
+//		// model.addAllAttributes("name",name,"userID",userID);
+//		return "edit";
+//	}
 	@PostMapping("/attendance"/**path="/mypage", params = "attendance-button"**/)
 	public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);
