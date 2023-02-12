@@ -1,6 +1,7 @@
 
 package com.example.demo.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,12 @@ import com.example.demo.service.AttendanceService;
 //出勤報告コントローラー*
 @Controller
 public class AttendanceController{
- 
-private AttendanceService  attendanceService = new AttendanceService();
+
+
+	@Autowired
+	private AttendanceService attendanceService;
+	
+//private AttendanceService  attendanceService = new AttendanceService();
 //(マイページから出勤報告画面を表示）
   @GetMapping("/attendance")//出勤報告画面を表示する
      public String attendance (Model model){
@@ -34,16 +39,16 @@ private AttendanceService  attendanceService = new AttendanceService();
   //登録ボタンを押したときに登録をする
   @PostMapping("/Attendance")
   public String create(@ModelAttribute AttendanceForm attendanceForm, Model model) {
-	    /*if (result.hasErrors()) {
-	      // 入力チェックエラーの場合
-	      List<String> errorList = new ArrayList<String>();
-	      for (ObjectError error : result.getAllErrors()) {
-	        errorList.add(error.getDefaultMessage());
-	      }
-	      model.addAttribute("validationError", errorList);
-	      return "user/add";S
-	    }*/
-	    // ユーザー情報の登録
+//	    if (result.hasErrors()) {
+//	      // 入力チェックエラーの場合
+//	      List<String> errorList = new ArrayList<String>();
+//	      for (ObjectError error : result.getAllErrors()) {
+//	        errorList.add(error.getDefaultMessage());
+//	      }
+//	      model.addAttribute("validationError", errorList);
+//	      return "user/add";S
+//	    }
+//	    // ユーザー情報の登録
 	  
 	  
 	    attendanceService.insert(attendanceForm);

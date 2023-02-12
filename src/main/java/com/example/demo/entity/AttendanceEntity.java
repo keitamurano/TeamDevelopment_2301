@@ -9,8 +9,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -25,7 +23,7 @@ public class AttendanceEntity{
 
   
     @Id //primary key(user_id)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
+   // @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
  @Column(name = "user_id")
     private Integer userId;
@@ -40,18 +38,18 @@ public class AttendanceEntity{
  @Column(name = "start_time")
     private LocalTime starttime;
  
- @DateTimeFormat(pattern="HH:mm:ss")
+/* @DateTimeFormat(pattern="HH:mm:ss")
  @Column(name = "end_date")
-    private String enddate;
+    private LocalTime enddate;
  
  @DateTimeFormat(pattern="HH:mm:ss")
  @Column(name = "end_time")
-    private String endtime;
+    private LocalTime endtime;*/
  
- @DateTimeFormat(pattern="HH:mm:ss")
+ /*@DateTimeFormat(pattern="HH:mm:ss")
  @Column(name = "break_time")
-    private String breaktime;
- 
+    private LocalTime breaktime;
+ */
  @Column(name = "remarks")
     private String remarks;
 

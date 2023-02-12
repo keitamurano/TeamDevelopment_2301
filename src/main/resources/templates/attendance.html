@@ -22,21 +22,20 @@
 		<form th:action="@{/Attendance}" th:object="${AttendanceForm}"
 			method="post">
 
-
-			<!--  <input type="text" th:field="*{userId}" > -->
-			<!-- ↑表記の仕方が×、全部修正する必要あり
-                    「タイムリーフ DB保持　画面遷移-->
-
+			<label>ユーザーID</label><br>
+			<input type="text" th:field="*{userId}" >
+			
 			<!--ステータスの処理(プルダウン)-->
 			 <div class="status">
-				<label>ステータス</label><br> <select name="status">
-					<option value="attendance" selected>出勤</option>
-					<option value="behind">遅刻</option>
-					<option value="holiday">休日</option>
-					<option value="paid">有給</option>
-					<option value="lieu">代休</option>
-					<option value="othersholiday">休日（その他）</option>
-					<option value="others">その他</option>
+				<label>ステータス</label><br>
+				<select name="status">
+					<option value="出勤">出勤</option>
+					<option value="遅刻">遅刻</option>
+					<option value="休日">休日</option>
+					<option value="有給">有給</option>
+					<option value="代休">代休</option>
+					<!-- <option value="othersholiday">休日（その他）</option> -->
+					<option value="その他">その他</option>
 				</select>
 			</div>
 
