@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="css/expenceslist.css">
 <body>
 <h1>経費一覧</h1>
-<!--  <form method="post" th:action="@{/confirm2}" th:object="${expencesListParam}"> -->
   <div class="container">
     <div class="float-end">
     </div>
@@ -22,7 +21,6 @@
         </tr>
       </thead>
     <tbody>
-<!--        <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle"> -->
           <tr th:each="expences : ${expenceslist}" th:object="${expencesEntity}">
           <td th:text="${expences.userId}"></td>
           <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
@@ -32,14 +30,12 @@
 							 th:text="${prefectures.name}">
 
   			  </td>
- 			  <!-- <td th:text="${expences.expencesItem}"></td> -->
         	  <td th:text="${expences.amountMoney}"></td>
          	  <td th:text="${expences.remarks}"></td>
      </tr>
       </tbody>
     </table>
   </div>
-<!--  </form> -->
    			  <div class="back">
 			    <a th:href="@{/mypage}">
    				 <input type="submit" value="マイページへ" class="back"></a>

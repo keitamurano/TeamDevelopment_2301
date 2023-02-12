@@ -8,14 +8,6 @@
 <body>
 	<div class="header">
 		<h1>経費申請</h1>
-		<!-- 	<form method="post" th:action="@{/expenceslist}" th:object="${expencesListParam}"> -->
-		<!-- 	<form  th:action="@{/expenceslist}" th:object="${expencesForm}" method="POST"> -->
-		<!-- <div th:if="${validationError}" th:each="error:${validationError}"></div> -->
-		<!-- <table class="error">
-        <tr th:if="${validationError}" th:each="error : ${validationError}">
-            <td style="color: red;" th:text="${error}"></td>
-        </tr>
-       </table> -->
 
 		<form th:action="@{/expences}" th:object="${expencesForm}"
 			method="POST">
@@ -43,10 +35,6 @@
 						th:selected="${prefectures.code == selectedValue}" ></option>
 				</select>
 
-				<!-- <select name="expencesItem">
-
-		          <option th:each="prefectures : ${prefecturesList}"th:value="${prefectures.code}"th:text="${prefectures.name}"></option>
-		       </select> -->
 			</div>
 			<!-- <br /> -->
 			<div class="amountMoney">
