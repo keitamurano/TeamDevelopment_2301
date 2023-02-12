@@ -12,7 +12,6 @@ import lombok.Data;
 
 @Data
 public class ExpencesForm {
-
 	@NotNull(message = "ユーザIDを入力してください")
 	private Integer userId;
 
