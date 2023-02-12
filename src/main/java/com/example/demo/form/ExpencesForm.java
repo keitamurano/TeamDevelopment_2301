@@ -1,4 +1,5 @@
 package com.example.demo.form;
+
 import java.util.Date;
 
 import javax.validation.constraints.NotEmpty;
@@ -8,28 +9,23 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.Data;
+
 @Data
 public class ExpencesForm {
 
-       @NotNull(message = "ユーザIDを入力してください")
-//       @NotEmpty(message = "UserIdを入力してください")
-		private Integer userId;
+	@NotNull(message = "ユーザIDを入力してください")
+	private Integer userId;
 
-       @NotNull(message = "申請日を入力してください")
-		@DateTimeFormat(pattern="yyyy-MM-dd")
-		private Date applicationDate;
+	@NotNull(message = "申請日を入力してください")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date applicationDate;
 
-//       @NotNull(message = "経費項目を選択してください")
-     @NotEmpty(message = "経費項目を入力してください")
-       private String expencesItem;
+	@NotEmpty(message = "経費項目を入力してください")
+	private String expencesItem;
 
+	@NotNull(message = "金額を入力してください")
+	private Integer amountMoney;
 
-      @NotNull(message = "金額を入力してください")
-//       @Size(max = 10, message = "半角数字10文字以内で入力して下さい")
-		private Integer amountMoney;
-
-
-       @Size(max = 50, message = "備考は50文字以内で入力して下さい")
-		private String remarks;
-	}
-
+	@Size(max = 50, message = "備考は50文字以内で入力して下さい")
+	private String remarks;
+}
