@@ -18,14 +18,16 @@
                 </div>
 				<form th:action="@{/Leavingwork}"th:object="${LeavingworkForm}"method="post"> 
                 <!--user_Idの処理（ラベル）-->
-                
+                <label>ユーザーID</label><br>
+			<input type="text" th:field="*{userId}" >
+			
 
                 <!--ステータスの処理(プルダウン)-->
                 <div class="status">
                     <label>ステータス</label><br> <select name="status">
-                            <option value="attendance" selected>退勤</option>
-                            <option value="Taurus">早退</option>
-                            <option value="Libra">その他</option>
+                            <option value="退勤" >退勤</option>
+                            <option value="早退">早退</option>
+                            <option value="その他">その他</option>
                         </select>
                 </div>
 

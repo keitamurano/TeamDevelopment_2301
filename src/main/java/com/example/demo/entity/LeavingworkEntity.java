@@ -9,8 +9,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -25,20 +23,13 @@ public class LeavingworkEntity{
 
   
     @Id //primary key(user_id)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
  @Column(name = "user_id")
-    private Integer userid;
+    private Integer userId;
 
  @Column(name = "status")
     private String status;
-
-@Column(name = "start_date")
-  private Date startdate;
-
-@DateTimeFormat(pattern="HH:mm:ss")
-@Column(name = "start_time")
-    private LocalTime starttime;
 
  @DateTimeFormat(pattern="HH:mm:ss")
  @Column(name = "end_date")

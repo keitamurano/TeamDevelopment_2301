@@ -2,6 +2,7 @@
 package com.example.demo.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +17,9 @@ import com.example.demo.service.LeavingworkService;
 @Controller
 public class LeavingworkController{
 
-private LeavingworkService leavingworkService = new LeavingworkService();
-	//@Autowired
-	   //LeavingworkService leavingworkService;
+//private LeavingworkService leavingworkService = new LeavingworkService();
+	@Autowired
+	   LeavingworkService leavingworkService;
 	//(マイページから退勤画面を表示）
 	  @GetMapping("/leavingwork")//退勤報告画面を表示する
 	     public String leavingwork (Model model){

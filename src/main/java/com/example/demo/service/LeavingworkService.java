@@ -28,7 +28,7 @@ public class LeavingworkService {
 
 	public void insert(LeavingworkForm leavingworkForm) {
 	LeavingworkEntity leavingworkEntity = new LeavingworkEntity();
-	leavingworkEntity.setUserid(leavingworkForm.getUserId());
+	leavingworkEntity.setUserId(leavingworkForm.getUserId());
 	leavingworkEntity.setStatus(leavingworkForm.getStatus());
 	leavingworkEntity.setEnddate(leavingworkForm.getEnddate());
 	leavingworkEntity.setEndtime(LocalTime.parse(leavingworkForm.getEndtime().substring(0, 5) + ":00"));
