@@ -11,11 +11,11 @@ import com.example.demo.entity.AttendanceEntity;
 import com.example.demo.form.AttendanceForm;
 import com.example.demo.repository.AttendanceRepository;
 
-@Service 
+@Service
 public class AttendanceService {
 
  //出勤報告のRepository
-	
+
 @Autowired
  AttendanceRepository attendanceRepository;
 
@@ -29,7 +29,7 @@ public class AttendanceService {
 
 public void insert(AttendanceForm attendanceForm) {
 AttendanceEntity attendanceEntity = new AttendanceEntity();
-attendanceEntity.setUserid(attendanceForm.getUserId());
+attendanceEntity.setUserId(attendanceForm.getUserId());
 attendanceEntity.setStatus(attendanceForm.getStatus());
 attendanceEntity.setStartdate(attendanceForm.getStartdate());
 attendanceEntity.setStarttime(LocalTime.parse(attendanceForm.getStarttime().substring(0, 5) + ":00"));
