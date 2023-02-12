@@ -6,7 +6,6 @@ package com.example.demo.entity;
 
 import java.time.LocalTime;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +20,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="leavingwork")//table名の指定（クラス名＝テーブル名）
+@Table(name="attendance")//table名の指定（クラス名＝テーブル名）
 public class LeavingworkEntity{
 
   
@@ -34,13 +33,13 @@ public class LeavingworkEntity{
  @Column(name = "status")
     private String status;
 
- @Column(name = "start_date")
-    private Date startdate;
+@Column(name = "start_date")
+  private Date startdate;
 
- @DateTimeFormat(pattern="HH:mm:ss")
- @Column(name = "start_time")
+@DateTimeFormat(pattern="HH:mm:ss")
+@Column(name = "start_time")
     private LocalTime starttime;
- 
+
  @DateTimeFormat(pattern="HH:mm:ss")
  @Column(name = "end_date")
     private Date enddate;
@@ -57,20 +56,20 @@ public class LeavingworkEntity{
     private String remarks;
 
 
- public static List<LeavingworkEntity> findAll() {
-  // TODO 自動生成されたメソッド・スタブ
-  return null;
-
-
-  
- }
-
- public void save(LeavingworkEntity leavingworkEntity) {
-  // TODO 自動生成されたメソッド・スタブ
-  
- 
- 
- //@Column(name = "attendance_id")
-   // private Integer attendanceid;
- }
+// //public static List<LeavingworkEntity> findAll() {
+//  // TODO 自動生成されたメソッド・スタブ
+//  return null;
+//
+//
+//  
+// }
+//
+// public void save(LeavingworkEntity leavingworkEntity) {
+//  // TODO 自動生成されたメソッド・スタブ
+//  
+// 
+// 
+// //@Column(name = "attendance_id")
+//   // private Integer attendanceid;
+// }
 }

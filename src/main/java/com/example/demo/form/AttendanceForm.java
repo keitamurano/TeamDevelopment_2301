@@ -6,7 +6,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,27 +16,27 @@ import lombok.Data;
 @Table(name = "attendance")
 public class AttendanceForm{
 
-	@NotNull
+	
 	@Column(name = "user_id")
 	private Integer userId;
 
 
-	@NotNull
+	@NotBlank(message="出勤状況を選択して下さい")
 	@Column(name = "status")
 	private  String status;
 
-	@NotNull
+	@NotBlank(message="出勤日を選択してください")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "start_date")
 	private  Date startdate;
 
-
+	@NotBlank(message="出勤時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	@Column(name = "start_time")
 	//@NotNull
 	private  String starttime;
 
-	@NotNull
+	//@NotNull
 	@Column(name = "remarks")
 	private  String remarks;
 
