@@ -11,11 +11,11 @@ import com.example.demo.entity.AttendanceEntity;
 import com.example.demo.form.AttendanceForm;
 import com.example.demo.repository.AttendanceRepository;
 
-@Service 
+@Service
 public class AttendanceService {
 
  //出勤報告のRepository
-	
+
 @Autowired
  AttendanceRepository attendanceRepository;
 

@@ -16,10 +16,10 @@
 
 
             <div class="userdate">
-            
-      		<form><a th:href="@{/edit}"> <!-- method="post" -->
+
+      		<form><a th:href="@{/Newuser}"> <!-- method="post" -->
               	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺︎">
-               </a><!-- 
+               </a><!--
                <div class="namebox"> -->
                     <p class="username">name:<span th:remove="tag" sec:authentication="name"></span></p>
                    <!--  </div> -->
@@ -27,51 +27,51 @@
                     <!--<p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>-->
 				<!-- 	</div> -->
           </form>
-                
+
             </div>
 
         </div>
-        
-        
+
+
         <div class="contents clearfix">
                 <div class="left">
 
             <form> <a th:href="@{/attendance}"><!--  method="post" -->
                 <input class="attendance-button" name="attendance-button" value="出勤報告" type="button"></a>
                 </form>
-                
+
             <form> <a th:href="@{/leavingwork}" ><!-- method="post"> -->
              	<input class="leavingwork-button" name="leavingwork-button" type="button" value="退勤報告"></a>
                 </form>
-                
+
             <form> <a th:href="@{/kintaiichiran}"> <!-- method="post"> -->
                 <input class="create-button" name="create-button" value="勤怠一覧" type="button"></a>
                 </form>
-                
+
             <form> <a th:href="@{/expences}"> <!-- method="post"> -->
                 <input class="expences-button" name="expences-button" value="経費申請" type="button" ></a>
 			</form>
                 </div>
 
                 <div class="right">
-			
-            <form> <a th:href="@{/kintaied}"><!-- method="post"> -->
-                <input class="create2-button" name="create2-button" value="勤怠修正" type="button"></a>
+
+            <form> <a th:href="@{/edit}"><!-- method="post"> -->
+                <input class="create2-button" name="create2-button" value="ユーザー編集" type="button"></a>
                 </form>
-                
+
             <form> <a th:href="@{/expenceslist}"> <!-- method="post"> -->
                 <input class="expenceslist-button" name="expenceslist-button" value="経費一覧" type="button"></a>
                 </form>
-                
+
             <form> <a th:href="@{/paid/list}"> <!-- method="post"> -->
                 <input class="paid-button" name="paid-button" value="有給一覧" type="button"></a>
 			</form>
-			
+
                 </div>
 
          </div>
     </div>
-    
+
 </body>
 
 
