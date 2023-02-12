@@ -34,7 +34,7 @@ private LeavingworkService leavingworkService = new LeavingworkService();
 //	     }
 
 	//登録ボタンを押下→マイページ画面に遷移する ??
-	  @PostMapping(value = "/Leavingwork")
+	  @PostMapping("/Leavingwork")
 	    public String create(@ModelAttribute LeavingworkForm leavingworkForm,Model model) {
 		  
 		  /*if (result.hasErrors()) {
@@ -48,8 +48,8 @@ private LeavingworkService leavingworkService = new LeavingworkService();
 	    }*/
 	    // ユーザー情報の登録
 		  
-		  model.addAttribute("leavingworkForm",leavingworkForm);
 		  leavingworkService.insert(leavingworkForm);
+		  model.addAttribute("LeavingworkForm",leavingworkForm);
 		  // leavingworkService.insert(leavingworkForm);
 	         return "Mypage"; //attendance.htmlに画面遷移
 	     }

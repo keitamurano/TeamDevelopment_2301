@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
     <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
                 <div class="header">
                     <h1>退勤報告</h1>
                 </div>
-<form th:action="@{/Leavingwork}"th:object="${LeavingworkForm}"method="post"> 
+				<form th:action="@{/Leavingwork}"th:object="${LeavingworkForm}"method="post"> 
                 <!--user_Idの処理（ラベル）-->
                 
 
@@ -39,7 +39,7 @@
                 <!--退勤時間(プルダウン？テキスト？)-->
                 <div class="end_time">
                     <label>退勤時間</label><br>
-                    <input type="time" th:field="*{endttime}">
+                    <input type="time" th:field="*{endtime}">
                 </div>
 
                 <!--休憩時間(プルダウン？テキスト？)-->

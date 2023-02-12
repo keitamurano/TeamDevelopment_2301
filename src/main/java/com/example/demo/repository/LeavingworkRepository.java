@@ -8,7 +8,7 @@ import com.example.demo.entity.LeavingworkEntity;
 
 
 @Repository
-public interface LeavingworkRepository  extends JpaRepository<LeavingworkEntity, Integer> {
+public interface LeavingworkRepository  extends JpaRepository<LeavingworkEntity, String> {
 
 //	void save(AttendanceEntity attendanceEntity);←不要
 

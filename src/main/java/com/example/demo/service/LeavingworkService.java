@@ -3,26 +3,26 @@
 package com.example.demo.service;
 
 import java.time.LocalTime;
-import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.LeavingworkEntity;
 import com.example.demo.form.LeavingworkForm;
+import com.example.demo.repository.LeavingworkRepository;
 
 @Service
 public class LeavingworkService {
 	
 //出勤報告のRepositoryS
-	
-	
-	private LeavingworkEntity leavingworkRepository=new LeavingworkEntity();
+	@Autowired
+	 LeavingworkRepository leavingworkRepository;
 
 
-	//DBから全件取得
-	public List<LeavingworkEntity> getLeavingworkAll() {
-	   return LeavingworkEntity.findAll();
-	}
+//	//DBから全件取得
+//	public List<LeavingworkEntity> getLeavingworkAll() {
+//	   return LeavingworkEntity.findAll();
+//	}
 
 	//エンティティ（データを格納する箱）を画面データに詰め替える
 
