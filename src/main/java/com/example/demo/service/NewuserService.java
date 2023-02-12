@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.UserEntity;
-import com.example.demo.form.UserRequest;
+import com.example.demo.form.UserRequestForm;
 import com.example.demo.repository.UserRepository;
 
 @Service
@@ -19,7 +19,7 @@ UserRepository userRepository;
 	   * ユーザー情報 新規登録
 	   * @param user ユーザー情報
 	   */
-	  public void create(UserRequest userRequest) {
+	  public void create(UserRequestForm userRequest) {
 	    UserEntity user = new UserEntity();
 	    
 	    user.setName(userRequest.getName());

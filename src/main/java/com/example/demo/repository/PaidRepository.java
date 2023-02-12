@@ -11,17 +11,12 @@ public class PaidRepository {
 
   public PaidEntity search(PaidForm userID) {
 	return null;
-		
+
 	}
 }
 
-**/
+ **/
 //---------------------------------------------
-
-
 @Repository
-
 public interface PaidRepository extends JpaRepository<PaidEntity, Integer> {
-	
-	
 }

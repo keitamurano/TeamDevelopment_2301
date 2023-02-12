@@ -1,52 +1,49 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
-<head > </head>
+<head>
+</head>
 <title>経費一覧</title>
 <link rel="stylesheet" href="css/expenceslist.css">
 <body>
-<h1>経費一覧</h1>
-<!--  <form method="post" th:action="@{/confirm2}" th:object="${expencesListParam}"> -->
-  <div class="container">
-    <div class="float-end">
-    </div>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-         	 <th>ユーザーID</th>
-        	  <th>申請日</th>
-           	 <th>経費項目</th>
-        	  <th>金額</th>
-        	  <th>備考</th>
-       	      <th></th>
-        </tr>
-      </thead>
-    <tbody>
-<!--        <tr th:each="expences :${expencesDataList}" th:object="${expences}" class="align-middle"> -->
-          <tr th:each="expences : ${expenceslist}" th:object="${expencesEntity}">
-          <td th:text="${expences.userId}"></td>
-          <td th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
+	<h1>経費一覧</h1>
+	<div class="container">
+		<div class="float-end"></div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ユーザーID</th>
+					<th>申請日</th>
+					<th>経費項目</th>
+					<th>金額</th>
+					<th>備考</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="expences : ${expenceslist}"
+					th:object="${expencesEntity}">
+					<td th:text="${expences.userId}"></td>
+					<td
+						th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
 
-  			   <td th:each="prefectures : ${prefecturesList}"
-  			  		 th:if="${prefectures.code ==  expences.expencesItem}"
-							 th:text="${prefectures.name}">
-
-  			  </td>
- 			  <!-- <td th:text="${expences.expencesItem}"></td> -->
-        	  <td th:text="${expences.amountMoney}"></td>
-         	  <td th:text="${expences.remarks}"></td>
-     </tr>
-      </tbody>
-    </table>
-  </div>
-<!--  </form> -->
-   			  <div class="back">
-			    <a th:href="@{/mypage}">
-   				 <input type="submit" value="マイページへ" class="back"></a>
-			  </div>
-			  <div class="backApplication">
-			     <a th:href="@{/expences}">
-			   <input type="submit" value="申請に戻る" class="backApplication"></a>
-			   </div>
+					<td th:each="prefectures : ${prefecturesList}"
+						th:if="${prefectures.code ==  expences.expencesItem}"
+						th:text="${prefectures.name}"></td>
+					<td th:text="${expences.amountMoney}"></td>
+					<td th:text="${expences.remarks}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="back">
+		<a th:href="@{/mypage}"> <input type="submit" value="マイページへ"
+			class="back"></a>
+	</div>
+	<div class="backApplication">
+		<a th:href="@{/expences}"> <input type="submit" value="申請に戻る"
+			class="backApplication"></a>
+	</div>
 </body>
 </html>

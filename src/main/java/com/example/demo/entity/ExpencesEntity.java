@@ -12,25 +12,21 @@ import lombok.Data;
 @Data
 @Table(name="expences")
 public class ExpencesEntity{
-
-    // 予約データの主キーはユーザーID
-    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	// 予約データの主キーはユーザーID
+	@Id
+	//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-    private Integer userId;
+	private Integer userId;
 
 	@Column(name = "application_date")
-    private Date applicationDate;
+	private Date applicationDate;
 
 	@Column(name = "expences_item")
-    private String expencesItem;
+	private String expencesItem;
 
 	@Column(name = "amount_money")
-    private Integer amountMoney;
+	private Integer amountMoney;
 
 	@Column(name = "remarks")
-    private String remarks;
-
-
-
+	private String remarks;
 }
