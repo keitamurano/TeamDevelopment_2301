@@ -12,13 +12,9 @@ import com.example.demo.form.ExpencesForm;
 import com.example.demo.repository.ExpencesRepository;
 import com.example.demo.repository.PrefecturesRepository;
 
-/**
- * ユーザー情報 Service
- */
 @Service
 @Transactional
 public class ExpencesService {
-
 	@Autowired
 	ExpencesRepository expencesRepository;
 
@@ -39,9 +35,7 @@ public class ExpencesService {
 	 * @param user ユーザー情報
 	 */
 	public void insert(ExpencesForm expencesForm) {
-
 		ExpencesEntity expencesEntity = new ExpencesEntity();
-
 		expencesEntity.setUserId(expencesForm.getUserId());
 		expencesEntity.setApplicationDate(expencesForm.getApplicationDate());
 		expencesEntity.setExpencesItem(expencesForm.getExpencesItem());
@@ -50,5 +44,4 @@ public class ExpencesService {
 		// データベースに登録する
 		expencesRepository.save(expencesEntity);
 	}
-
 }
