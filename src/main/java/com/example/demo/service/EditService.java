@@ -6,9 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.UserEntity;
-import com.example.demo.form.UserRequest;
+import com.example.demo.form.UserRequestForm;
 import com.example.demo.repository.UserRepository;
-
 
 @Service
 public class EditService {
@@ -38,7 +37,7 @@ public class EditService {
 	 * ユーザー情報 更新
 	 * @param user ユーザー情報
 	 */
-	public void update(UserRequest userUpdateRequest) {
+	public void update(UserRequestForm userUpdateRequest) {
 		UserEntity user = findById(userUpdateRequest.getUser_id());
 		user.setName(userUpdateRequest.getName());
 		user.setName_kana(userUpdateRequest.getName_kana());

@@ -3,87 +3,54 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/edit.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/edit.css">
 
 </head>
 
-<body  background="white0023.jpg">
-    <div class="wapper" ></div>
-    <div class="header"></div>
+<body background="white0023.jpg">
+	<div class="wapper"></div>
+	<div class="header"></div>
 
-    <div align="right">
-    <button type="button" onclick="history.back()">戻る</button>
-    </div>
-    <!--上下どちらか  -->
-    <div align="right">
-     <form><a th:href="@{/Mypage}"> <!-- method="post" -->
-              	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="戻る">
-               </a></form>
-    </div>
-   <h1>ユーザー編集•削除</h1>
-                <form th:action="@{/user/edit}" th:object="${userRequest}" th:method="post">
-                
-              
-                     <div class="form-group">
-        <label>Name：<span class="text-danger"></span></label>
-     <input type="text" th:field="*{name}" >
-      </div>
-      
-       <!--      <div class="form-group">
-        <label>カナ：<span class="text-danger"></span></label>
-        <input type="text" th:field="*{name_kana}" >
-      </div>
-      
-            <div class="form-group">
-        <label>E-mail：<span class="text-danger"></span></label>
-        <input type="text" th:field="*{mail_address}" >
-      </div>
-      
-            <div class="form-group">
-        <label>Password：<span class="text-danger"></span></label>
-        <input type="text" th:field="*{password}" >
-      </div>
-      
-        <div class="text-center">
-      <a href="/user/login1" class="btn btn-secondary">戻る</a> 
-    
-        <input type="submit" value="　登録　" class="btn btn-primary">
-      </div> -->
-             
-           <!--  <table>
-                <tr>
-                    <th>Name</th>
-                    <td><input name="name" type="text"></td>
-                </tr>
-                <tr>
-                    <th>カナ</th>
-                    <td><input name="name" type="text"></td>
-                </tr>
-                <tr>
-                    <th>E-mail</th>
-                    <td><input name="mail" type="email"></td>
-                </tr>
-                <tr>
-                    <th>PassWord</th>
-                    <td><input name="password" type="password"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                    <div align="left">
-                    <button class="favorite styled" type="button">削除</button></div>
-                    </td>
-                    
-                    <td colspan="2">
-                    <div align="right">
-                    <button class="favorite styled" type="button">編集</button></div>
-                    </td>
-                    
-                    
-                </tr>
-            </table> -->
-        </form>
+	<div align="right">
+		<button type="button" onclick="history.back()">戻る</button>
+	</div>
+	<!--上下どちらか  -->
+	<div align="right">
+		<form>
+			<a th:href="@{/Mypage}"> <!-- method="post" --> <input
+				name="editbutton"
+				class="editbutton userbutton-shadow userbutton-circle" type="button"
+				value="戻る">
+			</a>
+		</form>
+	</div>
+	<h1>ユーザー編集•削除</h1>
+	<form th:action="@{/user/edit}" th:object="${userRequest}"
+		th:method="post">
+
+		<div class="form-group">
+			<label>カナ：<span class="text-danger"></span></label> <input
+				type="text" th:field="*{name_kana}">
+		</div>
+
+		<div class="form-group">
+			<label>E-mail：<span class="text-danger"></span></label> <input
+				type="text" th:field="*{mail_address}">
+		</div>
+
+		<div class="form-group">
+			<label>Password：<span class="text-danger"></span></label> <input
+				type="text" th:field="*{password}">
+		</div>
+
+		<div class="text-center">
+			<a href="/user/login1" class="btn btn-secondary">戻る</a> <input
+				type="submit" value="　登録　" class="btn btn-primary">
+		</div>
+
+	</form>
 </body>
 </html>

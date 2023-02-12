@@ -11,14 +11,13 @@ import lombok.Data;
  * ユーザー情報 リクエストデータ
  */
 @Data
-public class UserRequest implements Serializable {
+public class UserRequestForm implements Serializable {
 
-
-private Long user_id;
+	private Long user_id;
 	/**
 	 * 名前
 	 */
-    @NotEmpty(message = "名前を入力してください")
+	@NotEmpty(message = "名前を入力してください")
 	@Size(max = 20, message = "名前は20桁以内で入力してください")
 	private String name;
 	/**
@@ -30,7 +29,7 @@ private Long user_id;
 	/**
 	 * メールアドレス
 	 */
-//	@Email(message = "正しい形式で入力してください")
+	//	@Email(message = "正しい形式で入力してください")
 	@NotEmpty(message = "E-mailを入力してください")
 	private String mail_address;
 	/**
