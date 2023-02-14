@@ -2,6 +2,9 @@
     /*width: 1300px;*/
     text-align:center;
 }
+.error{
+	color:red;
+}
 
 .userID{
     text-align: center;

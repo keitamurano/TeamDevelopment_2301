@@ -1,15 +1,23 @@
 
 package com.example.demo.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.form.AttendanceForm;
 import com.example.demo.service.AttendanceService;
+
+
 
 
 //出勤報告コントローラー*
@@ -28,7 +36,7 @@ public class AttendanceController{
 
          return "attendance"; //attendance.htmlに画面遷移
      }
-  //19-26行目　HTMLの表示
+
   
 ////戻るボタン押下→マイページ画面に遷移する
 // @GetMapping("/Mypage")
@@ -38,24 +46,29 @@ public class AttendanceController{
 
   //登録ボタンを押したときに登録をする
   @PostMapping("/Attendance")
-  public String create(@ModelAttribute AttendanceForm attendanceForm, Model model) {
-//	    if (result.hasErrors()) {
-//	      // 入力チェックエラーの場合
-//	      List<String> errorList = new ArrayList<String>();
-//	      for (ObjectError error : result.getAllErrors()) {
-//	        errorList.add(error.getDefaultMessage());
-//	      }
-//	      model.addAttribute("validationError", errorList);
-//	      return "user/add";S
-//	    }
-//	    // ユーザー情報の登録
+  public String create(@Validated @ModelAttribute AttendanceForm attendanceForm, BindingResult bindingResult,Model model) {
+	  if (bindingResult.hasErrors()) {
+	      List<String> errorList = new ArrayList<String>();      
+	      for (ObjectError error : bindingResult.getAllErrors()) {
+	    	  errorList.add(error.getDefaultMessage());
+	      }
+	      model.addAttribute("attendanceForm", attendanceForm);
+	      model.addAttribute("validationError", errorList);
+	      model.addAttribute("AttendanceForm",new AttendanceForm());
+//			プルダウンの値を保持する
+//	      List<Prefectures> prefecturesList = attendanceService.findAll2();
+//			model.addAttribute("prefecturesList", prefecturesList);
+  	return "/attendance"; //エラーが出たときの画面の遷移先
+		}
 	  
-	  
+	 // ユーザー情報の登録  
 	    attendanceService.insert(attendanceForm);
 	    model.addAttribute("AttendanceForm", attendanceForm);
 	    return "Mypage";
 	  }
- }
+
+  }
+
 
 //＠GetMappinrg…登録されているデータを取得する
 //＠PostMapping…新しいデータを登録する

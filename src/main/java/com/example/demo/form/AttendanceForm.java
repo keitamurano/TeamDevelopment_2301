@@ -6,7 +6,9 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,21 +18,21 @@ import lombok.Data;
 @Table(name = "attendance")
 public class AttendanceForm{
 
-	
+	//@NotNull　無くて良い
 	@Column(name = "user_id")
 	private Integer userId;
 
 
-	@NotBlank(message="出勤状況を選択して下さい")
+	@NotEmpty(message="出勤状況を選択して下さい")
 	@Column(name = "status")
 	private  String status;
 
-	@NotBlank(message="出勤日を選択してください")
+	@NotNull(message="出勤日を選択してください")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "start_date")
 	private  Date startdate;
 
-	@NotBlank(message="出勤時間を選択してください")
+	@NotEmpty(message="出勤時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	@Column(name = "start_time")
 	//@NotNull
@@ -38,6 +40,7 @@ public class AttendanceForm{
 
 	//@NotNull
 	@Column(name = "remarks")
+	@Size(max = 200, message = "備考は200文字以内で入力して下さい")
 	private  String remarks;
 
 	//attendance_ID integer(20) NOTNULL,

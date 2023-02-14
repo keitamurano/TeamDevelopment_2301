@@ -20,9 +20,9 @@ public class AttendanceService {
  AttendanceRepository attendanceRepository;
 
 
-//DBから全件取得
+////DBから全件取得
 //public List<AttendanceEntity> getAttendancAll() {
-//   return AttendanceEntity.findAll();
+//  return AttendanceEntity.findAll();
 //}
 
 //エンティティ（データを格納する箱）を画面データに詰め替える
