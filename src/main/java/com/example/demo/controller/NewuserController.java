@@ -37,7 +37,7 @@ public class NewuserController {
 	}
 
 	@RequestMapping(value = "/user/create", method = RequestMethod.POST)
-	public String create(@Validated @ModelAttribute UserRequestForm userRequest, BindingResult result, Model model) {
+	public String create(@Validated @ModelAttribute UserRequestForm userRequestForm, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 
 			// 入力チェックエラーの場合
@@ -49,8 +49,8 @@ public class NewuserController {
 			return "/Newuser";
 		}
 		// ユーザー情報の登録
-		newuserService.create(userRequest);
-		model.addAttribute("userRequest",userRequest);
+		newuserService.create(userRequestForm);
+		model.addAttribute("userRequest",userRequestForm);
 		return "/login";
 	}	    
 

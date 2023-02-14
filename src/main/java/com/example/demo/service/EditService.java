@@ -29,20 +29,21 @@ public class EditService {
 	 * ユーザー情報 主キー検索
 	 * @return 検索結果
 	 */
-	public UserEntity findById(Long id) {
-		return userRepository.findById(id).get();
+	public UserEntity findById(Long user_id) {
+		return userRepository.findById(user_id).get();
 	}
 
 	/**
 	 * ユーザー情報 更新
 	 * @param user ユーザー情報
 	 */
-	public void update(UserRequestForm userUpdateRequest) {
-		UserEntity user = findById(userUpdateRequest.getUser_id());
-		user.setName(userUpdateRequest.getName());
-		user.setName_kana(userUpdateRequest.getName_kana());
-		user.setMail_address(userUpdateRequest.getMail_address());
-		user.setPassword(userUpdateRequest.getPassword());
+	public void update(UserRequestForm userRequestForm) {
+		UserEntity user = findById(userRequestForm.getUser_id());
+		user.setUser_id(userRequestForm.getUser_id());
+		user.setName(userRequestForm.getName());
+		user.setName_kana(userRequestForm.getName_kana());
+		user.setMail_address(userRequestForm.getMail_address());
+		user.setPassword(userRequestForm.getPassword());
 		userRepository.save(user);
 	}
 

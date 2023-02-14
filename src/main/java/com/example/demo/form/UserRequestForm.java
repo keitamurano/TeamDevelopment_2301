@@ -5,12 +5,15 @@ import java.io.Serializable;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Data;
 
 /**
  * ユーザー情報 リクエストデータ
  */
 @Data
+@Component
 public class UserRequestForm implements Serializable {
 
 	private Long user_id;
