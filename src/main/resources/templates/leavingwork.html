@@ -18,6 +18,7 @@
                 </div>
 				<form th:action="@{/Leavingwork}"th:object="${LeavingworkForm}"method="post"> 
                 <!--user_Idの処理（ラベル）-->
+                <div class="error" th:errors="*{userId}"></div>
                 <label>ユーザーID</label><br>
 			<input type="text" th:field="*{userId}" >
 			
@@ -33,6 +34,7 @@
 
                 <!--退勤日(カレンダー)-->
                 <div class="end_date">
+                <div class="error" th:errors="*{enddate}"></div>
                     <label>退勤日</label><br>
                    
                         <input type="date" th:field="*{enddate}">
@@ -40,12 +42,14 @@
 
                 <!--退勤時間(プルダウン？テキスト？)-->
                 <div class="end_time">
+                <div class="error" th:errors="*{endtime}"></div>
                     <label>退勤時間</label><br>
                     <input type="time" th:field="*{endtime}">
                 </div>
 
                 <!--休憩時間(プルダウン？テキスト？)-->
                 <div class="break_time">
+                 <div class="error" th:errors="*{breaktime}"></div>
                     <label>休憩時間（分）</label><br>
                     <input type="time" th:field="*{breaktime}">
                 </div>

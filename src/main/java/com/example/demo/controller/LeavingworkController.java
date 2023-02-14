@@ -2,15 +2,23 @@
 package com.example.demo.controller;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.form.LeavingworkForm;
 import com.example.demo.service.LeavingworkService;
+
+
 
 //退勤報告コントローラー
 
@@ -36,17 +44,18 @@ public class LeavingworkController{
 
 	//登録ボタンを押下→マイページ画面に遷移する ??
 	  @PostMapping("/Leavingwork")
-	    public String create(@ModelAttribute LeavingworkForm leavingworkForm,Model model) {
+	    public String create(@Validated @ModelAttribute LeavingworkForm leavingworkForm,BindingResult bindingResult,Model model) {
 		  
-		  /*if (result.hasErrors()) {
-	      // 入力チェックエラーの場合
+		  if (bindingResult.hasErrors()) {
 	      List<String> errorList = new ArrayList<String>();
-	      for (ObjectError error : result.getAllErrors()) {
+	      for (ObjectError error : bindingResult.getAllErrors()) {
 	        errorList.add(error.getDefaultMessage());
 	      }
+	      model.addAttribute("LeavingworkForm", leavingworkForm);
 	      model.addAttribute("validationError", errorList);
-	      return "user/add";S
-	    }*/
+	      model.addAttribute("LeavingworkForm",new LeavingworkForm());
+	      return "/Leavingwork";
+	    }
 	    // ユーザー情報の登録
 		  
 		  leavingworkService.insert(leavingworkForm);
