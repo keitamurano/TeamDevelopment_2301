@@ -1,7 +1,6 @@
 package com.example.demo.form;
 
-import java.io.Serializable;
-
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
@@ -11,7 +10,7 @@ import lombok.Data;
  * ユーザー情報 リクエストデータ
  */
 @Data
-public class UserRequestForm implements Serializable {
+public class UserRequestForm {
 
 	private Long user_id;
 	/**
@@ -29,7 +28,7 @@ public class UserRequestForm implements Serializable {
 	/**
 	 * メールアドレス
 	 */
-	//	@Email(message = "正しい形式で入力してください")
+	@Email(message = "正しい形式で入力してください")
 	@NotEmpty(message = "E-mailを入力してください")
 	private String mail_address;
 	/**
