@@ -6,6 +6,10 @@
 	color:red;
 }
 
+.errortext{
+	 text-align: center;
+}
+
 .userID{
     text-align: center;
         display: block;

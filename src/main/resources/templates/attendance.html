@@ -20,17 +20,22 @@
 		</div>
 
 		<form th:action="@{/Attendance}" th:object="${AttendanceForm}"
-			method="post">
-			
+			method="POST">
+
+			<table>
+				<tr th:if="${validationError}" th:each="error : ${validationError}" class="errortext">
+					<td style="color: red;" th:text="${error}"></td>
+				</tr>
+			</table>
+
 			<div class="error" th:errors="*{userId}"></div>
-			<label>ユーザーID</label><br>
-			<input type="text" th:field="*{userId}" >
-			
+			<label>ユーザーID</label><br> <input type="text"
+				th:field="*{userId}">
+
 			<!--ステータスの処理(プルダウン)-->
 			<div class="error" th:errors="*{status}"></div>
-			 <div class="status">
-				<label>ステータス</label><br>
-				<select name="status">
+			<div class="status">
+				<label>ステータス</label><br> <select name="status">
 					<option value="出勤">出勤</option>
 					<option value="遅刻">遅刻</option>
 					<option value="休日">休日</option>
@@ -43,22 +48,22 @@
 
 			<!--出勤日(カレンダー)-->
 			<div class="start_date">
-			<div class="error" th:errors="*{startdate}"></div>
-				<label>出勤日</label><br>
+				<div class="error" th:errors="*{startdate}"></div>
+				<label>出勤日</label><br> <input type="date"
+					th:field="*{startdate}">
+			</div>
 
-				 <input type="date" th:field = "*{startdate}">
-				</div>
-			
 
 			<!--出勤時間(プルダウン？テキスト？)-->
 			<div class="start_time">
-			<div class="error" th:if="${#fields.hasErrors('starttime')}" th:errors="*{starttime}"></div>
-				<label>出勤時間</label><br>
-				<input type="time" th:field="*{starttime}">
-			
+				<div class="error" th:if="${#fields.hasErrors('starttime')}"
+					th:errors="*{starttime}"></div>
+				<label>出勤時間</label><br> <input type="time"
+					th:field="*{starttime}">
+
 			</div>
 			<div class="remarks">
-			<div class="error" th:errors="*{remarks}"></div>
+				<div class="error" th:errors="*{remarks}"></div>
 				<!--<label for="message">お問い合わせ内容</label><br>-->
 				<label>備考</label><br> <input type="text" th:field="*{remarks}">
 			</div>
