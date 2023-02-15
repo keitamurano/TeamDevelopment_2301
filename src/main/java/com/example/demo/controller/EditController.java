@@ -61,6 +61,8 @@ public class EditController {
 		model.addAttribute("UserRequest", userRequest);
 		return "/edit";
 	}
+	
+	
 
 	@RequestMapping(value = "/user/edit", method = RequestMethod.POST)
 	public String edit(@Validated @ModelAttribute UserRequestForm userRequest, BindingResult result, Model model) {

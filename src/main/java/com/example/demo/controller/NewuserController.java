@@ -11,8 +11,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.form.UserRequestForm;
 import com.example.demo.service.NewuserService;
@@ -36,7 +35,7 @@ public class NewuserController {
 		return "/Newuser";
 	}
 
-	@RequestMapping(value = "/user/create", method = RequestMethod.POST)
+	@PostMapping("/user/create")
 	public String create(@Validated @ModelAttribute UserRequestForm userRequest, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 
@@ -45,13 +44,13 @@ public class NewuserController {
 			for (ObjectError error : result.getAllErrors()) {
 				errorList.add(error.getDefaultMessage());
 			}
+			model.addAttribute("userRequest",userRequest);
 			model.addAttribute("validationError", errorList);
 			return "/Newuser";
 		}
 		// ユーザー情報の登録
 		newuserService.create(userRequest);
-		model.addAttribute("userRequest",userRequest);
-		return "/login";
+		return "/Mypage";
 	}	    
 
 }

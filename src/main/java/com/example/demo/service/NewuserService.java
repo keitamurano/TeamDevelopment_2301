@@ -21,7 +21,7 @@ UserRepository userRepository;
 	   */
 	  public void create(UserRequestForm userRequest) {
 	    UserEntity user = new UserEntity();
-	    
+	    user.setUser_id(userRequest.getUser_id());
 	    user.setName(userRequest.getName());
 	    user.setName_kana(userRequest.getName_kana());
 	    user.setMail_address(userRequest.getMail_address());
