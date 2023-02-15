@@ -19,7 +19,7 @@ import lombok.Data;
 @Table(name = "leavingwork")
 public class LeavingworkForm{
 	
-	@NotNull
+	//@NotNull
 	@Column(name = "user_id")
 	private Integer userId;
 
@@ -41,13 +41,13 @@ public class LeavingworkForm{
 	@Column(name = "end_date")
 	private  Date enddate;
 	
-	@NotNull(message="退勤時間を選択してください")
+	@NotEmpty(message="退勤時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	@Column(name = "end_time")
 	//@NotNull
 	private  String endtime;
 	
-	@NotNull(message="退勤日を選択してください")
+	@NotEmpty(message="休憩時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	@Column(name = "break_time")
 	//@NotNull

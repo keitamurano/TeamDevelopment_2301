@@ -1,76 +1,81 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" th:href="@{/css/leavingwork.css}">
-    </head>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" th:href="@{/css/leavingwork.css}">
+</head>
 
 <!--中身-->
-    <body>
-     <div id="wrapper"> 
-                <!--ヘッダー-->
-                <div class="header">
-                    <h1>退勤報告</h1>
-                </div>
-				<form th:action="@{/Leavingwork}"th:object="${LeavingworkForm}"method="post"> 
-                <!--user_Idの処理（ラベル）-->
-                <div class="error" th:errors="*{userId}"></div>
-                <label>ユーザーID</label><br>
-			<input type="text" th:field="*{userId}" >
-			
+<body>
+	<div id="wrapper">
+		<!--ヘッダー-->
+		<div class="header">
+			<h1>退勤報告</h1>
+		</div>
+		<form th:action="@{/Leavingwork}" th:object="${LeavingworkForm}"
+			method="post">
 
-                <!--ステータスの処理(プルダウン)-->
-                <div class="status">
-                    <label>ステータス</label><br> <select name="status">
-                            <option value="退勤" >退勤</option>
-                            <option value="早退">早退</option>
-                            <option value="その他">その他</option>
-                        </select>
-                </div>
+			<table>
+				<tr th:if="${validationError}" th:each="error : ${validationError}"
+					class="errortext">
+					<td style="color: red;" th:text="${error}"></td>
+				</tr>
+			</table>
 
-                <!--退勤日(カレンダー)-->
-                <div class="end_date">
-                <div class="error" th:errors="*{enddate}"></div>
-                    <label>退勤日</label><br>
-                   
-                        <input type="date" th:field="*{enddate}">
-                </div>
+			<!--user_Idの処理（ラベル）-->
+			<div class="error" th:errors="*{userId}"></div>
+			<label>ユーザーID</label><br> <input type="text"
+				th:field="*{userId}">
 
-                <!--退勤時間(プルダウン？テキスト？)-->
-                <div class="end_time">
-                <div class="error" th:errors="*{endtime}"></div>
-                    <label>退勤時間</label><br>
-                    <input type="time" th:field="*{endtime}">
-                </div>
 
-                <!--休憩時間(プルダウン？テキスト？)-->
-                <div class="break_time">
-                 <div class="error" th:errors="*{breaktime}"></div>
-                    <label>休憩時間（分）</label><br>
-                    <input type="time" th:field="*{breaktime}">
-                </div>
+			<!--ステータスの処理(プルダウン)-->
+			<div class="status">
+				<label>ステータス</label><br> <select name="status">
+					<option value="退勤">退勤</option>
+					<option value="早退">早退</option>
+					<option value="その他">その他</option>
+				</select>
+			</div>
 
-                <div class = "remarks">
-                    <!--<label for="message">お問い合わせ内容</label><br>-->
-                    <label>備考</label><br>
-                    <input type="text" th:field="*{remarks}">
-                    </div>
-                
-                <!--登録(ボタン)-->
-                <div class = "register">
-                    <input type="submit" value="登録"><br>
-                 </div>
-</form>
-                <!--戻る(ボタン)-->
-                <div class ="return">
-                 <a th:href="@{/mypage}">
-                    <input type="button" value="戻る">
-                    </a>
-                </div>
-        </div>
-    </body>
+			<!--退勤日(カレンダー)-->
+			<div class="end_date">
+				<div class="error" th:errors="*{enddate}"></div>
+				<label>退勤日</label><br> <input type="date" th:field="*{enddate}">
+			</div>
+
+			<!--退勤時間(プルダウン？テキスト？)-->
+			<div class="end_time">
+				<div class="error" th:errors="*{endtime}"></div>
+				<label>退勤時間</label><br> <input type="time"
+					th:field="*{endtime}">
+			</div>
+
+			<!--休憩時間(プルダウン？テキスト？)-->
+			<div class="break_time">
+				<div class="error" th:errors="*{breaktime}"></div>
+				<label>休憩時間（分）</label><br> <input type="time"
+					th:field="*{breaktime}">
+			</div>
+
+			<div class="remarks">
+				<!--<label for="message">お問い合わせ内容</label><br>-->
+				<label>備考</label><br> <input type="text" th:field="*{remarks}">
+			</div>
+
+			<!--登録(ボタン)-->
+			<div class="register">
+				<input type="submit" value="登録"><br>
+			</div>
+		</form>
+		<!--戻る(ボタン)-->
+		<div class="return">
+			<a th:href="@{/mypage}"> <input type="button" value="戻る">
+			</a>
+		</div>
+	</div>
+</body>
 </html>
