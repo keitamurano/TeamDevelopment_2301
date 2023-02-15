@@ -1,17 +1,18 @@
 @charset "UTF-8";
-.body {
-    min-height: 100%;
-    height: 100%;
-    font-weight: 300;
+.wrapper {
+	margin: 0 auto;
+	width: 100%
 }
 
-.wrapper {
-    width: 1024px;
-    height: 750px;
-    margin: 0px auto;    
-    background-image: url("white0023.png");
-    background-color: cadetblue;
-    background-size: cover;
+body {
+	background-image: url("white0023.jpg");
+	background-size: cover;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	
+    font-family:monospace;
+    font-weight:400;
 }
 .a {
     width: 100%;

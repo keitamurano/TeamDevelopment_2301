@@ -11,8 +11,6 @@
 </head>
 
 <body background="white0023.jpg">
-	<div class="wapper"></div>
-	<div class="header"></div>
 
 	<div align="right">
 		<form>
@@ -23,42 +21,48 @@
 			</a>
 		</form>
 	</div>
-
+	
+	<table>
+        <tr class="error-msg" th:if="${validationError}" th:each="error : ${validationError}">
+            <td style="color: red;" th:text="${error}"></td>
+        </tr>
+    </table>
 	<h1>ユーザー新規登録</h1>
-	<form th:action="@{/user/create}" th:object="${userRequest}"
-		th:method="post">
+	<form th:action="@{/user/create}" th:object="${userRequest}" method="post">
 
 		<div class="form-group">
-			<label>Name：<span class="text-danger"></span></label> <input
-				type="text" th:field="*{name}" name="name">
+			<!-- <div class="error" th:errors="*{name}"></div> -->
+			<label>Name：<span class="text-danger"></span></label> 
+			<input th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
 		</div>
-		</br>
+		<br>
 
 		<div class="form-group">
+			<!-- <div class="error" th:errors="*{name_kana}"></div> -->
 			<label>カナ：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{name_kana}" name="name_kana">
 		</div>
-		</br>
+		<br>
 
 		<div class="form-group">
+			<!-- <div class="error" th:errors="*{mail_address}"></div> -->
 			<label>E-mail：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{mail_address}" name="mail_address">
 		</div>
-		</br>
+		<br>
 
 		<div class="form-group">
+			<!-- <div class="error" th:errors="*{password}"></div> -->
 			<label>Password：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{password}" name="password">
 		</div>
-		</br>
+		<br>
 
 		<div class="text-center">
 			<!--  <a href="/user/login1" class="btn btn-secondary">戻る</a>  -->
-
-			<input type="submit" value="　登録　" class="btn btn-primary">
+			<input type="submit" value="登録">
 		</div>
-		</br>
-
+		<br>
 	</form>
 </body>
 </html>
