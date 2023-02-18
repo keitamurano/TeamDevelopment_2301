@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
-<link rel="stylesheet" href="css/Newuser.css">
+<link rel="stylesheet" th:href="@{/css/Newuser.css}">
+
 
 </head>
 
@@ -14,26 +15,35 @@
 
 	<div align="right">
 		<form>
-			<a th:href="@{/login}"> <!-- method="post" --> <input
+			<a th:href="@{/login}"> <!-- method="post" --> 
+			<input
 				name="editbutton"
 				class="editbutton userbutton-shadow userbutton-circle" type="button"
 				value="戻る">
 			</a>
 		</form>
 	</div>
-	
-	<table>
-        <tr class="error-msg" th:if="${validationError}" th:each="error : ${validationError}">
-            <td style="color: red;" th:text="${error}"></td>
-        </tr>
-    </table>
-	<h1>ユーザー新規登録</h1>
-	<form th:action="@{/user/create}" th:object="${userRequest}" method="post">
 
+	<table>
+		<tr class="error-msg" th:if="${validationError}"
+			th:each="error : ${validationError}">
+			<td style="color: red;" th:text="${error}"></td>
+		</tr>
+	</table>
+	<h1>ユーザー新規登録</h1>
+	<form th:action="@{/user/create}" th:object="${userRequest}"
+		method="post">
 		<div class="form-group">
 			<!-- <div class="error" th:errors="*{name}"></div> -->
-			<label>Name：<span class="text-danger"></span></label> 
-			<input th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
+			<label>ID：<span class="text-danger"></span></label> <input
+				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
+		</div>
+		<br>
+		
+		<div class="form-group">
+			<!-- <div class="error" th:errors="*{name}"></div> -->
+			<label>Name：<span class="text-danger"></span></label> <input
+				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
 		</div>
 		<br>
 
