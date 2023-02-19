@@ -34,6 +34,8 @@ attendanceEntity.setStatus(attendanceForm.getStatus());
 attendanceEntity.setStartdate(attendanceForm.getStartdate());
 attendanceEntity.setStarttime(LocalTime.parse(attendanceForm.getStarttime().substring(0, 5) + ":00"));
 attendanceEntity.setRemarks(attendanceForm.getRemarks());
+attendanceEntity.setAttendance_ID(attendanceForm.getAttendance_ID()); //
+
 
 attendanceRepository.save(attendanceEntity);
 }

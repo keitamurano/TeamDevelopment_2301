@@ -9,6 +9,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,7 +24,7 @@ import lombok.Data;
 public class AttendanceEntity{
 
   
-    @Id //primary key(user_id)
+  //primary key(user_id)
    // @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
     
  @Column(name = "user_id")
@@ -53,6 +55,9 @@ public class AttendanceEntity{
  @Column(name = "remarks")
     private String remarks;
 
+ //@Column(name = "attendance_id")
+ //private Integer AttendanceId;
+ 
 // public static List<AttendanceEntity> findAll() {
 //  // TODO 自動生成されたメソッド・スタブ
 //  return null;
@@ -64,10 +69,10 @@ public class AttendanceEntity{
  //public void save(AttendanceEntity attendanceEntity) {
   // TODO 自動生成されたメソッド・スタブ
   
- 
- 
- //@Column(name = "attendance_id")
-   // private Integer attendanceid;
+ @Id
+ @GeneratedValue(strategy = GenerationType.AUTO)
+ @Column(name = "attendance_id")
+   private Integer attendance_ID;
  //}
 
 

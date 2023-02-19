@@ -7,14 +7,27 @@
 }
 
 .errortext{
-	 text-align: center;
+	text-align:center;
+	margin: 0 auto;
+	
+
+	/*width:200px;
+	 text-align: center;-->*/
+	/* display: grid; justify-content: center;*/
 }
 
 .userID{
     text-align: center;
         display: block;
-        padding-top: 30px;   
+        padding-top: 20px;   
   }
+
+
+.attendance_ID{
+	text-align: center;
+        display: block;
+        padding-top: 30px;   
+}
 
 text{
     width: 70px;

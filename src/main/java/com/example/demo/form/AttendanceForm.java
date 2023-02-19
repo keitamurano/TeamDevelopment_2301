@@ -4,6 +4,7 @@ package com.example.demo.form;
 
 import java.util.Date;
 
+import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -41,5 +42,7 @@ public class AttendanceForm{
 	@Size(max = 200, message = "備考は200文字以内で入力して下さい")
 	private  String remarks;
 
-	//attendance_ID integer(20) NOTNULL,
+	//attendance_ID integer(20) NOTNULL,↓この形？
+	@Id
+	private Integer attendance_ID;
 }
