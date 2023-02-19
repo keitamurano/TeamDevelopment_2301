@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,11 +28,6 @@ public class PaidController {
 	 **/
 	@GetMapping(value = "/paid/list") 
 	public String PaidList(Model model){
-
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		//Principalからログインユーザの情報を取得
-		String userID = auth.getName();
-		model.addAttribute("user", userID);
 		PaidEntity paidlist = paidService.findById(1);
 		model.addAttribute("paidlist", paidlist);
 		return "Paid";
