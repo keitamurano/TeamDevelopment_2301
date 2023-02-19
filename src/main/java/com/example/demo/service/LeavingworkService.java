@@ -34,6 +34,7 @@ public class LeavingworkService {
 	leavingworkEntity.setEndtime(LocalTime.parse(leavingworkForm.getEndtime().substring(0, 5) + ":00"));
 	leavingworkEntity.setBreaktime(LocalTime.parse(leavingworkForm.getBreaktime().substring(0, 5) + ":00"));
 	leavingworkEntity.setRemarks(leavingworkForm.getRemarks());
+	//leavingworkEntity.setAttendance_ID(leavingworkForm.getAttendance_ID());
 
 	 leavingworkRepository.save(leavingworkEntity);
 	

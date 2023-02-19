@@ -6,6 +6,7 @@ package com.example.demo.form;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -57,7 +58,7 @@ public class LeavingworkForm{
 	@Column(name = "remarks")
 	@Size(max = 200, message = "備考は200文字以内で入力して下さい")
 	private  String remarks;
-
-	}
 	
-	//attendance_ID integer(20) NOTNULL,
+	@Id
+	private Integer attendance_ID;
+	}

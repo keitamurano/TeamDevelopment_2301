@@ -58,9 +58,9 @@ public class LeavingworkEntity{
 // public void save(LeavingworkEntity leavingworkEntity) {
 //  // TODO 自動生成されたメソッド・スタブ
 //  
-// 
-// 
-// //@Column(name = "attendance_id")
-//   // private Integer attendanceid;
-// }
+// @Id
+// @GeneratedValue(strategy = GenerationType.AUTO)
+// @Column(name = "attendance_id")
+//   private Integer attendance_ID;
+//// }
 }
