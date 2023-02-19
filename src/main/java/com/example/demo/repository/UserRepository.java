@@ -10,5 +10,5 @@ import com.example.demo.entity.UserEntity;
  */
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
-	//	 List<UserEntity> findById(Long user_id);
+//		 List<UserEntity> findById(Long user_id);
 }

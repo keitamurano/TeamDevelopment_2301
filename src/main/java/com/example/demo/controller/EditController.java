@@ -24,6 +24,7 @@ import com.example.demo.service.EditService;
 public class EditController {
 	@Autowired
 	EditService editService;
+	
 
 	/**
 	 * ユーザー情報詳細画面を表示
@@ -52,12 +53,15 @@ public class EditController {
 	   * @param model Model
 	   * @return ユーザー情報詳細画面
 	   */
-	  @GetMapping("/user/edit/delete")
+	  @GetMapping("/user/edit/delete/{user_id}")
 	  public String delete(@PathVariable Long user_id, Model model) {
 	    // ユーザー情報の削除
 		editService.delete(user_id);
-	    return "/login";
+	    return "/Mypage";
 	  }
+	 
+	  
+
 	  
 //	  @DeleteMapping("/user/edit/delete/{user_id}")
 //		public String delete(@PathVariable Long user_id) {

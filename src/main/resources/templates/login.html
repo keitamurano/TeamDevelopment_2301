@@ -20,8 +20,10 @@
     <input type="text" name="username"  placeholder="UserName">
     <input type="password" name="password" placeholder="Password">
     <button formaction="/sign_in"> LOGIN</button> 
-    <button id="newaccoun"> 新規アカウント作成</button> 
       </div>
+    </form>
+    <form th:action="@{/Newuser}"  name="login_form">
+    <button> 新規アカウント作成</button> 
     </form>
     </body>
 </html>
