@@ -25,6 +25,7 @@ public class kintaiService {
 
 	public void update(kintaiRequest kintairequest) {
 		kintaiEntity kintai = findById(kintairequest.getAttendance_id());
+		kintai.setAttendance_id(kintairequest.getAttendance_id());
 		kintai.setUser_id(kintairequest.getUser_id());
 		kintai.setStatus(kintairequest.getStatus());
 		kintai.setStart_date(kintairequest.getStart_date());
