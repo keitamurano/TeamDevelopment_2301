@@ -1,0 +1,99 @@
+#wrapper { /* 共通の処理 */
+    /*width: 1300px;*/
+    text-align:center;
+}
+.error{
+	color:red;
+}
+
+.errortext{
+	text-align:center;
+	margin: 0 auto;
+	
+
+	/*width:200px;
+	 text-align: center;-->*/
+	/* display: grid; justify-content: center;*/
+}
+
+.userID{
+    text-align: center;
+        display: block;
+        padding-top: 20px;   
+  }
+
+
+.attendance_ID{
+	text-align: center;
+        display: block;
+        padding-top: 30px;   
+}
+
+text{
+    width: 70px;
+    height: 30px;}
+
+
+.status{
+    padding-top: 30px;
+    
+}
+
+.start_date{
+    padding-top: 30px;
+}
+
+.start_time{
+    padding-top: 30px;
+}
+
+.remarks{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*ヘッダー*/
+h1{
+    text-align:center;
+    color: rgb(10, 10, 10);
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.return{
+  /*  text-align: left;*/
+    margin: 30px
+   
+}
+
+  input{
+    height: 30px;
+    width: 200px;
+  }
+
+  select{
+    height: 30px;
+    width: 200px;
+  }
+
+  body {
+    /* 画像ファイルの指定 */
+    background-image: url(white0023.png); /*分からない*/
+     
+    /* 画像を常に天地左右の中央に配置 */
+    background-position: center center;
+     
+    /* 画像をタイル状に繰り返し表示しない */
+    background-repeat: no-repeat;
+     
+    /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+    background-attachment: fixed;
+     
+    /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+    background-size: cover;
+     
+    /* 背景画像が読み込まれる前に表示される背景のカラー */
+    background-color: #464646;
+  }
