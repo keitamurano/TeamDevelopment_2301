@@ -30,7 +30,7 @@ public class AttendanceController{
 	
 //private AttendanceService  attendanceService = new AttendanceService();
 //(マイページから出勤報告画面を表示）
-  @GetMapping("/attendance")//出勤報告画面を表示する
+  @GetMapping("/attendances")//出勤報告画面を表示する
      public String attendance (Model model){
 	  model.addAttribute("AttendanceForm",new AttendanceForm());
 
@@ -45,7 +45,7 @@ public class AttendanceController{
  //    }
 
   //登録ボタンを押したときに登録をする
-  @PostMapping("/Attendance")
+  @PostMapping("/attendance")
   public String create(@Validated @ModelAttribute AttendanceForm attendanceForm, BindingResult bindingResult,Model model) {
 	  if (bindingResult.hasErrors()) {
 	      List<String> errorList = new ArrayList<String>();      

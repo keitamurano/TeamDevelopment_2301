@@ -28,7 +28,12 @@ public class kintaiichiranController {
 	public String myPage() {
 		return "/Mypage";
 	}
-//
+	
+	/*@GetMapping("/leavingwork")
+    public String leavingwork() {
+        return "/leavingwork"; 
+	}*/
+	
 //	@GetMapping("/kintaiichiran/{user_id}/edit")
 //	public String kintaiEdit(@PathVariable Integer attendance_id, Model model) {
 ////		kintaiEntity kintaiedit = kintaiservice.findById();
