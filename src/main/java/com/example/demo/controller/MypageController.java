@@ -28,11 +28,11 @@ public class MypageController {
 //		// model.addAllAttributes("name",name,"userID",userID);
 //		return "edit";
 //	}
-	@PostMapping("/attendance"/**path="/mypage", params = "attendance-button"**/)
-	public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
-		return "attendance";
-	}
+//	@PostMapping("/attendanc"/**path="/mypage", params = "attendance-button"**/)
+//	public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
+//		// model.addAllAttributes("name",name,"userID",userID);
+//		return "attendance";
+//	}
 	@PostMapping("/leavingwork"/**path="/mypage", params = "leavingwork-button"**/)
 	public String postLeavingwork(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);

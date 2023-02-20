@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
@@ -17,15 +16,15 @@
 
             <div class="userdate">
 
-      		<form><a th:href="@{/Newuser}"> <!-- method="post" -->
-              	<input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺︎">
+        <form><a th:href="@{/Newuser}"> <!-- method="post" -->
+               <input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺">
                </a><!--
                <div class="namebox"> -->
                     <p class="username">name:<span th:remove="tag" sec:authentication="name"></span></p>
                    <!--  </div> -->
            <!--     <div class="idbox"> -->
                     <!--<p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>-->
-				<!-- 	</div> -->
+    <!--  </div> -->
           </form>
 
             </div>
@@ -36,12 +35,12 @@
         <div class="contents clearfix">
                 <div class="left">
 
-            <form> <a th:href="@{/attendance}"><!--  method="post" -->
+            <form> <a th:href="@{/attendances}"><!--  method="post" -->
                 <input class="attendance-button" name="attendance-button" value="出勤報告" type="button"></a>
                 </form>
 
             <form> <a th:href="@{/leavingwork}" ><!-- method="post"> -->
-             	<input class="leavingwork-button" name="leavingwork-button" type="button" value="退勤報告"></a>
+              <input class="leavingwork-button" name="leavingwork-button" type="button" value="退勤報告"></a>
                 </form>
 
             <form> <a th:href="@{/mypage/kintaiichiran}"> <!-- method="post"> -->
@@ -50,12 +49,12 @@
 
             <form> <a th:href="@{/expences}"> <!-- method="post"> -->
                 <input class="expences-button" name="expences-button" value="経費申請" type="button" ></a>
-			</form>
+   </form>
                 </div>
 
                 <div class="right">
 
-            <form> <a th:href="@{user/edit/1}"><!-- method="post"> -->
+            <form> <a th:href="@{/edit}"><!-- method="post"> -->
                 <input class="create2-button" name="create2-button" value="ユーザー編集削除" type="button"></a>
                 </form>
 
@@ -65,7 +64,7 @@
 
             <form> <a th:href="@{/paid/list}"> <!-- method="post"> -->
                 <input class="paid-button" name="paid-button" value="有給一覧" type="button"></a>
-			</form>
+   </form>
 
                 </div>
 
@@ -73,5 +72,3 @@
     </div>
 
 </body>
-
-
