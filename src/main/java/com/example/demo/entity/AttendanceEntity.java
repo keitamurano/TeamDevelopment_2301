@@ -23,40 +23,39 @@ import lombok.Data;
 @Table(name = "attendance") // table名の指定（クラス名＝テーブル名）
 public class AttendanceEntity {
 
- // primary key(user_id)
- // @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
+	// primary key(user_id)
+	// @GeneratedValue(strategy = GenerationType.IDENTITY)//(AUTO指定にすると自動で値を割振る）
 
- @Column(name = "user_id")
- private Integer userId;
+	@Column(name = "user_id")
+	private Integer userId;
 
- @Column(name = "status")
- private String status;
+	@Column(name = "status")
+	private String status;
 
- @Column(name = "start_date")
- private Date startdate;
+	@Column(name = "start_date")
+	private Date startdate;
 
- @DateTimeFormat(pattern = "HH:mm:ss")
- @Column(name = "start_time")
- private LocalTime starttime;
+	@DateTimeFormat(pattern = "HH:mm:ss")
+	@Column(name = "start_time")
+	private LocalTime starttime;
 
- @DateTimeFormat(pattern = "HH:mm:ss")
- @Column(name = "end_date")
- private LocalTime enddate;
+	@DateTimeFormat(pattern = "HH:mm:ss")
+	@Column(name = "end_date")
+	private Date enddate;
 
- @DateTimeFormat(pattern = "HH:mm:ss")
- @Column(name = "end_time")
- private LocalTime endtime;
+	@DateTimeFormat(pattern = "HH:mm:ss")
+	@Column(name = "end_time")
+	private LocalTime endtime;
 
- @DateTimeFormat(pattern = "HH:mm:ss")
- @Column(name = "break_time")
- private LocalTime breaktime;
+	@DateTimeFormat(pattern = "HH:mm:ss")
+	@Column(name = "break_time")
+	private LocalTime breaktime;
 
- @Column(name = "remarks")
- private String remarks;
+	@Column(name = "remarks")
+	private String remarks;
 
- @Id
- @GeneratedValue(strategy = GenerationType.IDENTITY)
- @Column(name = "attendance_id")
- private Integer attendance_ID;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "attendance_id")
+	private Integer attendance_ID;
 }

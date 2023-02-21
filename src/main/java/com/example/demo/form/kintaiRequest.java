@@ -2,7 +2,6 @@
 package com.example.demo.form;
 
 import java.sql.Date;
-import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
@@ -16,31 +15,29 @@ import lombok.Data;
 @Data
 public class kintaiRequest{
 
-
 	private Integer user_id;
 
 	@NotEmpty(message="退勤状況を選択して下さい")
 	@Column(name = "status")
 	private String status;
 
-
 	private Date start_date;
 
-
-	private LocalTime start_time;
+	@DateTimeFormat(pattern="HH:mm:ss")
+	private String start_time;
 
 	@NotNull(message="退勤日を選択してください")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+
 	private Date end_date;
 
-	@NotNull(message="退勤時間を選択してください")
+	@NotEmpty(message="退勤時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	private String end_time;
 
-	@NotNull(message="休憩時間を選択してください")
+	@NotEmpty(message="休憩時間を選択してください")
 	@DateTimeFormat(pattern="HH:mm:ss")
 	private String break_time;
-	
+
 	@Size(max = 200, message = "備考は200文字以内で入力して下さい")
 	private String remarks;
 

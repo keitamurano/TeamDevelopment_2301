@@ -19,6 +19,8 @@
 		<form th:action="@{/Leavingwork}" th:object="${LeavingworkForm}"
 			method="post">
 
+			<input type="hidden" name="attendanceId" th:value=${attendanceId}>
+
 			<table>
 				<tr th:if="${validationError}" th:each="error : ${validationError}"
 					class="errortext">

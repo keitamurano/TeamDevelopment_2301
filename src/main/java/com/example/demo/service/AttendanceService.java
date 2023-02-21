@@ -14,29 +14,20 @@ import com.example.demo.repository.AttendanceRepository;
 @Service
 public class AttendanceService {
 
- //出勤報告のRepository
+	//出勤報告のRepository
+	@Autowired
+	AttendanceRepository attendanceRepository;
 
-@Autowired
- AttendanceRepository attendanceRepository;
+	//エンティティ（データを格納する箱）を画面データに詰め替える
+	public void insert(AttendanceForm attendanceForm) {
+		AttendanceEntity attendanceEntity = new AttendanceEntity();
+		attendanceEntity.setUserId(attendanceForm.getUserId());
+		attendanceEntity.setStatus(attendanceForm.getStatus());
+		attendanceEntity.setStartdate(attendanceForm.getStartdate());
+		attendanceEntity.setStarttime(LocalTime.parse(attendanceForm.getStarttime().substring(0, 5) + ":00"));
+		attendanceEntity.setRemarks(attendanceForm.getRemarks());
+		attendanceEntity.setAttendance_ID(attendanceForm.getAttendance_ID());
 
-
-////DBから全件取得
-//public List<AttendanceEntity> getAttendancAll() {
-//  return AttendanceEntity.findAll();
-//}
-
-//エンティティ（データを格納する箱）を画面データに詰め替える
-
-public void insert(AttendanceForm attendanceForm) {
-AttendanceEntity attendanceEntity = new AttendanceEntity();
-attendanceEntity.setUserId(attendanceForm.getUserId());
-attendanceEntity.setStatus(attendanceForm.getStatus());
-attendanceEntity.setStartdate(attendanceForm.getStartdate());
-attendanceEntity.setStarttime(LocalTime.parse(attendanceForm.getStarttime().substring(0, 5) + ":00"));
-attendanceEntity.setRemarks(attendanceForm.getRemarks());
-attendanceEntity.setAttendance_ID(attendanceForm.getAttendance_ID()); //
-
-
-attendanceRepository.save(attendanceEntity);
-}
+		attendanceRepository.save(attendanceEntity);
+	}
 }

@@ -1,7 +1,6 @@
 package com.example.demo.entity;
 
 import java.sql.Date;
-import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +24,7 @@ public class kintaiEntity {
 	private Date start_date;
 
 	@Column(name = "start_time")
-	private LocalTime start_time;
+	private String start_time;
 
 	@Column(name = "end_date")
 	private Date end_date;

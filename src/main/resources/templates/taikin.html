@@ -16,10 +16,10 @@
      <h1>退勤報告</h1>
     
 <form th:action="@{/leaving/update}" th:object="${KintaiRequests}" th:method="post">
-      <input type="text" th:field="*{attendance_id}" readonly>
-      <input type="text" th:field="*{user_id}" readonly>
-      <input type="text" th:field="*{start_date}" readonly>
-      <input type="text" th:field="*{start_time}" readonly>
+      <input type="hidden" th:field="*{attendance_id}" readonly>
+      <input type="hidden" th:field="*{user_id}" readonly>
+      <input type="text"  th:field="*{start_date}" >
+      <input type="text"  th:field="*{start_time}" >
       <div>
       <div class="row mx-md-n5">
           <div class="col-2 pt-3 border bg-light">ステータス<span class="text-danger">※</span></div>

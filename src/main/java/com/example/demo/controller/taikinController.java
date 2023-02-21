@@ -12,18 +12,21 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.kintaiEntity;
 import com.example.demo.form.kintaiRequest;
 import com.example.demo.service.kintaiService;
+import com.example.demo.service.taikinService;
 
 @Controller
 public class taikinController {
 
 	@Autowired
 	kintaiService KintaiService;
+
+	@Autowired
+	taikinService TaikinService;
 
 	@GetMapping("/leaving/{attendance_id}")
 	public String view(@PathVariable Integer attendance_id, Model model) {
@@ -38,29 +41,29 @@ public class taikinController {
 		KintaiRequest.setEnd_time(KintaiEntity.getEnd_time());
 		KintaiRequest.setBreak_time(KintaiEntity.getBreak_time());
 		KintaiRequest.setRemarks(KintaiEntity.getRemarks());
+
 		model.addAttribute("KintaiRequests", KintaiRequest);
+
 		return "taikin";
 	}
-	
-	 @RequestMapping(value = "/leaving/update", method = RequestMethod.POST)
-	  public String update(@Validated @ModelAttribute kintaiRequest KintaiRequests, BindingResult result, Model model) {
-	    if (result.hasErrors()) {
-	      List<String> errorList = new ArrayList<String>();
-	      for (ObjectError error : result.getAllErrors()) {
-	        errorList.add(error.getDefaultMessage());
-	      }
-	      model.addAttribute("kintaiRequests",new kintaiRequest());
-	      model.addAttribute("validationError", errorList);
-	      return "taikin";
-	    }
-	    System.out.println(KintaiRequests.getEnd_time()+":00");
-	    KintaiRequests.setEnd_time(KintaiRequests.getEnd_time()+":00");
-	    System.out.println(KintaiRequests.getBreak_time()+":00");
-	    KintaiRequests.setBreak_time(KintaiRequests.getBreak_time()+":00");
-	    // ユーザー情報の更新
-	    KintaiService.update(KintaiRequests);
-	    model.addAttribute("kintaiRequests",KintaiRequests);
-	    return "kintaiichiran";
-	  }
-	 
+
+	@PostMapping("/leaving/update")
+	public String update(@Validated @ModelAttribute kintaiRequest KintaiRequests, BindingResult result, Model model) {
+		if (result.hasErrors()) {
+			List<String> errorList = new ArrayList<String>();
+			for (ObjectError error : result.getAllErrors()) {
+				errorList.add(error.getDefaultMessage());
+			}
+			model.addAttribute("kintaiRequests",new kintaiRequest());
+			model.addAttribute("validationError", errorList);
+
+			return "taikin";
+		}
+
+		// ユーザー情報の更新
+		TaikinService.update(KintaiRequests);
+		model.addAttribute("kintaiRequests",KintaiRequests);
+
+		return "redirect:/mypage/kintaiichiran";
+	}
 }
