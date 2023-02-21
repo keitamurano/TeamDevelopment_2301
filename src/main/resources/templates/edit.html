@@ -19,64 +19,70 @@
 				value="戻る">
 			</a>
 		</form>
-		<!-- <form id="delete-form" method="post" action="/user/edit/delete">
-    <input type="hidden" name="user_id" id="delete-user-id">
-    <button type="submit" class="btn btn-danger">削除</button>
-</form> -->
+
 	</div>
 	<table>
-        <tr class="error-msg" th:if="${validationError}" th:each="error : ${validationError}">
-            <td style="color: red;" th:text="${error}"></td>
-        </tr>
-    </table>
-	
+		<tr class="error-msg" th:if="${validationError}"
+			th:each="error : ${validationError}">
+			<td style="color: red;" th:text="${error}"></td>
+		</tr>
+	</table>
+
 	<h1>ユーザー編集•削除</h1>
-	<form th:action="@{/user/update}" th:object="${userRequest}" th:method="post">
+	<form th:action="@{/user/update}" th:object="${userRequest}"
+		th:method="post">
+
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name}"></div> -->
-			<label>ID：<span class="text-danger"></span></label> 
-	 		<input th:errorclass="error-msg" type="text" th:field="*{user_id}" name="user_id"> 
+			<label>ID：<span class="text-danger"></span></label> <input
+				th:errorclass="error-msg" type="text" th:field="*{user_id}"
+				name="user_id" disabled>
 		</div>
 		<br>
-		
+
+
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name}"></div> -->
-			<label>Name：<span class="text-danger"></span></label> 
-	 		<input th:errorclass="error-msg" type="text" th:field="*{name}" name="name"> 
+			<label>Name：<span class="text-danger"></span></label> <input
+				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name_kana}"></div> -->
 			<label>カナ：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{name_kana}" name="name_kana">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{mail_address}"></div> -->
 			<label>E-mail：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{mail_address}" name="mail_address">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{password}"></div> -->
 			<label>Password：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{password}" name="password">
 		</div>
 		<br>
-		
+
 		<div class="text-center">
 			<input type="submit" value="編集">
 		</div>
-		
+
 		<div class="text-center">
 			<input type="submit" value="削除">
 		</div>
-		
-		
-</form>
+
+	</form>
+	<div class="form-group">
+		<form th:action="@{/user/edit/delete}" th:object="${userRequest}"
+			th:method="post">
+			<label>ID：<span class="text-danger"></span></label>
+			<div class="text-center">
+				<input type="submit" value="削除">
+			</div>
+			<input type="text" th:field="*{user_id}" name="user_id">
+		</form>
+	</div>
 
 </body>
 </html>
