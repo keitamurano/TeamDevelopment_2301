@@ -18,25 +18,21 @@ import com.example.demo.service.NewuserService;
 
 @Controller
 public class NewuserController {
+
 	/**
 	 * ユーザー情報 Service
 	 */
 	@Autowired
 	NewuserService newuserService;
 
-	//	    @RequestMapping("/user")
-	//	    public String user() {
-	//	        return "/Newuser";
-	//	    }
-	//	    
 	@GetMapping("/Newuser")
 	public String displayAdd(Model model) {
-		model.addAttribute("userRequest", new UserRequestForm());
+		model.addAttribute("userRequestForm", new UserRequestForm());
 		return "/Newuser";
 	}
 
 	@PostMapping("/user/create")
-	public String create(@Validated @ModelAttribute UserRequestForm userRequest, BindingResult result, Model model) {
+	public String create(@Validated @ModelAttribute UserRequestForm userRequestForm, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 
 			// 入力チェックエラーの場合
@@ -44,13 +40,12 @@ public class NewuserController {
 			for (ObjectError error : result.getAllErrors()) {
 				errorList.add(error.getDefaultMessage());
 			}
-			model.addAttribute("userRequest",userRequest);
+			model.addAttribute("userRequestForm",userRequestForm);
 			model.addAttribute("validationError", errorList);
 			return "/Newuser";
 		}
 		// ユーザー情報の登録
-		newuserService.create(userRequest);
+		newuserService.create(userRequestForm);
 		return "/Mypage";
-	}	    
-
+	}
 }

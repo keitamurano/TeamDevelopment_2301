@@ -9,6 +9,5 @@ import com.example.demo.entity.UserEntity;
  * ユーザー情報 Repository
  */
 @Repository
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
-//		 List<UserEntity> findById(Long user_id);
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 }

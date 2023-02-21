@@ -11,9 +11,10 @@ import com.example.demo.repository.UserRepository;
 
 @Service
 public class EditService {
+
 	/**
-	* ユーザー情報 Repository
-	*/
+	 * ユーザー情報 Repository
+	 */
 	@Autowired
 	UserRepository userRepository;
 
@@ -29,7 +30,7 @@ public class EditService {
 	 * ユーザー情報 主キー検索
 	 * @return 検索結果
 	 */
-	public UserEntity findById(Long user_id) {
+	public UserEntity findById(Integer user_id) {
 		return userRepository.getOne(user_id);
 	}
 
@@ -37,23 +38,22 @@ public class EditService {
 	 * ユーザー情報 更新
 	 * @param user ユーザー情報
 	 */
-	public void update(UserRequestForm userUpdateRequest) {
+	public void update(UserRequestForm userRequestForm) {
 		UserEntity user = new UserEntity();
-		user.setUser_id(userUpdateRequest.getUser_id());
-		user.setName(userUpdateRequest.getName());
-		user.setName_kana(userUpdateRequest.getName_kana());
-		user.setMail_address(userUpdateRequest.getMail_address());
-		user.setPassword(userUpdateRequest.getPassword());
+		user.setUser_id(userRequestForm.getUser_id());
+		user.setName(userRequestForm.getName());
+		user.setName_kana(userRequestForm.getName_kana());
+		user.setMail_address(userRequestForm.getMail_address());
+		user.setPassword(userRequestForm.getPassword());
 		userRepository.save(user);
 	}
-	
-	  /**
-	   * ユーザー情報 物理削除
-	   * @param id ユーザーID
-	   */
-	  public void delete(Long user_id) {
-		  UserEntity user = findById(user_id);
-	    userRepository.delete(user);
-	  }
 
+	/**
+	 * ユーザー情報 物理削除
+	 * @param id ユーザーID
+	 */
+	public void delete(Integer user_id) {
+		UserEntity user = findById(user_id);
+		userRepository.delete(user);
+	}
 }

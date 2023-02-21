@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class UserRequestForm {
 
-	private Long user_id;
+	private Integer user_id;
 	/**
 	 * 名前
 	 */

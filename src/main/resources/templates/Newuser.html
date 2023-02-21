@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" th:href="@{/css/Newuser.css}">
-
-
 </head>
 
 <body background="white0023.jpg">
 
 	<div align="right">
 		<form>
-			<a th:href="@{/login}"> <!-- method="post" --> 
+			<a th:href="@{/login}">
 			<input
 				name="editbutton"
 				class="editbutton userbutton-shadow userbutton-circle" type="button"
@@ -33,43 +29,32 @@
 	<h1>ユーザー新規登録</h1>
 	<form th:action="@{/user/create}" th:object="${userRequest}"
 		method="post">
-		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name}"></div> -->
-			<label>ID：<span class="text-danger"></span></label> <input
-				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
-		</div>
-		<br>
 		
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name}"></div> -->
 			<label>Name：<span class="text-danger"></span></label> <input
 				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{name_kana}"></div> -->
 			<label>カナ：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{name_kana}" name="name_kana">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{mail_address}"></div> -->
 			<label>E-mail：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{mail_address}" name="mail_address">
 		</div>
 		<br>
 
 		<div class="form-group">
-			<!-- <div class="error" th:errors="*{password}"></div> -->
 			<label>Password：<span class="text-danger"></span></label> <input
 				type="text" th:field="*{password}" name="password">
 		</div>
 		<br>
 
 		<div class="text-center">
-			<!--  <a href="/user/login1" class="btn btn-secondary">戻る</a>  -->
 			<input type="submit" value="登録">
 		</div>
 		<br>
