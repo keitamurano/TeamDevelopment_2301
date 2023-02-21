@@ -12,7 +12,6 @@ import lombok.Data;
 @Data
 @Table(name="expences")
 public class ExpencesEntity{
-	// 予約データの主キーはユーザーID
 	@Id
 	//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")

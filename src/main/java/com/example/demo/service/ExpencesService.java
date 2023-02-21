@@ -25,14 +25,12 @@ public class ExpencesService {
 	public List<Prefectures> findAll2() {
 		return prefecturesRepository.findAll();
 	}
-
 	public List<ExpencesEntity> findAllByOrderByUserIdAsc() {
 		return expencesRepository.findAllByOrderByUserIdAsc();
 	}
-
 	/**
 	 * 経費申請新規登録
-	 * @param user ユーザー情報
+	 * @param expencesForm 経費申請情報
 	 */
 	public void insert(ExpencesForm expencesForm) {
 		ExpencesEntity expencesEntity = new ExpencesEntity();

@@ -5,7 +5,6 @@
 .error{
 	color:red;
 }
-
 body {
 	background-image: url("white0023.jpg");
 	background-size: cover;
@@ -15,24 +14,11 @@ body {
 h1 {
 	text-align: center;
 }
-
-
-.main3 {
-
-	list-style-type: none;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	padding-left: 10px;
-
-}
-
 .userId {
 	text-align: center;
 	margin: 30px;
  	height: 30px;
 }
-
  .inputuserId {
 	height: 30px;
 	width:300px;
@@ -41,9 +27,7 @@ h1 {
 	text-align: center;
 	margin: 30px;
 	height: 30px;
-
 }
-
  .inputapplicationDate {
 	height: 30px;
 	width:300px;
@@ -60,7 +44,6 @@ select {
 	text-align: center;
 	margin: 30px;
 }
-
  .inputamountMoney {
 	height: 30px;
 	width:300px;
@@ -69,15 +52,12 @@ select {
 	text-align: center;
 	margin: 30px;
 }
-
  .inputremarks {
 	height: 30px;
 	width:300px;
 }
 .back {
-/*    	text-align : center ; */
 	 position: relative;
-/*   	top: 25px; */
   	right: 30px;
 	border-radius: 30px;
  	width: 100px;
@@ -85,10 +65,7 @@ select {
   display: block;
   margin: auto;
 }
-
-
 .application {
-/*     text-align : center ; */
 	position: relative;
   	top: 25px;
     left:30px;
@@ -98,4 +75,3 @@ select {
 	display: block;
     margin: auto;
 }
-
