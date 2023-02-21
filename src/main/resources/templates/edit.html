@@ -29,13 +29,13 @@
 	</table>
 
 	<h1>ユーザー編集•削除</h1>
-	<form th:action="@{/user/update}" th:object="${userRequest}"
+	<form th:action="@{/user/update}" th:object="${userRequestForm}"
 		th:method="post">
 
 		<div class="form-group">
 			<label>ID：<span class="text-danger"></span></label> <input
 				th:errorclass="error-msg" type="text" th:field="*{user_id}"
-				name="user_id" disabled>
+				name="user_id">
 		</div>
 		<br>
 
@@ -68,13 +68,9 @@
 			<input type="submit" value="編集">
 		</div>
 
-		<div class="text-center">
-			<input type="submit" value="削除">
-		</div>
-
 	</form>
 	<div class="form-group">
-		<form th:action="@{/user/edit/delete}" th:object="${userRequest}"
+		<form th:action="@{/user/edit/delete}" th:object="${userRequestForm}"
 			th:method="post">
 			<label>ID：<span class="text-danger"></span></label>
 			<div class="text-center">

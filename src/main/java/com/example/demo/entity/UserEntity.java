@@ -14,8 +14,8 @@ import lombok.Data;
 @Table(name = "user_tb")
 public class UserEntity {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private Integer user_id;
 

@@ -20,13 +20,12 @@ public class NewuserService {
 	 * ユーザー情報 新規登録
 	 * @param user ユーザー情報
 	 */
-	public void create(UserRequestForm userRequestForm) {
+	public void create(UserRequestForm createUserRequestForm) {
 		UserEntity user = new UserEntity();
-		user.setUser_id(userRequestForm.getUser_id());
-		user.setName(userRequestForm.getName());
-		user.setName_kana(userRequestForm.getName_kana());
-		user.setMail_address(userRequestForm.getMail_address());
-		user.setPassword(userRequestForm.getPassword());
+		user.setName(createUserRequestForm.getName());
+		user.setName_kana(createUserRequestForm.getName_kana());
+		user.setMail_address(createUserRequestForm.getMail_address());
+		user.setPassword(createUserRequestForm.getPassword());
 
 		userRepository.save(user);
 	}
