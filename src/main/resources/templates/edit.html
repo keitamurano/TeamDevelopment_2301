@@ -64,19 +64,17 @@
 		</div>
 		<br>
 
-		<div class="text-center">
+		<div class="text-edit">
 			<input type="submit" value="編集">
 		</div>
 
 	</form>
-	<div class="form-group">
+	<div class="form-group1">
 		<form th:action="@{/user/edit/delete}" th:object="${userRequestForm}"
 			th:method="post">
-			<label>ID：<span class="text-danger"></span></label>
-			<div class="text-center">
+			<div class="text-delete">
 				<input type="submit" value="削除">
 			</div>
-			<input type="text" th:field="*{user_id}" name="user_id">
 		</form>
 	</div>
 

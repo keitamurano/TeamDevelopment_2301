@@ -18,6 +18,19 @@ h1 {
     background-color: rgb(182, 181, 181);
 }
 
+/* ページ全体のスタイル */
+body {
+  background-image: url("white0023.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;   
+  background-color: #464646;   
+}
+
+
+
+
 .form-text {
   width: 1000px;
   margin-right: auto;
@@ -26,7 +39,15 @@ h1 {
 
 .form-group{
 	text-align: center;
+	display: flex;
+  justify-content: flex-end; /* 右寄せにする */
+  margin-right: 640px;
+  align-items: center;
 }
+
+.form-group1{
+	text-align: center;
+	}
 
 
 .form-control
@@ -43,20 +64,28 @@ li {
   list-style: none;
 }
 
-body {
-  background-image: url("white0023.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+
+.text-edit{
+	
+	 margin-left: 600px;
+	float: left;
 }
 
-.text-center{
-	text-align: right;
-	 margin-right: 50px;
+.text-delete{
+	
+	 margin-right: 400px;
 	
 }
+
 
 table{
 width: 100%;
 border-collapse: collapse;
 font-size: 13px;
 }
+
+.editbutton{
+	 margin-right: 500px;
+}
+
+
