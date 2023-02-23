@@ -27,7 +27,6 @@ public class kintaiRequest{
 	private String start_time;
 
 	@NotNull(message="退勤日を選択してください")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")//★
 	private Date end_date;
 
 	@NotEmpty(message="退勤時間を選択してください")
