@@ -11,7 +11,7 @@
 
 	<div align="right">
 		<form>
-			<a th:href="@{/login}">
+			<a th:href="@{/mypage}">
 			<input
 				name="editbutton"
 				class="editbutton userbutton-shadow userbutton-circle" type="button"
@@ -29,7 +29,7 @@
 	<h1>ユーザー新規登録</h1>
 	<form th:action="@{/user/create}" th:object="${userRequestForm}"
 		method="post">
-		
+
 		<div class="form-group">
 			<label>Name：<span class="text-danger"></span></label> <input
 				th:errorclass="error-msg" type="text" th:field="*{name}" name="name">

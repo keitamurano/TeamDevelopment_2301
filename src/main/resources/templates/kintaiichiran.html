@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="create.css">
+<link rel="stylesheet" href="css/kintai.css">
 <title>'勤怠一覧'</title>
 </head>
 <body>
@@ -38,8 +38,15 @@
 					<td th:text="${kintailist.end_time}"></td>
 					<td th:text="${kintailist.break_time}"></td>
 					<td th:text="${kintailist.remarks}"></td>
-					<td><a th:href="@{/leaving/{attendance_id}(attendance_id=${kintailist.attendance_id})}">退勤報告</a></td>	
+					<td><a th:href="@{/leaving/{attendance_id}(attendance_id=${kintailist.attendance_id})}">退勤報告</a></td>
 			</table>
+					<form>
+			<a th:href="@{/mypage}"> <!-- method="post" --> <input
+				name="editbutton"
+				class="editbutton" type="button"
+				value="戻る">
+			</a>
+		</form>
 		</div>
 	</div>
 </body>

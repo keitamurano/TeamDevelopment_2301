@@ -28,16 +28,13 @@ public class MypageController {
 //		// model.addAllAttributes("name",name,"userID",userID);
 //		return "edit";
 //	}
-//	@PostMapping("/attendanc"/**path="/mypage", params = "attendance-button"**/)
-//	public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
-//		// model.addAllAttributes("name",name,"userID",userID);
-//		return "attendance";
-//	}
-	@PostMapping("/leavingwork"/**path="/mypage", params = "leavingwork-button"**/)
-	public String postLeavingwork(/**@RequestParam String name, String userID, **/Model model) {
-		// model.addAllAttributes("name",name,"userID",userID);
-		return "leavingwork";
+	 
+	@PostMapping("/attendanc"/**path="/mypage", params = "attendance-button"**/)
+	public String postAttendance(/**@RequestParam String name, String userID, **/Model model) {
+//		 model.addAllAttributes("name",name,"userID",userID);
+		return "attendance";
 	}
+
 	@GetMapping("/kintaiichiran" /** path="/mypage", params = "create-button"**/)
 	public String postCreate(/**@RequestParam String name, String userID, **/Model model) {
 		// model.addAllAttributes("name",name,"userID",userID);
