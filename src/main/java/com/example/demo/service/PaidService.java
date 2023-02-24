@@ -20,6 +20,5 @@ public class PaidService {
 	 */
 	public PaidEntity findById(Integer userid) {
 		return paidRepository.getOne(userid);
-		//	  List<Integer> findByIdx(@Param("id") Integer id);
 	}
 }

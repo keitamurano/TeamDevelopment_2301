@@ -18,14 +18,6 @@ public class PaidController {
 	 * @param model Model
 	 * @return 有給一覧画面
 	 */
-	/**
-	  @GetMapping(value = "/paid/list")
-	  public String displayPaidList(Model model) {
-		    Optional<PaidEntity> paidList  = paidService.selectById(1);
-		  model.addAttribute("paidList", paidList);
-	    return "Paid";
-	  }
-	 **/
 	@GetMapping(value = "/paid/list") 
 	public String PaidList(Model model){
 		PaidEntity paidlist = paidService.findById(1);

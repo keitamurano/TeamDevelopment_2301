@@ -1,70 +1,85 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <meta charset="UTF-8">
 <title>マイページ</title>
-<link rel="stylesheet" href="/css/Mypage.css"></head>
+<link rel="stylesheet" href="/css/Mypage.css">
+</head>
 
 <body>
-    <div class="wrapper">
-        <div class="a"></div>
-        <div class="header">
+	<div class="wrapper">
+		<div class="a"></div>
+		<div class="header">
 
-            <p class="mypage-p">MY PAGE</p>
-
-
-            <div class="userdate">
-
-        <form><a th:href="@{/Newuser}"> <!-- method="post" -->
-               <input name="editbutton" class="editbutton userbutton-shadow userbutton-circle" type="button" value="☺">
-               </a><!--
-               <div class="namebox"> -->
-                    <p class="username">name:<span th:remove="tag" sec:authentication="name"></span></p>
-                   <!--  </div> -->
-           <!--     <div class="idbox"> -->
-                    <!--<p class="userid">id:<span class="userid" th:text="${user.userid}"></span></p>-->
-    <!--  </div> -->
-          </form>
-
-            </div>
-
-        </div>
+			<p class="mypage-p">MY PAGE</p>
 
 
-        <div class="contents clearfix">
-                <div class="left">
+			<div class="userdate">
 
-            <form> <a th:href="@{/attendances}"><!--  method="post" -->
-                <input class="attendance-button" name="attendance-button" value="出勤報告" type="button"></a>
-                </form>
+				<form>
+					<a th:href="@{/Newuser}"> <input name="editbutton"
+						class="editbutton userbutton-shadow userbutton-circle"
+						type="button" value="☺">
+					</a>
+					<p class="username">
+						name:<span th:remove="tag" sec:authentication="name"></span>
+					</p>
+				</form>
 
-            <form> <a th:href="@{/mypage/kintaiichiran}"> <!-- method="post"> -->
-                <input class="create-button" name="create-button" value="勤怠一覧" type="button"></a>
-                </form>
+			</div>
 
-            <form> <a th:href="@{/expences}"> <!-- method="post"> -->
-                <input class="expences-button" name="expences-button" value="経費申請" type="button" ></a>
-   </form>
-                </div>
+		</div>
 
-                <div class="right">
 
-            <form> <a th:href="@{/user/edit/5}"><!-- method="post"> -->
-                <input class="create2-button" name="create2-button" value="ユーザー編集削除" type="button"></a>
-                </form>
+		<div class="contents clearfix">
+			<div class="left">
 
-            <form> <a th:href="@{/expenceslist}"> <!-- method="post"> -->
-                <input class="expenceslist-button" name="expenceslist-button" value="経費一覧" type="button"></a>
-                </form>
+				<form>
+					<a th:href="@{/attendances}"> <input class="attendance-button"
+						name="attendance-button" value="出勤報告" type="button">
+					</a>
+				</form>
 
-            <form> <a th:href="@{/paid/list}"> <!-- method="post"> -->
-                <input class="paid-button" name="paid-button" value="有給一覧" type="button"></a>
-   </form>
+				<form>
+					<a th:href="@{/mypage/kintaiichiran}"> <input
+						class="create-button" name="create-button" value="勤怠一覧"
+						type="button">
+					</a>
+				</form>
 
-                </div>
+				<form>
+					<a th:href="@{/expences}"> <input class="expences-button"
+						name="expences-button" value="経費申請" type="button">
+					</a>
+				</form>
+			</div>
 
-         </div>
-    </div>
+			<div class="right">
+
+				<form>
+					<a th:href="@{/user/edit/5}"> <input class="create2-button"
+						name="create2-button" value="ユーザー編集削除" type="button">
+					</a>
+				</form>
+
+				<form>
+					<a th:href="@{/expenceslist}"> <input
+						class="expenceslist-button" name="expenceslist-button"
+						value="経費一覧" type="button">
+					</a>
+				</form>
+
+				<form>
+					<a th:href="@{/paid/list}"> <input class="paid-button"
+						name="paid-button" value="有給一覧" type="button">
+					</a>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
 
 </body>
