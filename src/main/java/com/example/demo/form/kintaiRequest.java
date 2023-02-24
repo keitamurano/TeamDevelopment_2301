@@ -1,9 +1,10 @@
 //勤怠FORM
 package com.example.demo.form;
 
-import java.sql.Date;
 
-import javax.persistence.Column;
+
+import java.util.Date;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -18,16 +19,16 @@ public class kintaiRequest{
 	private Integer user_id;
 
 	@NotEmpty(message="退勤状況を選択して下さい")
-	@Column(name = "status")
 	private String status;
-
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date start_date;
 
 	@DateTimeFormat(pattern="HH:mm:ss")
 	private String start_time;
 
 	@NotNull(message="退勤日を選択してください")
-	@DateTimeFormat(pattern = "yyyy-MM-dd")//★
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date end_date;
 
 	@NotEmpty(message="退勤時間を選択してください")

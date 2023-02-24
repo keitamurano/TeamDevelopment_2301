@@ -54,7 +54,7 @@ public class taikinController {
 			for (ObjectError error : result.getAllErrors()) {
 				errorList.add(error.getDefaultMessage());
 			}
-			model.addAttribute("KintaiRequests",new kintaiRequest());
+			model.addAttribute("KintaiRequests", KintaiRequests);
 			model.addAttribute("validationError", errorList);
 
 			return "taikin";
