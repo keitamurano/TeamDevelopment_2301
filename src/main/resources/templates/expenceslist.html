@@ -27,7 +27,6 @@
 					<td th:text="${expences.userId}"></td>
 					<td
 						th:text="${#dates.format(expences.applicationDate, 'yyyy/MM/dd')}"></td>
-
 					<td th:each="prefectures : ${prefecturesList}"
 						th:if="${prefectures.code ==  expences.expencesItem}"
 						th:text="${prefectures.name}"></td>

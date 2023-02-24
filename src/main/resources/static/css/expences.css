@@ -2,76 +2,91 @@
 	margin: 0 auto;
 	width: 100%
 }
-.error{
-	color:red;
+
+.error {
+	color: red;
 }
+
 body {
 	background-image: url("white0023.jpg");
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
 }
+
 h1 {
 	text-align: center;
 }
+
 .userId {
 	text-align: center;
 	margin: 30px;
- 	height: 30px;
-}
- .inputuserId {
 	height: 30px;
-	width:300px;
 }
+
+.inputuserId {
+	height: 30px;
+	width: 300px;
+}
+
 .applicationDate {
 	text-align: center;
 	margin: 30px;
 	height: 30px;
 }
- .inputapplicationDate {
+
+.inputapplicationDate {
 	height: 30px;
-	width:300px;
+	width: 300px;
 }
+
 .expences-item-pulldown {
 	text-align: center;
 	margin: 30px;
 }
+
 select {
 	width: 130px;
 	height: 30px;
 }
+
 .amountMoney {
 	text-align: center;
 	margin: 30px;
 }
- .inputamountMoney {
+
+.inputamountMoney {
 	height: 30px;
-	width:300px;
+	width: 300px;
 }
+
 .remarks {
 	text-align: center;
 	margin: 30px;
 }
- .inputremarks {
+
+.inputremarks {
 	height: 30px;
-	width:300px;
+	width: 300px;
 }
+
 .back {
-	 position: relative;
-  	right: 30px;
-	border-radius: 30px;
- 	width: 100px;
-	height: 50px;
-  display: block;
-  margin: auto;
-}
-.application {
 	position: relative;
-  	top: 25px;
-    left:30px;
+	right: 30px;
 	border-radius: 30px;
 	width: 100px;
 	height: 50px;
 	display: block;
-    margin: auto;
+	margin: auto;
+}
+
+.application {
+	position: relative;
+	top: 25px;
+	left: 30px;
+	border-radius: 30px;
+	width: 100px;
+	height: 50px;
+	display: block;
+	margin: auto;
 }

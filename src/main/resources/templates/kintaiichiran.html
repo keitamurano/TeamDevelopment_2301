@@ -5,14 +5,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="create.css">
+<link rel="stylesheet" href="/css/kintai.css">
 <title>'勤怠一覧'</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div align="center">
 			<h1>勤怠一覧</h1>
-			<form> <a th:href="@{/attendance}"><!--  method="post" -->
+			<form> <a th:href="@{/attendances}"><!--  method="post" -->
                 <input class="attendance-button" name="attendance-button" value="出勤報告" type="button"></a>
             </form>
 			<table colspan="2" border="1">
@@ -38,8 +38,15 @@
 					<td th:text="${kintailist.end_time}"></td>
 					<td th:text="${kintailist.break_time}"></td>
 					<td th:text="${kintailist.remarks}"></td>
-					<td><a th:href="@{/leaving/{attendance_id}(attendance_id=${kintailist.attendance_id})}">退勤報告</a></td>	
+					<td><a th:href="@{/leaving/{attendance_id}(attendance_id=${kintailist.attendance_id})}">退勤報告</a></td>
 			</table>
+					<form>
+			<a th:href="@{/mypage}"> <!-- method="post" --> <input
+				name="editbutton"
+				class="editbutton" type="button"
+				value="戻る">
+			</a>
+		</form>
 		</div>
 	</div>
 </body>

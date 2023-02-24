@@ -39,7 +39,7 @@ public class AttendanceEntity {
 	@Column(name = "start_time")
 	private LocalTime starttime;
 
-	@DateTimeFormat(pattern = "HH:mm:ss")
+	//@DateTimeFormat(pattern = "HH:mm:ss")
 	@Column(name = "end_date")
 	private Date enddate;
 
