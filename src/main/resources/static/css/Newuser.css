@@ -1,76 +1,69 @@
-.wapper { 
-  width: 1000%;
-  text-align: center;
-  margin: 0 auto;
+.wapper {
+	width: 1000%;
+	text-align: center;
+	margin: 0 auto;
 }
 
-header{
-    width: 20px;
-    height: 20px;
-    text-align: right;
+header {
+	width: 20px;
+	height: 20px;
+	text-align: right;
 }
 
 h1 {
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    color: rgb(4, 4, 5);
-    background-color: rgb(182, 181, 181);
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	color: rgb(4, 4, 5);
+	background-color: rgb(182, 181, 181);
 }
-
-
 
 .form-text {
-  width: 1000px;
-  margin-right: auto;
-  margin-left: auto;  
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.form-group{
+.form-group {
 	text-align: center;
 	display: flex;
-  justify-content: flex-end; /* 右寄せにする */
-  margin-right: 640px;
-  align-items: center;
+	justify-content: flex-end; /* 右寄せにする */
+	margin-right: 640px;
+	align-items: center;
 }
 
-
-.form-control
-{
-	 width: 30%;
-    height: 20px;
-    text-align: center;
-    margin-top: 50px;
-    color: rgb(4, 4, 5);
-    background-color: rgb(182, 181, 181);
+.form-control {
+	width: 30%;
+	height: 20px;
+	text-align: center;
+	margin-top: 50px;
+	color: rgb(4, 4, 5);
+	background-color: rgb(182, 181, 181);
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
-
 /* ページ全体のスタイル */
 body {
-  background-image: url("white0023.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;   
-  background-color: #464646;   
+	background-image: url("white0023.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #464646;
 }
 
-
-.text-center{
+.text-center {
 	text-align: center;
-	
 }
 
-table{
-width: 100%;
-border-collapse: collapse;
-font-size: 13px;
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
 }
 
-.editbutton{
-	 margin-right: 500px;
+.editbutton {
+	margin-right: 500px;
 }
