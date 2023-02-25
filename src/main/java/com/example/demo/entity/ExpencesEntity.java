@@ -13,7 +13,6 @@ import lombok.Data;
 @Table(name="expences")
 public class ExpencesEntity{
 	@Id
-	//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
 	private Integer userId;
 
