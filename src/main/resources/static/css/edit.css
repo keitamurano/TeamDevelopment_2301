@@ -43,7 +43,7 @@ body {
 }
 
 .form-group1 {
-	text-align: center;
+	text-align: right;
 }
 
 .form-control {
@@ -59,9 +59,12 @@ li {
 	list-style: none;
 }
 
-.text-edit {
-	margin-left: 600px;
-	/* float: left; */
+.edit {
+	position: relative;
+	display: block;
+	margin: auto;
+	text-align: center;
+	left: 50px;
 }
 
 .text-delete {
@@ -78,6 +81,11 @@ table {
 	font-size: 13px;
 }
 
-.editbutton {
-	margin-right: 500px;
+.back {
+	position: relative;
+	display: block;
+	margin: auto;
+	text-align: center;
+	bottom: 25px;
+	right: 50px;
 }
